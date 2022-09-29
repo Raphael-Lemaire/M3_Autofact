@@ -8,3 +8,14 @@ C:\Users\utilisateur\Desktop\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFac
 C:\Users\utilisateur\Desktop\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.exe
 C:\Users\utilisateur\Desktop\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.pdb
 C:\Users\utilisateur\Desktop\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.formAF.resources
+C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\AutoFact.exe.config
+C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\AutoFact.exe
+C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\AutoFact.pdb
+C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.csproj.AssemblyReference.cache
+C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.csproj.SuggestedBindingRedirects.cache
+C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.formAF.resources
+C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.Properties.Resources.resources
+C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.csproj.GenerateResource.cache
+C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.csproj.CoreCompileInputs.cache
+C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.exe
+C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.pdb
