@@ -154,7 +154,7 @@
   <data name="logo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAS4AAAEOCAYAAAA37Pp1AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAATx5JREFUeF7tXQd4VEXXRum9C0gVBcEu6mcBJdlNQkdaQBQEEZHdTaWFbui9Kmro
+        vQAADr0BR/uQrQAATx5JREFUeF7tXQd4VEXXRum9C0gVBcEu6mcBJdlNQkdaQBQEEZHdTaWFbui9Kmro
         vWwSQgkgzSBSpBcR0ADZu5u2JT2Elr3znxNv+OMy2YTsJrmTzPs877N3k92798yc+96ZMzNnynBwcHBw
         cJR0PBMRQcp5Bl6r0MU7smJRM1BLKuDvawkpe56Q8vsjScWcXM7JJLPrD+uUEPKs5GulE4u1pHKnrw11
         PvaOq1+U7KYSagdGkErSZZQYnDKQygs3Jzb/KSRxfP8Jhn2uKt2ZomQnf/2Zb783HVp+JG1WyM37qsNm
@@ -495,6 +495,9 @@
         SUVORK5CYII=
 </value>
   </data>
+  <metadata name="printDocument1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAAAAAAEAIAD3JwAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAEAAAABAAgGAAAAXHKoZgAAAAFv

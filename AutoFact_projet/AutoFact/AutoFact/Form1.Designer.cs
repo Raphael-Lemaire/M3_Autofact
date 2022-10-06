@@ -29,9 +29,13 @@ namespace AutoFact
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAF));
             this.pageselection = new System.Windows.Forms.TabControl();
             this.firstpage = new System.Windows.Forms.TabPage();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.rvs = new System.Windows.Forms.Label();
             this.dfdashboard = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -66,8 +70,10 @@ namespace AutoFact
             this.nomClientc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parametrepage = new System.Windows.Forms.TabPage();
             this.logo = new System.Windows.Forms.PictureBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.pageselection.SuspendLayout();
             this.firstpage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.servicespage.SuspendLayout();
@@ -100,6 +106,7 @@ namespace AutoFact
             // 
             // firstpage
             // 
+            this.firstpage.Controls.Add(this.chart1);
             this.firstpage.Controls.Add(this.rvs);
             this.firstpage.Controls.Add(this.dfdashboard);
             this.firstpage.Controls.Add(this.dataGridView2);
@@ -115,6 +122,27 @@ namespace AutoFact
             this.firstpage.Text = "Dashboard";
             this.firstpage.UseVisualStyleBackColor = true;
             // 
+            // chart1
+            // 
+            this.chart1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(541, 107);
+            this.chart1.Name = "chart1";
+            this.chart1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.YValuesPerPoint = 4;
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(350, 350);
+            this.chart1.TabIndex = 5;
+            this.chart1.Text = "chart1";
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            // 
             // rvs
             // 
             this.rvs.AutoSize = true;
@@ -128,7 +156,7 @@ namespace AutoFact
             // dfdashboard
             // 
             this.dfdashboard.AutoSize = true;
-            this.dfdashboard.Location = new System.Drawing.Point(5, 226);
+            this.dfdashboard.Location = new System.Drawing.Point(4, 241);
             this.dfdashboard.Name = "dfdashboard";
             this.dfdashboard.Size = new System.Drawing.Size(105, 13);
             this.dfdashboard.TabIndex = 3;
@@ -138,7 +166,7 @@ namespace AutoFact
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(5, 242);
+            this.dataGridView2.Location = new System.Drawing.Point(5, 257);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(474, 150);
             this.dataGridView2.TabIndex = 2;
@@ -473,6 +501,7 @@ namespace AutoFact
             this.pageselection.ResumeLayout(false);
             this.firstpage.ResumeLayout(false);
             this.firstpage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.servicespage.ResumeLayout(false);
@@ -492,7 +521,6 @@ namespace AutoFact
         #endregion
 
         private System.Windows.Forms.TabControl pageselection;
-        private System.Windows.Forms.TabPage firstpage;
         private System.Windows.Forms.TabPage servicespage;
         private System.Windows.Forms.TabPage devispage;
         private System.Windows.Forms.TabPage clientpage;
@@ -527,6 +555,9 @@ namespace AutoFact
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.DataGridViewTextBoxColumn numeroClient;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomClientc;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.TabPage firstpage;
     }
 }
 
