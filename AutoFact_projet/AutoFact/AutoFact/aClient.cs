@@ -16,5 +16,29 @@ namespace AutoFact
         {
             InitializeComponent();
         }
+
+        private void aClient_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            {
+                formAF AF = new formAF();
+                this.Hide();
+
+            }
+        }
     }
 }
