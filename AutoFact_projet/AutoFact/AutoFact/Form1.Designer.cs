@@ -123,6 +123,7 @@ namespace AutoFact
             this.rvs.Size = new System.Drawing.Size(170, 13);
             this.rvs.TabIndex = 4;
             this.rvs.Text = "Répartition des ventes de services";
+            this.rvs.Click += new System.EventHandler(this.rvs_Click);
             // 
             // dfdashboard
             // 

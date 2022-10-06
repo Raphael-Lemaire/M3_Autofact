@@ -66,5 +66,10 @@ namespace AutoFact
             aClient aC = new aClient();
             aC.Show();
         }
+
+        private void rvs_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
