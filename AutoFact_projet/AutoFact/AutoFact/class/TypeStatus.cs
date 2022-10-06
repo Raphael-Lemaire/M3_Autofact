@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace AutoFact
 {
-    class Type_Status
+    class TypeStatus
     {
         private int _Id;
         private string _Libelle;
 
         //Construct
 
-        public Type_Status(int anId, string aLibelle)
+        public TypeStatus(int anId, string aLibelle)
         {
             this._Id = anId;
             this._Libelle = aLibelle;

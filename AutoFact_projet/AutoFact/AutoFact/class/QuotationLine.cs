@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace AutoFact
 {
-    abstract class Quotation_Line
+    abstract class QuotationLine
     {
         private int _amount;
 
         //Construct
 
 
-        public Quotation_Line(int anAmount)
+        public QuotationLine(int anAmount)
         {
             this._amount = anAmount;
         }

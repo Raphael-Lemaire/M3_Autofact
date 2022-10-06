@@ -19,3 +19,8 @@ C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\o
 C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.csproj.CoreCompileInputs.cache
 C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.exe
 C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.pdb
+C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.gService.resources
+C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.aService.resources
+C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.gDevis.resources
+C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.aClient.resources
+C:\Users\fourny\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.gClient.resources

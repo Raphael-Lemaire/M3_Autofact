@@ -32,51 +32,51 @@ namespace AutoFact
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAF));
             this.pageselection = new System.Windows.Forms.TabControl();
             this.firstpage = new System.Windows.Forms.TabPage();
+            this.rvs = new System.Windows.Forms.Label();
+            this.dfdashboard = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.cadashboard = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.colservices = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colannee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.servicespage = new System.Windows.Forms.TabPage();
-            this.devispage = new System.Windows.Forms.TabPage();
-            this.clientpage = new System.Windows.Forms.TabPage();
-            this.parametrepage = new System.Windows.Forms.TabPage();
-            this.logo = new System.Windows.Forms.PictureBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dfdashboard = new System.Windows.Forms.Label();
-            this.rvs = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dsservice = new System.Windows.Forms.Label();
-            this.gererService = new System.Windows.Forms.Button();
-            this.addService = new System.Windows.Forms.Button();
             this.filtrecatservice = new System.Windows.Forms.ComboBox();
+            this.addService = new System.Windows.Forms.Button();
+            this.gererService = new System.Windows.Forms.Button();
+            this.dsservice = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.categorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nom_des_services = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prix_unitaire = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.devispage = new System.Windows.Forms.TabPage();
+            this.gererDevis = new System.Windows.Forms.Button();
+            this.filtreDevis = new System.Windows.Forms.ComboBox();
+            this.ldDevis = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.numDevis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prixTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ldDevis = new System.Windows.Forms.Label();
-            this.filtreDevis = new System.Windows.Forms.ComboBox();
-            this.gererDevis = new System.Windows.Forms.Button();
+            this.clientpage = new System.Windows.Forms.TabPage();
+            this.addClient = new System.Windows.Forms.Button();
+            this.gererClient = new System.Windows.Forms.Button();
+            this.listecliClient = new System.Windows.Forms.Label();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.numeroClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomClientc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.listecliClient = new System.Windows.Forms.Label();
-            this.gererClient = new System.Windows.Forms.Button();
-            this.addClient = new System.Windows.Forms.Button();
+            this.parametrepage = new System.Windows.Forms.TabPage();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.pageselection.SuspendLayout();
             this.firstpage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.servicespage.SuspendLayout();
-            this.devispage.SuspendLayout();
-            this.clientpage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.devispage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.clientpage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // pageselection
@@ -90,7 +90,7 @@ namespace AutoFact
             this.pageselection.Controls.Add(this.clientpage);
             this.pageselection.Controls.Add(this.parametrepage);
             this.pageselection.Location = new System.Drawing.Point(107, 8);
-            this.pageselection.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pageselection.Margin = new System.Windows.Forms.Padding(2);
             this.pageselection.Name = "pageselection";
             this.pageselection.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.pageselection.SelectedIndex = 0;
@@ -106,14 +106,41 @@ namespace AutoFact
             this.firstpage.Controls.Add(this.cadashboard);
             this.firstpage.Controls.Add(this.dataGridView1);
             this.firstpage.Location = new System.Drawing.Point(4, 22);
-            this.firstpage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.firstpage.Margin = new System.Windows.Forms.Padding(2);
             this.firstpage.Name = "firstpage";
-            this.firstpage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.firstpage.Padding = new System.Windows.Forms.Padding(2);
             this.firstpage.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.firstpage.Size = new System.Drawing.Size(928, 488);
             this.firstpage.TabIndex = 0;
             this.firstpage.Text = "Dashboard";
             this.firstpage.UseVisualStyleBackColor = true;
+            // 
+            // rvs
+            // 
+            this.rvs.AutoSize = true;
+            this.rvs.Location = new System.Drawing.Point(538, 82);
+            this.rvs.Name = "rvs";
+            this.rvs.Size = new System.Drawing.Size(170, 13);
+            this.rvs.TabIndex = 4;
+            this.rvs.Text = "Répartition des ventes de services";
+            // 
+            // dfdashboard
+            // 
+            this.dfdashboard.AutoSize = true;
+            this.dfdashboard.Location = new System.Drawing.Point(5, 226);
+            this.dfdashboard.Name = "dfdashboard";
+            this.dfdashboard.Size = new System.Drawing.Size(105, 13);
+            this.dfdashboard.TabIndex = 3;
+            this.dfdashboard.Text = "Dernières facturation";
+            this.dfdashboard.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(5, 242);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(474, 150);
+            this.dataGridView2.TabIndex = 2;
             // 
             // cadashboard
             // 
@@ -143,7 +170,7 @@ namespace AutoFact
             this.colca,
             this.colannee});
             this.dataGridView1.Location = new System.Drawing.Point(5, 39);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
@@ -184,132 +211,13 @@ namespace AutoFact
             this.servicespage.Controls.Add(this.dsservice);
             this.servicespage.Controls.Add(this.dataGridView3);
             this.servicespage.Location = new System.Drawing.Point(4, 22);
-            this.servicespage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.servicespage.Margin = new System.Windows.Forms.Padding(2);
             this.servicespage.Name = "servicespage";
-            this.servicespage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.servicespage.Padding = new System.Windows.Forms.Padding(2);
             this.servicespage.Size = new System.Drawing.Size(928, 488);
             this.servicespage.TabIndex = 1;
             this.servicespage.Text = "Services";
             this.servicespage.UseVisualStyleBackColor = true;
-            // 
-            // devispage
-            // 
-            this.devispage.Controls.Add(this.gererDevis);
-            this.devispage.Controls.Add(this.filtreDevis);
-            this.devispage.Controls.Add(this.ldDevis);
-            this.devispage.Controls.Add(this.dataGridView4);
-            this.devispage.Location = new System.Drawing.Point(4, 22);
-            this.devispage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.devispage.Name = "devispage";
-            this.devispage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.devispage.Size = new System.Drawing.Size(928, 488);
-            this.devispage.TabIndex = 2;
-            this.devispage.Text = "Devis";
-            this.devispage.UseVisualStyleBackColor = true;
-            // 
-            // clientpage
-            // 
-            this.clientpage.Controls.Add(this.addClient);
-            this.clientpage.Controls.Add(this.gererClient);
-            this.clientpage.Controls.Add(this.listecliClient);
-            this.clientpage.Controls.Add(this.dataGridView5);
-            this.clientpage.Location = new System.Drawing.Point(4, 22);
-            this.clientpage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.clientpage.Name = "clientpage";
-            this.clientpage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.clientpage.Size = new System.Drawing.Size(928, 488);
-            this.clientpage.TabIndex = 3;
-            this.clientpage.Text = "Client";
-            this.clientpage.UseVisualStyleBackColor = true;
-            // 
-            // parametrepage
-            // 
-            this.parametrepage.Location = new System.Drawing.Point(4, 22);
-            this.parametrepage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.parametrepage.Name = "parametrepage";
-            this.parametrepage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.parametrepage.Size = new System.Drawing.Size(928, 488);
-            this.parametrepage.TabIndex = 4;
-            this.parametrepage.Text = "Paramètres";
-            this.parametrepage.UseVisualStyleBackColor = true;
-            // 
-            // logo
-            // 
-            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(8, 8);
-            this.logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(97, 93);
-            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logo.TabIndex = 1;
-            this.logo.TabStop = false;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(5, 242);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(474, 150);
-            this.dataGridView2.TabIndex = 2;
-            // 
-            // dfdashboard
-            // 
-            this.dfdashboard.AutoSize = true;
-            this.dfdashboard.Location = new System.Drawing.Point(5, 226);
-            this.dfdashboard.Name = "dfdashboard";
-            this.dfdashboard.Size = new System.Drawing.Size(105, 13);
-            this.dfdashboard.TabIndex = 3;
-            this.dfdashboard.Text = "Dernières facturation";
-            this.dfdashboard.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // rvs
-            // 
-            this.rvs.AutoSize = true;
-            this.rvs.Location = new System.Drawing.Point(538, 82);
-            this.rvs.Name = "rvs";
-            this.rvs.Size = new System.Drawing.Size(170, 13);
-            this.rvs.TabIndex = 4;
-            this.rvs.Text = "Répartition des ventes de services";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.categorie,
-            this.nom_des_services,
-            this.prix_unitaire});
-            this.dataGridView3.Location = new System.Drawing.Point(5, 69);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(899, 150);
-            this.dataGridView3.TabIndex = 0;
-            // 
-            // dsservice
-            // 
-            this.dsservice.AutoSize = true;
-            this.dsservice.Location = new System.Drawing.Point(5, 53);
-            this.dsservice.Name = "dsservice";
-            this.dsservice.Size = new System.Drawing.Size(118, 13);
-            this.dsservice.TabIndex = 1;
-            this.dsservice.Text = "Les différents services :";
-            // 
-            // gererService
-            // 
-            this.gererService.Location = new System.Drawing.Point(720, 42);
-            this.gererService.Name = "gererService";
-            this.gererService.Size = new System.Drawing.Size(75, 23);
-            this.gererService.TabIndex = 2;
-            this.gererService.Text = "Gérer";
-            this.gererService.UseVisualStyleBackColor = true;
-            this.gererService.Click += new System.EventHandler(this.gererService_Click);
-            // 
-            // addService
-            // 
-            this.addService.Location = new System.Drawing.Point(801, 42);
-            this.addService.Name = "addService";
-            this.addService.Size = new System.Drawing.Size(75, 23);
-            this.addService.TabIndex = 3;
-            this.addService.Text = "Ajouter";
-            this.addService.UseVisualStyleBackColor = true;
             // 
             // filtrecatservice
             // 
@@ -323,6 +231,47 @@ namespace AutoFact
             this.filtrecatservice.Size = new System.Drawing.Size(75, 21);
             this.filtrecatservice.TabIndex = 4;
             this.filtrecatservice.Text = "Catégorie";
+            // 
+            // addService
+            // 
+            this.addService.Location = new System.Drawing.Point(801, 42);
+            this.addService.Name = "addService";
+            this.addService.Size = new System.Drawing.Size(75, 23);
+            this.addService.TabIndex = 3;
+            this.addService.Text = "Ajouter";
+            this.addService.UseVisualStyleBackColor = true;
+            this.addService.Click += new System.EventHandler(this.addService_Click);
+            // 
+            // gererService
+            // 
+            this.gererService.Location = new System.Drawing.Point(720, 42);
+            this.gererService.Name = "gererService";
+            this.gererService.Size = new System.Drawing.Size(75, 23);
+            this.gererService.TabIndex = 2;
+            this.gererService.Text = "Gérer";
+            this.gererService.UseVisualStyleBackColor = true;
+            this.gererService.Click += new System.EventHandler(this.gererService_Click);
+            // 
+            // dsservice
+            // 
+            this.dsservice.AutoSize = true;
+            this.dsservice.Location = new System.Drawing.Point(5, 53);
+            this.dsservice.Name = "dsservice";
+            this.dsservice.Size = new System.Drawing.Size(118, 13);
+            this.dsservice.TabIndex = 1;
+            this.dsservice.Text = "Les différents services :";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.categorie,
+            this.nom_des_services,
+            this.prix_unitaire});
+            this.dataGridView3.Location = new System.Drawing.Point(5, 69);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(899, 150);
+            this.dataGridView3.TabIndex = 0;
             // 
             // categorie
             // 
@@ -345,6 +294,49 @@ namespace AutoFact
             this.prix_unitaire.Name = "prix_unitaire";
             this.prix_unitaire.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
+            // devispage
+            // 
+            this.devispage.Controls.Add(this.gererDevis);
+            this.devispage.Controls.Add(this.filtreDevis);
+            this.devispage.Controls.Add(this.ldDevis);
+            this.devispage.Controls.Add(this.dataGridView4);
+            this.devispage.Location = new System.Drawing.Point(4, 22);
+            this.devispage.Margin = new System.Windows.Forms.Padding(2);
+            this.devispage.Name = "devispage";
+            this.devispage.Padding = new System.Windows.Forms.Padding(2);
+            this.devispage.Size = new System.Drawing.Size(928, 488);
+            this.devispage.TabIndex = 2;
+            this.devispage.Text = "Devis";
+            this.devispage.UseVisualStyleBackColor = true;
+            // 
+            // gererDevis
+            // 
+            this.gererDevis.Location = new System.Drawing.Point(806, 41);
+            this.gererDevis.Name = "gererDevis";
+            this.gererDevis.Size = new System.Drawing.Size(75, 23);
+            this.gererDevis.TabIndex = 3;
+            this.gererDevis.Text = "Gérer";
+            this.gererDevis.UseVisualStyleBackColor = true;
+            this.gererDevis.Click += new System.EventHandler(this.gererDevis_Click);
+            // 
+            // filtreDevis
+            // 
+            this.filtreDevis.FormattingEnabled = true;
+            this.filtreDevis.Location = new System.Drawing.Point(712, 43);
+            this.filtreDevis.Name = "filtreDevis";
+            this.filtreDevis.Size = new System.Drawing.Size(75, 21);
+            this.filtreDevis.TabIndex = 2;
+            this.filtreDevis.Text = "Filtre";
+            // 
+            // ldDevis
+            // 
+            this.ldDevis.AutoSize = true;
+            this.ldDevis.Location = new System.Drawing.Point(5, 53);
+            this.ldDevis.Name = "ldDevis";
+            this.ldDevis.Size = new System.Drawing.Size(83, 13);
+            this.ldDevis.TabIndex = 1;
+            this.ldDevis.Text = "Liste des devis :";
+            // 
             // dataGridView4
             // 
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -354,7 +346,7 @@ namespace AutoFact
             this.prixTotal});
             this.dataGridView4.Location = new System.Drawing.Point(5, 69);
             this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(794, 150);
+            this.dataGridView4.Size = new System.Drawing.Size(901, 150);
             this.dataGridView4.TabIndex = 0;
             // 
             // numDevis
@@ -375,32 +367,49 @@ namespace AutoFact
             this.prixTotal.HeaderText = "Prix total";
             this.prixTotal.Name = "prixTotal";
             // 
-            // ldDevis
+            // clientpage
             // 
-            this.ldDevis.AutoSize = true;
-            this.ldDevis.Location = new System.Drawing.Point(5, 53);
-            this.ldDevis.Name = "ldDevis";
-            this.ldDevis.Size = new System.Drawing.Size(83, 13);
-            this.ldDevis.TabIndex = 1;
-            this.ldDevis.Text = "Liste des devis :";
+            this.clientpage.Controls.Add(this.addClient);
+            this.clientpage.Controls.Add(this.gererClient);
+            this.clientpage.Controls.Add(this.listecliClient);
+            this.clientpage.Controls.Add(this.dataGridView5);
+            this.clientpage.Location = new System.Drawing.Point(4, 22);
+            this.clientpage.Margin = new System.Windows.Forms.Padding(2);
+            this.clientpage.Name = "clientpage";
+            this.clientpage.Padding = new System.Windows.Forms.Padding(2);
+            this.clientpage.Size = new System.Drawing.Size(928, 488);
+            this.clientpage.TabIndex = 3;
+            this.clientpage.Text = "Client";
+            this.clientpage.UseVisualStyleBackColor = true;
             // 
-            // filtreDevis
+            // addClient
             // 
-            this.filtreDevis.FormattingEnabled = true;
-            this.filtreDevis.Location = new System.Drawing.Point(630, 43);
-            this.filtreDevis.Name = "filtreDevis";
-            this.filtreDevis.Size = new System.Drawing.Size(75, 21);
-            this.filtreDevis.TabIndex = 2;
-            this.filtreDevis.Text = "Filtre";
+            this.addClient.Location = new System.Drawing.Point(782, 40);
+            this.addClient.Name = "addClient";
+            this.addClient.Size = new System.Drawing.Size(75, 23);
+            this.addClient.TabIndex = 3;
+            this.addClient.Text = "Ajouter";
+            this.addClient.UseVisualStyleBackColor = true;
+            this.addClient.Click += new System.EventHandler(this.addClient_Click);
             // 
-            // gererDevis
+            // gererClient
             // 
-            this.gererDevis.Location = new System.Drawing.Point(724, 43);
-            this.gererDevis.Name = "gererDevis";
-            this.gererDevis.Size = new System.Drawing.Size(75, 23);
-            this.gererDevis.TabIndex = 3;
-            this.gererDevis.Text = "Gérer";
-            this.gererDevis.UseVisualStyleBackColor = true;
+            this.gererClient.Location = new System.Drawing.Point(701, 40);
+            this.gererClient.Name = "gererClient";
+            this.gererClient.Size = new System.Drawing.Size(75, 23);
+            this.gererClient.TabIndex = 2;
+            this.gererClient.Text = "Gérer";
+            this.gererClient.UseVisualStyleBackColor = true;
+            this.gererClient.Click += new System.EventHandler(this.gererClient_Click);
+            // 
+            // listecliClient
+            // 
+            this.listecliClient.AutoSize = true;
+            this.listecliClient.Location = new System.Drawing.Point(5, 53);
+            this.listecliClient.Name = "listecliClient";
+            this.listecliClient.Size = new System.Drawing.Size(88, 13);
+            this.listecliClient.TabIndex = 1;
+            this.listecliClient.Text = "Liste des clients :";
             // 
             // dataGridView5
             // 
@@ -425,32 +434,27 @@ namespace AutoFact
             this.nomClientc.HeaderText = "Nom des clients";
             this.nomClientc.Name = "nomClientc";
             // 
-            // listecliClient
+            // parametrepage
             // 
-            this.listecliClient.AutoSize = true;
-            this.listecliClient.Location = new System.Drawing.Point(5, 53);
-            this.listecliClient.Name = "listecliClient";
-            this.listecliClient.Size = new System.Drawing.Size(88, 13);
-            this.listecliClient.TabIndex = 1;
-            this.listecliClient.Text = "Liste des clients :";
+            this.parametrepage.Location = new System.Drawing.Point(4, 22);
+            this.parametrepage.Margin = new System.Windows.Forms.Padding(2);
+            this.parametrepage.Name = "parametrepage";
+            this.parametrepage.Padding = new System.Windows.Forms.Padding(2);
+            this.parametrepage.Size = new System.Drawing.Size(928, 488);
+            this.parametrepage.TabIndex = 4;
+            this.parametrepage.Text = "Paramètres";
+            this.parametrepage.UseVisualStyleBackColor = true;
             // 
-            // gererClient
+            // logo
             // 
-            this.gererClient.Location = new System.Drawing.Point(701, 40);
-            this.gererClient.Name = "gererClient";
-            this.gererClient.Size = new System.Drawing.Size(75, 23);
-            this.gererClient.TabIndex = 2;
-            this.gererClient.Text = "Gérer";
-            this.gererClient.UseVisualStyleBackColor = true;
-            // 
-            // addClient
-            // 
-            this.addClient.Location = new System.Drawing.Point(782, 40);
-            this.addClient.Name = "addClient";
-            this.addClient.Size = new System.Drawing.Size(75, 23);
-            this.addClient.TabIndex = 3;
-            this.addClient.Text = "Ajouter";
-            this.addClient.UseVisualStyleBackColor = true;
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(8, 8);
+            this.logo.Margin = new System.Windows.Forms.Padding(2);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(97, 93);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logo.TabIndex = 1;
+            this.logo.TabStop = false;
             // 
             // formAF
             // 
@@ -462,24 +466,24 @@ namespace AutoFact
             this.Controls.Add(this.logo);
             this.Controls.Add(this.pageselection);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "formAF";
             this.Text = "AutoFact";
             this.pageselection.ResumeLayout(false);
             this.firstpage.ResumeLayout(false);
             this.firstpage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.servicespage.ResumeLayout(false);
             this.servicespage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.devispage.ResumeLayout(false);
             this.devispage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.clientpage.ResumeLayout(false);
             this.clientpage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
 
         }
