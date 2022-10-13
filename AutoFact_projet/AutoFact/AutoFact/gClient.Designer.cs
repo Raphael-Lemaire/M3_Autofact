@@ -40,90 +40,104 @@
             this.tbLastName = new System.Windows.Forms.TextBox();
             this.tbFirstName = new System.Windows.Forms.TextBox();
             this.logo = new System.Windows.Forms.PictureBox();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonBack = new System.Windows.Forms.Button();
+            this.rbBack = new CustomControls.RJControls.RButton();
+            this.rbAdd = new CustomControls.RJControls.RButton();
+            this.tbRecherche = new System.Windows.Forms.TextBox();
+            this.rButton1 = new CustomControls.RJControls.RButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(98, 322);
+            this.labelAddress.Location = new System.Drawing.Point(551, 237);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(45, 13);
             this.labelAddress.TabIndex = 21;
             this.labelAddress.Text = "Adresse";
+            this.labelAddress.Click += new System.EventHandler(this.labelAddress_Click);
             // 
             // labelEmailAddress
             // 
             this.labelEmailAddress.AutoSize = true;
-            this.labelEmailAddress.Location = new System.Drawing.Point(68, 282);
+            this.labelEmailAddress.Location = new System.Drawing.Point(348, 237);
             this.labelEmailAddress.Name = "labelEmailAddress";
             this.labelEmailAddress.Size = new System.Drawing.Size(75, 13);
             this.labelEmailAddress.TabIndex = 20;
             this.labelEmailAddress.Text = "Adresse e-mail";
+            this.labelEmailAddress.Click += new System.EventHandler(this.labelEmailAddress_Click);
             // 
             // labelNumberPhone
             // 
             this.labelNumberPhone.AutoSize = true;
-            this.labelNumberPhone.Location = new System.Drawing.Point(45, 240);
+            this.labelNumberPhone.Location = new System.Drawing.Point(122, 237);
             this.labelNumberPhone.Name = "labelNumberPhone";
             this.labelNumberPhone.Size = new System.Drawing.Size(98, 13);
             this.labelNumberPhone.TabIndex = 19;
             this.labelNumberPhone.Text = "Numéro Téléphone";
+            this.labelNumberPhone.Click += new System.EventHandler(this.labelNumberPhone_Click);
             // 
             // labelNom
             // 
             this.labelNom.AutoSize = true;
-            this.labelNom.Location = new System.Drawing.Point(67, 201);
+            this.labelNom.Location = new System.Drawing.Point(474, 173);
             this.labelNom.Name = "labelNom";
             this.labelNom.Size = new System.Drawing.Size(76, 13);
             this.labelNom.TabIndex = 18;
             this.labelNom.Text = "Nom de famille";
+            this.labelNom.Click += new System.EventHandler(this.labelNom_Click);
             // 
             // labelFirstName
             // 
             this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Location = new System.Drawing.Point(100, 161);
+            this.labelFirstName.Location = new System.Drawing.Point(195, 169);
             this.labelFirstName.Name = "labelFirstName";
             this.labelFirstName.Size = new System.Drawing.Size(43, 13);
             this.labelFirstName.TabIndex = 17;
             this.labelFirstName.Text = "Prénom";
+            this.labelFirstName.Click += new System.EventHandler(this.labelFirstName_Click);
             // 
             // tbAddress
             // 
-            this.tbAddress.Location = new System.Drawing.Point(149, 319);
+            this.tbAddress.Location = new System.Drawing.Point(602, 234);
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.Size = new System.Drawing.Size(100, 20);
             this.tbAddress.TabIndex = 16;
+            this.tbAddress.TextChanged += new System.EventHandler(this.tbAddress_TextChanged);
             // 
             // tbEmailAddress
             // 
-            this.tbEmailAddress.Location = new System.Drawing.Point(149, 279);
+            this.tbEmailAddress.Location = new System.Drawing.Point(429, 234);
             this.tbEmailAddress.Name = "tbEmailAddress";
             this.tbEmailAddress.Size = new System.Drawing.Size(100, 20);
             this.tbEmailAddress.TabIndex = 15;
+            this.tbEmailAddress.TextChanged += new System.EventHandler(this.tbEmailAddress_TextChanged);
             // 
             // tbNumberPhone
             // 
-            this.tbNumberPhone.Location = new System.Drawing.Point(149, 237);
+            this.tbNumberPhone.Location = new System.Drawing.Point(226, 234);
             this.tbNumberPhone.Name = "tbNumberPhone";
             this.tbNumberPhone.Size = new System.Drawing.Size(100, 20);
             this.tbNumberPhone.TabIndex = 14;
+            this.tbNumberPhone.TextChanged += new System.EventHandler(this.tbNumberPhone_TextChanged);
             // 
             // tbLastName
             // 
-            this.tbLastName.Location = new System.Drawing.Point(149, 194);
+            this.tbLastName.Location = new System.Drawing.Point(556, 166);
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(100, 20);
             this.tbLastName.TabIndex = 13;
+            this.tbLastName.TextChanged += new System.EventHandler(this.tbLastName_TextChanged);
             // 
             // tbFirstName
             // 
-            this.tbFirstName.Location = new System.Drawing.Point(149, 158);
+            this.tbFirstName.Location = new System.Drawing.Point(244, 166);
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(100, 20);
             this.tbFirstName.TabIndex = 12;
+            this.tbFirstName.TextChanged += new System.EventHandler(this.tbFirstName_TextChanged);
             // 
             // logo
             // 
@@ -136,32 +150,91 @@
             this.logo.TabIndex = 22;
             this.logo.TabStop = false;
             // 
-            // buttonAdd
+            // rbBack
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(611, 314);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
-            this.buttonAdd.TabIndex = 24;
-            this.buttonAdd.Text = "Ajouter";
-            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.rbBack.BackColor = System.Drawing.Color.RoyalBlue;
+            this.rbBack.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.rbBack.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rbBack.BorderRadius = 12;
+            this.rbBack.BorderSize = 0;
+            this.rbBack.FlatAppearance.BorderSize = 0;
+            this.rbBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbBack.ForeColor = System.Drawing.Color.White;
+            this.rbBack.Location = new System.Drawing.Point(244, 446);
+            this.rbBack.Name = "rbBack";
+            this.rbBack.Size = new System.Drawing.Size(100, 32);
+            this.rbBack.TabIndex = 25;
+            this.rbBack.Text = "Annuler";
+            this.rbBack.TextColor = System.Drawing.Color.White;
+            this.rbBack.UseVisualStyleBackColor = false;
             // 
-            // buttonBack
+            // rbAdd
             // 
-            this.buttonBack.Location = new System.Drawing.Point(474, 314);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(75, 23);
-            this.buttonBack.TabIndex = 23;
-            this.buttonBack.Text = "Annuler";
-            this.buttonBack.UseVisualStyleBackColor = true;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            this.rbAdd.BackColor = System.Drawing.Color.RoyalBlue;
+            this.rbAdd.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.rbAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rbAdd.BorderRadius = 12;
+            this.rbAdd.BorderSize = 0;
+            this.rbAdd.FlatAppearance.BorderSize = 0;
+            this.rbAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbAdd.ForeColor = System.Drawing.Color.White;
+            this.rbAdd.Location = new System.Drawing.Point(494, 446);
+            this.rbAdd.Name = "rbAdd";
+            this.rbAdd.Size = new System.Drawing.Size(100, 32);
+            this.rbAdd.TabIndex = 26;
+            this.rbAdd.Text = "Ajouter";
+            this.rbAdd.TextColor = System.Drawing.Color.White;
+            this.rbAdd.UseVisualStyleBackColor = false;
+            // 
+            // tbRecherche
+            // 
+            this.tbRecherche.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.tbRecherche.Location = new System.Drawing.Point(157, 54);
+            this.tbRecherche.Multiline = true;
+            this.tbRecherche.Name = "tbRecherche";
+            this.tbRecherche.Size = new System.Drawing.Size(220, 19);
+            this.tbRecherche.TabIndex = 28;
+            this.tbRecherche.Text = "recherche";
+            this.tbRecherche.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // rButton1
+            // 
+            this.rButton1.BackColor = System.Drawing.Color.LightCyan;
+            this.rButton1.BackgroundColor = System.Drawing.Color.LightCyan;
+            this.rButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rButton1.BorderRadius = 15;
+            this.rButton1.BorderSize = 0;
+            this.rButton1.FlatAppearance.BorderSize = 0;
+            this.rButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rButton1.ForeColor = System.Drawing.Color.Black;
+            this.rButton1.Location = new System.Drawing.Point(383, 47);
+            this.rButton1.Name = "rButton1";
+            this.rButton1.Size = new System.Drawing.Size(100, 33);
+            this.rButton1.TabIndex = 27;
+            this.rButton1.Text = "Recherche";
+            this.rButton1.TextColor = System.Drawing.Color.Black;
+            this.rButton1.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Gray;
+            this.pictureBox1.Location = new System.Drawing.Point(41, 121);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(798, 310);
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
             // 
             // gClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.buttonBack);
+            this.ClientSize = new System.Drawing.Size(851, 513);
+            this.Controls.Add(this.tbRecherche);
+            this.Controls.Add(this.rButton1);
+            this.Controls.Add(this.rbAdd);
+            this.Controls.Add(this.rbBack);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.labelAddress);
             this.Controls.Add(this.labelEmailAddress);
@@ -173,9 +246,11 @@
             this.Controls.Add(this.tbNumberPhone);
             this.Controls.Add(this.tbLastName);
             this.Controls.Add(this.tbFirstName);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "gClient";
             this.Text = "Gérer les clients";
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,7 +269,10 @@
         private System.Windows.Forms.TextBox tbLastName;
         private System.Windows.Forms.TextBox tbFirstName;
         private System.Windows.Forms.PictureBox logo;
-        private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.TextBox tbRecherche;
+        private CustomControls.RJControls.RButton rbBack;
+        private CustomControls.RJControls.RButton rbAdd;
+        private CustomControls.RJControls.RButton rButton1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
