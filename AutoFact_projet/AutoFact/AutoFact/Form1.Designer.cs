@@ -29,9 +29,9 @@ namespace AutoFact
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAF));
             this.pageselection = new System.Windows.Forms.TabControl();
             this.firstpage = new System.Windows.Forms.TabPage();
@@ -45,6 +45,8 @@ namespace AutoFact
             this.colca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colannee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.servicespage = new System.Windows.Forms.TabPage();
+            this.rButton2 = new CustomControls.RJControls.RButton();
+            this.rButton1 = new CustomControls.RJControls.RButton();
             this.filtrecatservice = new System.Windows.Forms.ComboBox();
             this.dsservice = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -52,6 +54,7 @@ namespace AutoFact
             this.nom_des_services = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prix_unitaire = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.devispage = new System.Windows.Forms.TabPage();
+            this.rButton3 = new CustomControls.RJControls.RButton();
             this.filtreDevis = new System.Windows.Forms.ComboBox();
             this.ldDevis = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
@@ -59,17 +62,14 @@ namespace AutoFact
             this.nomClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prixTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientpage = new System.Windows.Forms.TabPage();
+            this.rButton5 = new CustomControls.RJControls.RButton();
+            this.rButton4 = new CustomControls.RJControls.RButton();
             this.listecliClient = new System.Windows.Forms.Label();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.numeroClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomClientc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parametrepage = new System.Windows.Forms.TabPage();
             this.logo = new System.Windows.Forms.PictureBox();
-            this.rButton2 = new CustomControls.RJControls.RButton();
-            this.rButton1 = new CustomControls.RJControls.RButton();
-            this.rButton3 = new CustomControls.RJControls.RButton();
-            this.rButton5 = new CustomControls.RJControls.RButton();
-            this.rButton4 = new CustomControls.RJControls.RButton();
             this.pageselection.SuspendLayout();
             this.firstpage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -126,19 +126,19 @@ namespace AutoFact
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea11.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea11);
-            legend11.Name = "Legend1";
-            this.chart1.Legends.Add(legend11);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(541, 107);
             this.chart1.Name = "chart1";
             this.chart1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series11.Legend = "Legend1";
-            series11.Name = "Series1";
-            series11.YValuesPerPoint = 4;
-            this.chart1.Series.Add(series11);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.YValuesPerPoint = 4;
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(350, 350);
             this.chart1.TabIndex = 5;
             this.chart1.Text = "chart1";
@@ -250,6 +250,46 @@ namespace AutoFact
             this.servicespage.Text = "Services";
             this.servicespage.UseVisualStyleBackColor = true;
             // 
+            // rButton2
+            // 
+            this.rButton2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.rButton2.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.rButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rButton2.BorderRadius = 12;
+            this.rButton2.BorderSize = 0;
+            this.rButton2.FlatAppearance.BorderSize = 0;
+            this.rButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rButton2.ForeColor = System.Drawing.Color.White;
+            this.rButton2.Location = new System.Drawing.Point(823, 31);
+            this.rButton2.Name = "rButton2";
+            this.rButton2.Size = new System.Drawing.Size(100, 32);
+            this.rButton2.TabIndex = 6;
+            this.rButton2.Text = "Ajouter";
+            this.rButton2.TextColor = System.Drawing.Color.White;
+            this.rButton2.UseVisualStyleBackColor = false;
+            this.rButton2.Click += new System.EventHandler(this.rButton2_Click);
+            // 
+            // rButton1
+            // 
+            this.rButton1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.rButton1.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.rButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rButton1.BorderRadius = 12;
+            this.rButton1.BorderSize = 0;
+            this.rButton1.FlatAppearance.BorderSize = 0;
+            this.rButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rButton1.ForeColor = System.Drawing.Color.White;
+            this.rButton1.Location = new System.Drawing.Point(717, 31);
+            this.rButton1.Name = "rButton1";
+            this.rButton1.Size = new System.Drawing.Size(100, 32);
+            this.rButton1.TabIndex = 5;
+            this.rButton1.Text = "Gérer";
+            this.rButton1.TextColor = System.Drawing.Color.White;
+            this.rButton1.UseVisualStyleBackColor = false;
+            this.rButton1.Click += new System.EventHandler(this.rButton1_Click);
+            // 
             // filtrecatservice
             // 
             this.filtrecatservice.FormattingEnabled = true;
@@ -322,6 +362,26 @@ namespace AutoFact
             this.devispage.Text = "Devis";
             this.devispage.UseVisualStyleBackColor = true;
             // 
+            // rButton3
+            // 
+            this.rButton3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.rButton3.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.rButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rButton3.BorderRadius = 12;
+            this.rButton3.BorderSize = 0;
+            this.rButton3.FlatAppearance.BorderSize = 0;
+            this.rButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rButton3.ForeColor = System.Drawing.Color.White;
+            this.rButton3.Location = new System.Drawing.Point(823, 31);
+            this.rButton3.Name = "rButton3";
+            this.rButton3.Size = new System.Drawing.Size(100, 32);
+            this.rButton3.TabIndex = 4;
+            this.rButton3.Text = "Gérer";
+            this.rButton3.TextColor = System.Drawing.Color.White;
+            this.rButton3.UseVisualStyleBackColor = false;
+            this.rButton3.Click += new System.EventHandler(this.rButton3_Click);
+            // 
             // filtreDevis
             // 
             this.filtreDevis.FormattingEnabled = true;
@@ -387,6 +447,46 @@ namespace AutoFact
             this.clientpage.Text = "Client";
             this.clientpage.UseVisualStyleBackColor = true;
             // 
+            // rButton5
+            // 
+            this.rButton5.BackColor = System.Drawing.Color.RoyalBlue;
+            this.rButton5.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.rButton5.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rButton5.BorderRadius = 12;
+            this.rButton5.BorderSize = 0;
+            this.rButton5.FlatAppearance.BorderSize = 0;
+            this.rButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rButton5.ForeColor = System.Drawing.Color.White;
+            this.rButton5.Location = new System.Drawing.Point(823, 31);
+            this.rButton5.Name = "rButton5";
+            this.rButton5.Size = new System.Drawing.Size(100, 32);
+            this.rButton5.TabIndex = 5;
+            this.rButton5.Text = "Ajouter";
+            this.rButton5.TextColor = System.Drawing.Color.White;
+            this.rButton5.UseVisualStyleBackColor = false;
+            this.rButton5.Click += new System.EventHandler(this.rButton5_Click);
+            // 
+            // rButton4
+            // 
+            this.rButton4.BackColor = System.Drawing.Color.RoyalBlue;
+            this.rButton4.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.rButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rButton4.BorderRadius = 12;
+            this.rButton4.BorderSize = 0;
+            this.rButton4.FlatAppearance.BorderSize = 0;
+            this.rButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rButton4.ForeColor = System.Drawing.Color.White;
+            this.rButton4.Location = new System.Drawing.Point(717, 31);
+            this.rButton4.Name = "rButton4";
+            this.rButton4.Size = new System.Drawing.Size(100, 32);
+            this.rButton4.TabIndex = 4;
+            this.rButton4.Text = "Gérer";
+            this.rButton4.TextColor = System.Drawing.Color.White;
+            this.rButton4.UseVisualStyleBackColor = false;
+            this.rButton4.Click += new System.EventHandler(this.rButton4_Click);
+            // 
             // listecliClient
             // 
             this.listecliClient.AutoSize = true;
@@ -441,106 +541,6 @@ namespace AutoFact
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logo.TabIndex = 1;
             this.logo.TabStop = false;
-            // 
-            // rButton2
-            // 
-            this.rButton2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.rButton2.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.rButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rButton2.BorderRadius = 12;
-            this.rButton2.BorderSize = 0;
-            this.rButton2.FlatAppearance.BorderSize = 0;
-            this.rButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rButton2.ForeColor = System.Drawing.Color.White;
-            this.rButton2.Location = new System.Drawing.Point(823, 31);
-            this.rButton2.Name = "rButton2";
-            this.rButton2.Size = new System.Drawing.Size(100, 32);
-            this.rButton2.TabIndex = 6;
-            this.rButton2.Text = "Ajouter";
-            this.rButton2.TextColor = System.Drawing.Color.White;
-            this.rButton2.UseVisualStyleBackColor = false;
-            this.rButton2.Click += new System.EventHandler(this.rButton2_Click);
-            // 
-            // rButton1
-            // 
-            this.rButton1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.rButton1.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.rButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rButton1.BorderRadius = 12;
-            this.rButton1.BorderSize = 0;
-            this.rButton1.FlatAppearance.BorderSize = 0;
-            this.rButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rButton1.ForeColor = System.Drawing.Color.White;
-            this.rButton1.Location = new System.Drawing.Point(717, 31);
-            this.rButton1.Name = "rButton1";
-            this.rButton1.Size = new System.Drawing.Size(100, 32);
-            this.rButton1.TabIndex = 5;
-            this.rButton1.Text = "Gérer";
-            this.rButton1.TextColor = System.Drawing.Color.White;
-            this.rButton1.UseVisualStyleBackColor = false;
-            this.rButton1.Click += new System.EventHandler(this.rButton1_Click);
-            // 
-            // rButton3
-            // 
-            this.rButton3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.rButton3.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.rButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rButton3.BorderRadius = 12;
-            this.rButton3.BorderSize = 0;
-            this.rButton3.FlatAppearance.BorderSize = 0;
-            this.rButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rButton3.ForeColor = System.Drawing.Color.White;
-            this.rButton3.Location = new System.Drawing.Point(823, 31);
-            this.rButton3.Name = "rButton3";
-            this.rButton3.Size = new System.Drawing.Size(100, 32);
-            this.rButton3.TabIndex = 4;
-            this.rButton3.Text = "Gérer";
-            this.rButton3.TextColor = System.Drawing.Color.White;
-            this.rButton3.UseVisualStyleBackColor = false;
-            this.rButton3.Click += new System.EventHandler(this.rButton3_Click);
-            // 
-            // rButton5
-            // 
-            this.rButton5.BackColor = System.Drawing.Color.RoyalBlue;
-            this.rButton5.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.rButton5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rButton5.BorderRadius = 12;
-            this.rButton5.BorderSize = 0;
-            this.rButton5.FlatAppearance.BorderSize = 0;
-            this.rButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rButton5.ForeColor = System.Drawing.Color.White;
-            this.rButton5.Location = new System.Drawing.Point(823, 31);
-            this.rButton5.Name = "rButton5";
-            this.rButton5.Size = new System.Drawing.Size(100, 32);
-            this.rButton5.TabIndex = 5;
-            this.rButton5.Text = "Ajouter";
-            this.rButton5.TextColor = System.Drawing.Color.White;
-            this.rButton5.UseVisualStyleBackColor = false;
-            this.rButton5.Click += new System.EventHandler(this.rButton5_Click);
-            // 
-            // rButton4
-            // 
-            this.rButton4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.rButton4.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.rButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rButton4.BorderRadius = 12;
-            this.rButton4.BorderSize = 0;
-            this.rButton4.FlatAppearance.BorderSize = 0;
-            this.rButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rButton4.ForeColor = System.Drawing.Color.White;
-            this.rButton4.Location = new System.Drawing.Point(717, 31);
-            this.rButton4.Name = "rButton4";
-            this.rButton4.Size = new System.Drawing.Size(100, 32);
-            this.rButton4.TabIndex = 4;
-            this.rButton4.Text = "Gérer";
-            this.rButton4.TextColor = System.Drawing.Color.White;
-            this.rButton4.UseVisualStyleBackColor = false;
-            this.rButton4.Click += new System.EventHandler(this.rButton4_Click);
             // 
             // formAF
             // 
