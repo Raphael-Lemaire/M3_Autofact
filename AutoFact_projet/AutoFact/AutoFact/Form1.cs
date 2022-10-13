@@ -37,36 +37,6 @@ namespace AutoFact
 
         }
 
-        private void gererService_Click(object sender, EventArgs e)
-        {
-            gService gS = new gService();
-            gS.Show();
-        }
-
-        private void gererDevis_Click(object sender, EventArgs e)
-        {
-            gDevis gD = new gDevis();
-            gD.Show();
-        }
-
-        private void addService_Click(object sender, EventArgs e)
-        {
-            aService aS = new aService();
-            aS.Show();
-        }
-
-        private void gererClient_Click(object sender, EventArgs e)
-        {
-            gClient gC = new gClient();
-            gC.Show();
-        }
-
-        private void addClient_Click(object sender, EventArgs e)
-        {
-            aClient aC = new aClient();
-            aC.Show();
-        }
-
         private void rvs_Click(object sender, EventArgs e)
         {
 
@@ -75,6 +45,36 @@ namespace AutoFact
         private void chart1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void rButton1_Click(object sender, EventArgs e)
+        {
+            gService gS = new gService();
+            gS.Show();
+        }
+
+        private void rButton2_Click(object sender, EventArgs e)
+        {
+            aService aS = new aService();
+            aS.Show();
+        }
+
+        private void rButton3_Click(object sender, EventArgs e)
+        {
+            gDevis gD = new gDevis();
+            gD.Show();
+        }
+
+        private void rButton4_Click(object sender, EventArgs e)
+        {
+            gClient gC = new gClient();
+            gC.Show();
+        }
+
+        private void rButton5_Click(object sender, EventArgs e)
+        {
+            aClient aC = new aClient();
+            aC.Show();
         }
     }
 }
