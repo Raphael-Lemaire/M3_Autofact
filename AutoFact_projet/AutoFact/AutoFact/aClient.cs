@@ -67,24 +67,7 @@ namespace AutoFact
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                try
-                {
-
-
-                    SQLiteConnection AutoFact = new SQLiteConnection(ConnectionString);
-
-                    AutoFact.Open();
-                    SQLiteCommand AddClient= AutoFact.CreateCommand();
-                    Console.WriteLine("A");
-                    AddClient.CommandText = "INSERT INTO (Nom, Prenom) FROM Adherents Order By (Nom);";
-                    Console.WriteLine("A");
-                    AddClient.ExecuteNonQuery();
-                    Console.WriteLine("A");
-                    AutoFact.Close();
-                }
-            }
+           
         }
     }
     
