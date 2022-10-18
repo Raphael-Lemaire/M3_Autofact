@@ -34,8 +34,6 @@ namespace AutoFact
 
         //setter
 
-        public void setId(int anId) {this._Id = anId;}
-
 
         public void setName(string aName) {this._Name=aName;}
 

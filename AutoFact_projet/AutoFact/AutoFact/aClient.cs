@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,9 +17,11 @@ namespace AutoFact
         public aClient()
         {
             InitializeComponent();
+
         }
 
-        private void aClient_Load(object sender, EventArgs e)
+
+            private void aClient_Load(object sender, EventArgs e)
         {
 
         }
@@ -36,30 +39,36 @@ namespace AutoFact
 
         private void tbLastName_TextChanged(object sender, EventArgs e)
         {
-            string LastName = (tbLastName.Text); 
+            string _LastName = (tbLastName.Text); 
         }
 
         private void tbNumberPhone_TextChanged(object sender, EventArgs e)
         {
-            string NumberPhone = (tbNumberPhone.Text);
+            string _NumberPhone = (tbNumberPhone.Text);
         }
 
         private void tbEmailAddress_TextChanged(object sender, EventArgs e)
         {
-            string EmailAddress = (tbEmailAddress.Text);
+            string _EmailAddress = (tbEmailAddress.Text);
         }
 
         private void tbAddress_TextChanged(object sender, EventArgs e)
         {
-            string Address = (tbAddress.Text);
+            string _Address = (tbAddress.Text);
         }
 
         private void rButton1_Click(object sender, EventArgs e)
         {
-            
-           
-        }
+            string conString = @"Data Source= autofact.db";
+            SQLiteConnection Conn = new SQLiteConnection(conString);
+            Conn.Open();
+            SQLiteCommand SQLCmd1 = Conn.CreateCommand();
+            SQLiteCommand cmd = new SQLiteCommand("INSERT INTO customer (first_name,last_name, phone_number, mail)" +
+                "VALUES ('_FirstName','_LastName' ,'_NumberPhone','_EmailAddress');");
 
+            Conn.Close();
+        }
+       
         private void rbBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -67,7 +76,11 @@ namespace AutoFact
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-           
+        }
+
+        private void labelFirstName_Click(object sender, EventArgs e)
+        {
+
         }
     }
     

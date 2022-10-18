@@ -98,6 +98,7 @@
             this.labelFirstName.Size = new System.Drawing.Size(43, 13);
             this.labelFirstName.TabIndex = 7;
             this.labelFirstName.Text = "Prénom";
+            this.labelFirstName.Click += new System.EventHandler(this.labelFirstName_Click);
             // 
             // labelNom
             // 

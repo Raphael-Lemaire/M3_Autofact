@@ -35,12 +35,13 @@ namespace AutoFact
 
                 _instance = new Database();
             }
-            // SQLiteConnection Conn = new SQLiteConnection(conString);
-            //SQLiteCommand command = new SQLiteCommand();
+             SQLiteConnection Conn = new SQLiteConnection(conString);
+             SQLiteCommand command = new SQLiteCommand();
             return _instance;
         }
         public SQLiteConnection getConnection()
         {
+                
                 SQLiteConnection Conn = new SQLiteConnection(conString);
                 Conn.Open();
                 Console.WriteLine("Connected");

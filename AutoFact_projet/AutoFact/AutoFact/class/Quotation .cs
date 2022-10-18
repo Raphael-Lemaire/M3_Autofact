@@ -39,7 +39,7 @@ namespace AutoFact
         //setter
 
 
-        public void setId(int anId) { this._Id = anId; }
+     
         public void setName(string anName) {this._Name=anName;}
         public void setTotalPrice( float aTotalPrice) {this._Total_Price = aTotalPrice;}
         public void setStatus(string aStatus) { this._Status = aStatus; }
