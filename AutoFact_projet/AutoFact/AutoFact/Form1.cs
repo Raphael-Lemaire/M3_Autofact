@@ -76,5 +76,10 @@ namespace AutoFact
             aClient aC = new aClient();
             aC.Show();
         }
+
+        private void formAF_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
