@@ -28,8 +28,8 @@ namespace AutoFact
 
         //setter
 
-        public void setId(int anId)
-        {this._Id=anId;}
+
+
 
         public void setLibelle(string aLibelle) {this._Libelle=aLibelle;}
     }
