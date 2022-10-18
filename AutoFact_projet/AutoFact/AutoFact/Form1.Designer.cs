@@ -297,7 +297,7 @@ namespace AutoFact
             "Par défaut",
             "Service",
             "Produit"});
-            this.filtrecatservice.Location = new System.Drawing.Point(636, 33);
+            this.filtrecatservice.Location = new System.Drawing.Point(636, 35);
             this.filtrecatservice.Name = "filtrecatservice";
             this.filtrecatservice.Size = new System.Drawing.Size(75, 24);
             this.filtrecatservice.TabIndex = 4;
@@ -555,6 +555,7 @@ namespace AutoFact
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "formAF";
             this.Text = "AutoFact";
+            this.Load += new System.EventHandler(this.formAF_Load);
             this.pageselection.ResumeLayout(false);
             this.firstpage.ResumeLayout(false);
             this.firstpage.PerformLayout();
