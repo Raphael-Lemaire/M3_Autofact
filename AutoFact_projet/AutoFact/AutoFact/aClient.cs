@@ -6,6 +6,7 @@ using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -59,14 +60,19 @@ namespace AutoFact
 
         private void rButton1_Click(object sender, EventArgs e)
         {
-            string conString = @"Data Source= autofact.db";
-            SQLiteConnection Conn = new SQLiteConnection(conString);
-            Conn.Open();
-            SQLiteCommand SQLCmd1 = Conn.CreateCommand();
-            SQLiteCommand cmd = new SQLiteCommand("INSERT INTO customer (first_name,last_name, phone_number, mail)" +
-                "VALUES ('_FirstName','_LastName' ,'_NumberPhone','_EmailAddress');");
 
-            Conn.Close();
+            SQLiteConnection db = Database.getInstance().getConnection();
+
+
+            SQLiteCommand sqlite_cmd;
+            string CreateUser = @"INSERT INTO customer (first_name,last_name, phone_number, mail, compagny_name)"
++ "VALUES ('Dupond','Pierre','07202684','pierre.dupond@gmail.com','test')";
+
+            sqlite_cmd = db.CreateCommand();
+            sqlite_cmd.CommandText = CreateUser;
+            sqlite_cmd.ExecuteNonQuery();
+            
+       
         }
        
         private void rbBack_Click(object sender, EventArgs e)
