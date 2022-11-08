@@ -17,8 +17,9 @@ namespace AutoFact
     {
         public aClient()
         {
+           
             InitializeComponent();
-
+          
         }
 
 
@@ -27,9 +28,9 @@ namespace AutoFact
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void tbFirstName_TextChanged(object sender, EventArgs e)
         {
-            string FirstName = (tbFirstName.Text);
+            string _FirstName = (tbFirstName.Text);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -63,18 +64,20 @@ namespace AutoFact
 
             SQLiteConnection db = Database.getInstance().getConnection();
 
+            db.Open();
+            SQLiteCommand AjoutClient;
+    
+            string CreateUser = @"INSERT INTO customer (first_name,last_name, phone_number, mail) VALUES ('" + tbFirstName.Text + "','" + tbLastName.Text + "','" + tbNumberPhone.Text + "','" + tbAddress.Text + "');";
 
-            SQLiteCommand sqlite_cmd;
-            string CreateUser = @"INSERT INTO customer (first_name,last_name, phone_number, mail, compagny_name)"
-+ "VALUES ('Dupond','Pierre','07202684','pierre.dupond@gmail.com','test')";
-
-            sqlite_cmd = db.CreateCommand();
-            sqlite_cmd.CommandText = CreateUser;
-            sqlite_cmd.ExecuteNonQuery();
+            AjoutClient = db.CreateCommand();
+            AjoutClient.CommandText = CreateUser;
+            AjoutClient.ExecuteNonQuery();
+            db.Close();
+            MessageBox.Show("Votre client à bien été ajouté");
             
-       
         }
-       
+        
+    
         private void rbBack_Click(object sender, EventArgs e)
         {
             this.Close();
