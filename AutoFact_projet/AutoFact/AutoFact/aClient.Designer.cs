@@ -55,7 +55,7 @@
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(100, 20);
             this.tbFirstName.TabIndex = 2;
-            this.tbFirstName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbFirstName.TextChanged += new System.EventHandler(this.tbFirstName_TextChanged);
             // 
             // tbLastName
             // 
@@ -189,7 +189,7 @@
             this.rbAdd.Text = "Ajouter";
             this.rbAdd.TextColor = System.Drawing.Color.White;
             this.rbAdd.UseVisualStyleBackColor = false;
-            this.rbAdd.Click += new System.EventHandler(this.rButton1_Click);
+            this.rbAdd.Click += new System.EventHandler(this.rbAdd_Click);
             // 
             // pictureBox1
             // 

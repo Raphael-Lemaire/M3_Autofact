@@ -15,6 +15,7 @@ namespace AutoFact
         private int _Phone_Number;
         private string _Email_Address;
         private string _Address;
+        public List<Customer> Customers = new List<Customer>();
 
 
         // construct
@@ -63,5 +64,6 @@ namespace AutoFact
 
 
     }
+
 
 }
