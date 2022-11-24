@@ -84,6 +84,7 @@
     </Compile>
     <Compile Include="class\Category.cs" />
     <Compile Include="class\Customer.cs" />
+    <Compile Include="class\Database.cs" />
     <Compile Include="class\DateModif.cs" />
     <Compile Include="class\Product.cs" />
     <Compile Include="class\Quotation .cs" />
@@ -113,6 +114,7 @@
     <Compile Include="gService.Designer.cs">
       <DependentUpon>gService.cs</DependentUpon>
     </Compile>
+    <Compile Include="model\QuotationModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="aClient.resx">

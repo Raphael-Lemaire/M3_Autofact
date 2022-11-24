@@ -12,7 +12,7 @@ namespace AutoFact
     {
         private static Database _instance = null;
         //private static readonly object _syncObject = new object();
-        private static string conString = @"Data Source= autofact.db";
+        private static string conString = @"Data Source= C:/Users/utilisateur/Desktop/autofact_mat/M3_Autofact/AutoFact_projet/AutoFact/AutoFact/bin/Debug/autofact.db";
         private Database()
         {
             SQLiteConnection Conn = new SQLiteConnection(conString);

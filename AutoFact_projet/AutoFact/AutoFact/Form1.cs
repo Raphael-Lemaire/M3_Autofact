@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace AutoFact
 {
@@ -79,6 +80,106 @@ namespace AutoFact
 
         private void formAF_Load(object sender, EventArgs e)
         {
+
+        }
+        private void fillchart()
+        {
+            SQLiteConnection db = Database.getInstance().getConnection();
+
+            //List<String> list = new List<String>();
+            //SQLiteCommand sqlite_cmd;
+            //string Createsql = @"";
+
+            //SQLiteCommand cmd = new SQLiteCommand(Createsql, db);
+            //Creer un data reader et execute la commande
+            //SQLiteDataReader dataReader = cmd.ExecuteReader();
+            DataSet ds = new DataSet();
+            SQLiteDataAdapter adapt = new SQLiteDataAdapter("SELECT name, unit_price FROM Product ORDER BY unit_price DESC", db);
+            adapt.Fill(ds);
+            chart1.DataSource = ds;
+
+            //chart1.Series["CA"].Points.AddXY(ds);
+
+            chart1.Series["CA"].XValueMember = "name";
+            //set the member columns of the chart data source used to data bind to the X-values of the series  
+            chart1.Series["CA"].YValueMembers = "unit_price";
+            chart1.Series["CA"].LabelForeColor = Color.Transparent;
+        }
+        private void rButton6_Click(object sender, EventArgs e)
+        {
+            fillchart();
+
+            /*SQLiteConnection db = Database.getInstance().getConnection();
+
+            //List<String> list = new List<String>();
+            //SQLiteCommand sqlite_cmd;
+            //string Createsql = @"";
+
+            //SQLiteCommand cmd = new SQLiteCommand(Createsql, db);
+            //Creer un data reader et execute la commande
+            //SQLiteDataReader dataReader = cmd.ExecuteReader();
+            DataSet ds = new DataSet();
+            SQLiteDataAdapter adapt = new SQLiteDataAdapter("SELECT name, unit_price FROM Product", db);
+            adapt.Fill(ds);
+            chart1.DataSource = ds;
+
+            chart1.Series["CA"].XValueMember = "name";
+            //set the member columns of the chart data source used to data bind to the X-values of the series  
+            chart1.Series["CA"].YValueMembers = "unit_price";
+
+
+
+            /*using (SQLiteCommand cmd = new SQLiteCommand("SELECT name, unit_price FROM Product;", db))
+            {
+                using (IDataReader dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        list.Add(dr[0].ToString());            
+                        chart1.Series["CA"].YValueMembers = dr[0];
+                    }
+                }
+            }
+
+            /*foreach(String uneentre in list)
+            {
+                //chart1.Series["CA"].Points.AddXY();
+                
+            }
+           /* sqlite_cmd = db.CreateCommand();
+            sqlite_cmd.CommandText = Createsql;
+            sqlite_cmd.ExecuteNonQuery();
+
+            chart1.Series["CA"].Points.AddXY("Ajay", "10000");
+            chart1.Series["CA"].Points.AddXY("Ramesh", "8000");
+            chart1.Series["CA"].Points.AddXY("Ankit", "7000");
+            chart1.Series["CA"].Points.AddXY("Gurmeet", "10000");
+            chart1.Series["CA"].Points.AddXY("Suresh", "8500");*/
+        }
+
+        private void servicespage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+        }
+
+        private void LoadGridview4_Click(object sender, EventArgs e)
+        {
+            SQLiteConnection db = Database.getInstance().getConnection();
+            SQLiteCommand cmd = new SQLiteCommand("SELECT (id) as Numéro, (name) as Nom, (total_price) as Total FROM quotation", db);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+
+            dt.Load(reader);
+            dataGridView4.DataSource = dt;
+            db.Close();
+
+
 
         }
     }
