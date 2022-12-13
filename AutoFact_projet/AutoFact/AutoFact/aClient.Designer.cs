@@ -34,14 +34,14 @@
             this.tbFirstName = new System.Windows.Forms.TextBox();
             this.tbLastName = new System.Windows.Forms.TextBox();
             this.tbNumberPhone = new System.Windows.Forms.TextBox();
-            this.tbEmailAddress = new System.Windows.Forms.TextBox();
-            this.tbAddress = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             this.labelFirstName = new System.Windows.Forms.Label();
             this.labelNom = new System.Windows.Forms.Label();
             this.labelNumberPhone = new System.Windows.Forms.Label();
             this.labelEmailAddress = new System.Windows.Forms.Label();
-            this.labelAddress = new System.Windows.Forms.Label();
             this.logo = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbCompagny = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +71,6 @@
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(100, 20);
             this.tbFirstName.TabIndex = 2;
-            this.tbFirstName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tbLastName
             // 
@@ -87,19 +86,12 @@
             this.tbNumberPhone.Size = new System.Drawing.Size(100, 20);
             this.tbNumberPhone.TabIndex = 4;
             // 
-            // tbEmailAddress
+            // tbEmail
             // 
-            this.tbEmailAddress.Location = new System.Drawing.Point(148, 283);
-            this.tbEmailAddress.Name = "tbEmailAddress";
-            this.tbEmailAddress.Size = new System.Drawing.Size(100, 20);
-            this.tbEmailAddress.TabIndex = 5;
-            // 
-            // tbAddress
-            // 
-            this.tbAddress.Location = new System.Drawing.Point(148, 323);
-            this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(100, 20);
-            this.tbAddress.TabIndex = 6;
+            this.tbEmail.Location = new System.Drawing.Point(148, 283);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(100, 20);
+            this.tbEmail.TabIndex = 5;
             // 
             // labelFirstName
             // 
@@ -137,15 +129,6 @@
             this.labelEmailAddress.TabIndex = 10;
             this.labelEmailAddress.Text = "Adresse e-mail";
             // 
-            // labelAddress
-            // 
-            this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(97, 326);
-            this.labelAddress.Name = "labelAddress";
-            this.labelAddress.Size = new System.Drawing.Size(45, 13);
-            this.labelAddress.TabIndex = 11;
-            this.labelAddress.Text = "Adresse";
-            // 
             // logo
             // 
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
@@ -157,19 +140,35 @@
             this.logo.TabIndex = 12;
             this.logo.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(80, 327);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "entreprise";
+            // 
+            // tbCompagny
+            // 
+            this.tbCompagny.Location = new System.Drawing.Point(148, 320);
+            this.tbCompagny.Name = "tbCompagny";
+            this.tbCompagny.Size = new System.Drawing.Size(100, 20);
+            this.tbCompagny.TabIndex = 14;
+            // 
             // aClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(815, 450);
+            this.Controls.Add(this.tbCompagny);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.logo);
-            this.Controls.Add(this.labelAddress);
             this.Controls.Add(this.labelEmailAddress);
             this.Controls.Add(this.labelNumberPhone);
             this.Controls.Add(this.labelNom);
             this.Controls.Add(this.labelFirstName);
-            this.Controls.Add(this.tbAddress);
-            this.Controls.Add(this.tbEmailAddress);
+            this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.tbNumberPhone);
             this.Controls.Add(this.tbLastName);
             this.Controls.Add(this.tbFirstName);
@@ -177,7 +176,6 @@
             this.Controls.Add(this.buttonBack);
             this.Name = "aClient";
             this.Text = "Ajouter un client";
-            this.Load += new System.EventHandler(this.aClient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -191,13 +189,13 @@
         private System.Windows.Forms.TextBox tbFirstName;
         private System.Windows.Forms.TextBox tbLastName;
         private System.Windows.Forms.TextBox tbNumberPhone;
-        private System.Windows.Forms.TextBox tbEmailAddress;
-        private System.Windows.Forms.TextBox tbAddress;
+        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label labelFirstName;
         private System.Windows.Forms.Label labelNom;
         private System.Windows.Forms.Label labelNumberPhone;
         private System.Windows.Forms.Label labelEmailAddress;
-        private System.Windows.Forms.Label labelAddress;
         private System.Windows.Forms.PictureBox logo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbCompagny;
     }
 }
