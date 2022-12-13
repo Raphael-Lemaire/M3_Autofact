@@ -45,7 +45,7 @@ namespace AutoFact
 
         private void chart1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void rButton1_Click(object sender, EventArgs e)
@@ -180,6 +180,23 @@ namespace AutoFact
             db.Close();
 
 
+
+        }
+
+        private void dataGridViewCustomer_Click(object sender, EventArgs e)
+        {
+                SQLiteConnection db = Database.getInstance().getConnection();
+                SQLiteCommand cmd = new SQLiteCommand("SELECT id, (first_name) as Prenom, (last_name) as Nom_Famille, (phone_number) as Numéro_de_téléplhone, mail, (compagny_name) as Nom_compagny FROM customer", db);
+                SQLiteDataReader reader = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+
+                dt.Load(reader);
+                dataGridViewCustomer.DataSource = dt;
+                db.Close();
+            }
+
+        private void dataGridViewCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
