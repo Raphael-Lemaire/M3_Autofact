@@ -11,6 +11,7 @@ using System.Data.SQLite;
 using AutoFact.model;
 using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Windows.Controls;
 
 namespace AutoFact
 {
@@ -183,6 +184,7 @@ namespace AutoFact
 
         private void dataGridViewCustomer_Click(object sender, EventArgs e)
         {
+
                 SQLiteConnection db = Database.getInstance().getConnection();
                 SQLiteCommand cmd = new SQLiteCommand("SELECT id, (first_name) as Prenom, (last_name) as 'Nom de Famille', (phone_number) as 'Numéro de téléplhone', mail, (compagny_name) as 'Nom de la compagnie' FROM customer", db);
                 SQLiteDataReader reader = cmd.ExecuteReader();
@@ -190,19 +192,11 @@ namespace AutoFact
 
                 dt.Load(reader);
                 dataGridViewCustomer.DataSource = dt;
-                db.Close();
-
-
-              
-            
-        }
-
-        private void Button_Delete_Click(object sender, EventArgs e)
-        {
- 
+                db.Close();  
         }
 
 
+        //todo suppression des données 
         private void bSearch_Click(object sender, EventArgs e)
         {
             string firstNameR = tbScreachCustomer.Text;
@@ -228,8 +222,41 @@ namespace AutoFact
             dt.Load(reader);
             dataGridViewCustomer.DataSource = dt;
             db.Close();
-
             dataGridViewCustomer.Refresh();
         }
+
+        private void Button_Delete_Click(object sender, EventArgs e)
+        {
+
+            int rowindex = dataGridViewCustomer.CurrentCell.RowIndex;
+            int columnindex = dataGridViewCustomer.CurrentCell.ColumnIndex;
+
+            int id = Convert.ToInt32(dataGridViewCustomer.Rows[rowindex].Cells[columnindex].Value);
+
+            int numRows = dataGridViewCustomer.SelectedCells.Count;
+
+            if (numRows > 1)
+            { // Traitement en fonction de l'option choisie par l'utilisateur
+                DialogResult confirmation = MessageBox.Show("Vous avez choisi de supprimer plusieur utilisateur voulez vous vraiment supprimer ces utilisateur?", "Confirmation", MessageBoxButtons.YesNo);
+
+                //Si le client appuis sur oui aloir
+                if (confirmation == DialogResult.Yes)
+                {
+                        CustomerModel.deleteCustommer(id, numRows);
+                        
+                    
+                }
+            }
+            else
+            {
+                CustomerModel.deleteCustommer(id, numRows);
+                dataGridViewCustomer.Update();
+
+            }
+
+            
+        }
+
+
     }
 }

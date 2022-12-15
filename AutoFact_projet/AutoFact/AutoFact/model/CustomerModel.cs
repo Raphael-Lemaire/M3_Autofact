@@ -1,16 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SQLite;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.SQLite;
 using System.Windows.Forms;
 
 namespace AutoFact.model
 {
     public static class CustomerModel
     {
+        /// <summary>
+        /// L'ajout du client 
+        /// </summary>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
+        /// <param name="email"></param>
+        /// <param name="numberphone"></param>
+        /// <param name="compagny"></param>
         public static void addCustomer(string firstName, string lastName, string email, string numberphone, string compagny)
         {
             //Connexion a la base de données
@@ -37,12 +39,22 @@ namespace AutoFact.model
             sqlite_cmd.ExecuteNonQuery();
         }
 
-        public static void deleteCustommer(int id)
+        /// <summary>
+        /// La suppression du client
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="numRows"></param>
+
+
+        public static void deleteCustommer(int id,int numRows)
         {
+            numRows = numRows;
             SQLiteConnection db = Database.getInstance().getConnection();
 
             //requete SQL
-            string queryDelete = "DELETE FROM customer WHERE id = @id";
+            string queryDelete = "DELETE from customer WHERE id = @id";
+               
+            
 
 
             SQLiteCommand sqlite_cmd = new SQLiteCommand(queryDelete, db);
@@ -50,22 +62,27 @@ namespace AutoFact.model
             // Ajouter les valeurs des paramètres de la requête
             sqlite_cmd.Parameters.AddWithValue("@id", id);
 
+            // Exécuter la requête d'insertion
+            sqlite_cmd.ExecuteNonQuery();
 
             string messageSucess = "Vous avez bien supprimer le client";
             string titleSucess = "Succès ! ";
             MessageBox.Show(messageSucess, titleSucess);
-
-            // Exécuter la requête d'insertion
-            sqlite_cmd.ExecuteNonQuery();
         }
 
-        public static void SearchCustommer(string firstNameR, string lastNameR, string emailR, string numberphoneR, string compagnyR)
+
+        /// <summary>
+        /// Modification des clients
+        /// </summary>
+        /// <param name="firstNameR"></param>
+        /// <param name="lastNameR"></param>
+        /// <param name="emailR"></param>
+        /// <param name="numberphoneR"></param>
+        /// <param name="compagnyR"></param>
+        public static void UpdateCustomer(string firstNameR, string lastNameR, string emailR, string numberphoneR, string compagnyR)
         {
+            string querySearch = ("UPDATE CLIENT");
             SQLiteConnection db = Database.getInstance().getConnection();
-
-            //requete SQL
-            string querySearch = ("SELECT id, (first_name) as Prenom, (last_name) as 'Nom de Famille', (phone_number) as 'Numéro de téléplhone', mail, (compagny_name) as 'Nom de la compagnie'\r\nFROM customer\r\nWHERE first_name LIKE '@firstNameR%'\r\nOR last_name LIKE '@lastNameR%'\r\nOR phone_number LIKE '@phone_numberR%'\r\nOR mail LIKE '@mailR%'\r\nOR compagny_name LIKE '@compagnyR%'");
-
 
             SQLiteCommand sqlite_cmd = new SQLiteCommand(querySearch, db);
 
@@ -76,10 +93,6 @@ namespace AutoFact.model
             sqlite_cmd.Parameters.AddWithValue("@mailR", emailR);
             sqlite_cmd.Parameters.AddWithValue("@compagnyR", compagnyR);
 
-
-
-
-
             // Exécuter la requête d'insertion  
             sqlite_cmd.ExecuteNonQuery();
         }
@@ -88,7 +101,7 @@ namespace AutoFact.model
 
 
     }
-     
 
-    
+
+
 }

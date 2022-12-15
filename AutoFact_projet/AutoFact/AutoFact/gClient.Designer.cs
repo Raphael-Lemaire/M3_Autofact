@@ -34,25 +34,25 @@
             this.labelNumberPhone = new System.Windows.Forms.Label();
             this.labelNom = new System.Windows.Forms.Label();
             this.labelFirstName = new System.Windows.Forms.Label();
-            this.tbAddress = new System.Windows.Forms.TextBox();
-            this.tbEmailAddress = new System.Windows.Forms.TextBox();
+            this.tbCompagny = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             this.tbNumberPhone = new System.Windows.Forms.TextBox();
             this.tbLastName = new System.Windows.Forms.TextBox();
             this.tbFirstName = new System.Windows.Forms.TextBox();
             this.logo = new System.Windows.Forms.PictureBox();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonBack = new System.Windows.Forms.Button();
+            this.rButton1 = new CustomControls.RJControls.RButton();
+            this.rButton2 = new CustomControls.RJControls.RButton();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(98, 322);
+            this.labelAddress.Location = new System.Drawing.Point(83, 322);
             this.labelAddress.Name = "labelAddress";
-            this.labelAddress.Size = new System.Drawing.Size(45, 13);
+            this.labelAddress.Size = new System.Drawing.Size(60, 13);
             this.labelAddress.TabIndex = 21;
-            this.labelAddress.Text = "Adresse";
+            this.labelAddress.Text = "Compagnie";
             // 
             // labelEmailAddress
             // 
@@ -90,19 +90,19 @@
             this.labelFirstName.TabIndex = 17;
             this.labelFirstName.Text = "Prénom";
             // 
-            // tbAddress
+            // tbCompagny
             // 
-            this.tbAddress.Location = new System.Drawing.Point(149, 319);
-            this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(100, 20);
-            this.tbAddress.TabIndex = 16;
+            this.tbCompagny.Location = new System.Drawing.Point(149, 319);
+            this.tbCompagny.Name = "tbCompagny";
+            this.tbCompagny.Size = new System.Drawing.Size(100, 20);
+            this.tbCompagny.TabIndex = 16;
             // 
-            // tbEmailAddress
+            // tbEmail
             // 
-            this.tbEmailAddress.Location = new System.Drawing.Point(149, 279);
-            this.tbEmailAddress.Name = "tbEmailAddress";
-            this.tbEmailAddress.Size = new System.Drawing.Size(100, 20);
-            this.tbEmailAddress.TabIndex = 15;
+            this.tbEmail.Location = new System.Drawing.Point(149, 279);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(100, 20);
+            this.tbEmail.TabIndex = 15;
             // 
             // tbNumberPhone
             // 
@@ -136,40 +136,57 @@
             this.logo.TabIndex = 22;
             this.logo.TabStop = false;
             // 
-            // buttonAdd
+            // rButton1
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(611, 314);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
-            this.buttonAdd.TabIndex = 24;
-            this.buttonAdd.Text = "Ajouter";
-            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.rButton1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.rButton1.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.rButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rButton1.BorderRadius = 15;
+            this.rButton1.BorderSize = 0;
+            this.rButton1.FlatAppearance.BorderSize = 0;
+            this.rButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rButton1.ForeColor = System.Drawing.Color.White;
+            this.rButton1.Location = new System.Drawing.Point(479, 367);
+            this.rButton1.Name = "rButton1";
+            this.rButton1.Size = new System.Drawing.Size(150, 40);
+            this.rButton1.TabIndex = 23;
+            this.rButton1.Text = "modifier";
+            this.rButton1.TextColor = System.Drawing.Color.White;
+            this.rButton1.UseVisualStyleBackColor = false;
             // 
-            // buttonBack
+            // rButton2
             // 
-            this.buttonBack.Location = new System.Drawing.Point(474, 314);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(75, 23);
-            this.buttonBack.TabIndex = 23;
-            this.buttonBack.Text = "Annuler";
-            this.buttonBack.UseVisualStyleBackColor = true;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            this.rButton2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.rButton2.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.rButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rButton2.BorderRadius = 15;
+            this.rButton2.BorderSize = 0;
+            this.rButton2.FlatAppearance.BorderSize = 0;
+            this.rButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rButton2.ForeColor = System.Drawing.Color.White;
+            this.rButton2.Location = new System.Drawing.Point(255, 367);
+            this.rButton2.Name = "rButton2";
+            this.rButton2.Size = new System.Drawing.Size(150, 40);
+            this.rButton2.TabIndex = 24;
+            this.rButton2.Text = "annuler";
+            this.rButton2.TextColor = System.Drawing.Color.White;
+            this.rButton2.UseVisualStyleBackColor = false;
             // 
             // gClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.buttonBack);
+            this.Controls.Add(this.rButton2);
+            this.Controls.Add(this.rButton1);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.labelAddress);
             this.Controls.Add(this.labelEmailAddress);
             this.Controls.Add(this.labelNumberPhone);
             this.Controls.Add(this.labelNom);
             this.Controls.Add(this.labelFirstName);
-            this.Controls.Add(this.tbAddress);
-            this.Controls.Add(this.tbEmailAddress);
+            this.Controls.Add(this.tbCompagny);
+            this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.tbNumberPhone);
             this.Controls.Add(this.tbLastName);
             this.Controls.Add(this.tbFirstName);
@@ -188,13 +205,13 @@
         private System.Windows.Forms.Label labelNumberPhone;
         private System.Windows.Forms.Label labelNom;
         private System.Windows.Forms.Label labelFirstName;
-        private System.Windows.Forms.TextBox tbAddress;
-        private System.Windows.Forms.TextBox tbEmailAddress;
+        private System.Windows.Forms.TextBox tbCompagny;
+        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.TextBox tbNumberPhone;
         private System.Windows.Forms.TextBox tbLastName;
         private System.Windows.Forms.TextBox tbFirstName;
         private System.Windows.Forms.PictureBox logo;
-        private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.Button buttonBack;
+        private CustomControls.RJControls.RButton rButton1;
+        private CustomControls.RJControls.RButton rButton2;
     }
 }

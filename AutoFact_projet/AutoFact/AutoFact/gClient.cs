@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoFact.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,6 +25,17 @@ namespace AutoFact
                 this.Hide();
 
             }
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            string firstName = tbFirstName.Text;
+            string lastName = tbLastName.Text;
+            string email = tbEmail.Text;
+            string numberphone = tbNumberPhone.Text;
+            string compagny = tbCompagny.Text;
+
+            CustomerModel.UpdateCustomer(firstName, lastName, email, numberphone, compagny);
         }
     }
 }
