@@ -89,3 +89,12 @@ C:\Users\utilisateur\Desktop\autofact_mat\M3_Autofact-Matteo\AutoFact_projet\Aut
 C:\Users\utilisateur\Desktop\autofact_mat\M3_Autofact-Matteo\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.exe
 C:\Users\utilisateur\Desktop\autofact_mat\M3_Autofact-Matteo\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.pdb
 C:\Users\utilisateur\Desktop\autofact_mat\M3_Autofact-Matteo\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.csproj.AssemblyReference.cache
+C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\EntityFramework.dll
+C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\System.Data.SQLite.dll
+C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\EntityFramework.xml
+C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\System.Data.SQLite.xml
+C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.csproj.CopyComplete

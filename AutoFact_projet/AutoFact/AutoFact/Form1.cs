@@ -65,11 +65,7 @@ namespace AutoFact
             gD.Show();
         }
 
-        private void rButton4_Click(object sender, EventArgs e)
-        {
-            gClient gC = new gClient();
-            gC.Show();
-        }
+
 
         private void rButton5_Click(object sender, EventArgs e)
         {
@@ -185,14 +181,14 @@ namespace AutoFact
         private void dataGridViewCustomer_Click(object sender, EventArgs e)
         {
 
-                SQLiteConnection db = Database.getInstance().getConnection();
-                SQLiteCommand cmd = new SQLiteCommand("SELECT id, (first_name) as Prenom, (last_name) as 'Nom de Famille', (phone_number) as 'Numéro de téléplhone', mail, (compagny_name) as 'Nom de la compagnie' FROM customer", db);
-                SQLiteDataReader reader = cmd.ExecuteReader();
-                DataTable dt = new DataTable();
+            SQLiteConnection db = Database.getInstance().getConnection();
+            SQLiteCommand cmd = new SQLiteCommand("SELECT id, (first_name) as Prenom, (last_name) as 'Nom de Famille', (phone_number) as 'Numéro de téléplhone', mail, (compagny_name) as 'Nom de la compagnie' FROM customer", db);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
 
-                dt.Load(reader);
-                dataGridViewCustomer.DataSource = dt;
-                db.Close();  
+            dt.Load(reader);
+            dataGridViewCustomer.DataSource = dt;
+            db.Close();
         }
 
 
@@ -227,36 +223,39 @@ namespace AutoFact
 
         private void Button_Delete_Click(object sender, EventArgs e)
         {
-
+            // Variable permettant d'avoir la cellule actuel
             int rowindex = dataGridViewCustomer.CurrentCell.RowIndex;
             int columnindex = dataGridViewCustomer.CurrentCell.ColumnIndex;
 
+            // Ligne permettant de mettre la valeur de l'id 
             int id = Convert.ToInt32(dataGridViewCustomer.Rows[rowindex].Cells[columnindex].Value);
 
             int numRows = dataGridViewCustomer.SelectedCells.Count;
-
             if (numRows > 1)
-            { // Traitement en fonction de l'option choisie par l'utilisateur
+            {
+                string messageError = ("Vous pouvez selectioner qu'une seule cellule.");
+                string titleError = ("Erreur");
+                MessageBox.Show(messageError, titleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                // Traitement en fonction de l'option choisie par l'utilisateur
                 DialogResult confirmation = MessageBox.Show("Vous avez choisi de supprimer plusieur utilisateur voulez vous vraiment supprimer ces utilisateur?", "Confirmation", MessageBoxButtons.YesNo);
 
                 //Si le client appuis sur oui aloir
                 if (confirmation == DialogResult.Yes)
                 {
-                        CustomerModel.deleteCustommer(id, numRows);
-                        
-                    
+                    CustomerModel.deleteCustommer(id);
                 }
             }
-            else
-            {
-                CustomerModel.deleteCustommer(id, numRows);
-                dataGridViewCustomer.Update();
-
-            }
-
-            
         }
+        private void rButton4_Click(object sender, EventArgs e)
+        {
 
+            // Ligne permettant de mettre la valeur de l'id 
+            gClient gC = new gClient();
+            gC.Show();
+        }
 
     }
 }

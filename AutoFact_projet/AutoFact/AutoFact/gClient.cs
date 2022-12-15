@@ -27,15 +27,21 @@ namespace AutoFact
             }
         }
 
-        private void buttonAdd_Click(object sender, EventArgs e)
+        private void rButton1_Click(object sender, EventArgs e)
         {
-            string firstName = tbFirstName.Text;
-            string lastName = tbLastName.Text;
-            string email = tbEmail.Text;
-            string numberphone = tbNumberPhone.Text;
-            string compagny = tbCompagny.Text;
+            int id = int.Parse(tbId.Text);
+            string firstNameU = tbFirstName.Text;
+            string lastNameU = tbLastName.Text;
+            string emailU = tbEmail.Text;
+            string numberphoneU = tbNumberPhone.Text;
+            string compagnyU = tbCompagny.Text;
+            if( firstNameU == null)
 
-            CustomerModel.UpdateCustomer(firstName, lastName, email, numberphone, compagny);
+
+            CustomerModel.UpdateCustomer( id, firstNameU, lastNameU, emailU, numberphoneU, compagnyU);
+
+            gClient gC = new gClient();
+            this.Hide();
         }
     }
 }

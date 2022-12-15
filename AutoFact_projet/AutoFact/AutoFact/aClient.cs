@@ -24,12 +24,26 @@ namespace AutoFact
         private void rButton2_Click(object sender, EventArgs e)
         {
             string firstName = tbFirstName.Text;
-            string lastName = tbLastName.Text;
-            string email = tbEmail.Text;
-            string numberphone = tbNumberPhone.Text;
-            string compagny = tbCompagny.Text;
 
-            CustomerModel.addCustomer(firstName, lastName, email, numberphone, compagny);
+            string lastName = tbLastName.Text;
+
+            string email = tbEmail.Text;
+ 
+            string numberphone = tbNumberPhone.Text;
+     
+            string compagny = tbCompagny.Text;
+     
+            if (firstName == null || lastName == null || email == null || numberphone == null || compagny == null)
+            {
+                string messageErreurFirstName = ("Le champ ne pas être vide.");
+                string titleErreur = ("Erreur !");
+                MessageBox.Show(messageErreurFirstName, titleErreur, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                CustomerModel.addCustomer(firstName, lastName, email, numberphone, compagny);
+            }
+            
 
 
         }

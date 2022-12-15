@@ -42,13 +42,15 @@
             this.logo = new System.Windows.Forms.PictureBox();
             this.rButton1 = new CustomControls.RJControls.RButton();
             this.rButton2 = new CustomControls.RJControls.RButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(83, 322);
+            this.labelAddress.Location = new System.Drawing.Point(492, 243);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(60, 13);
             this.labelAddress.TabIndex = 21;
@@ -57,7 +59,7 @@
             // labelEmailAddress
             // 
             this.labelEmailAddress.AutoSize = true;
-            this.labelEmailAddress.Location = new System.Drawing.Point(68, 282);
+            this.labelEmailAddress.Location = new System.Drawing.Point(264, 259);
             this.labelEmailAddress.Name = "labelEmailAddress";
             this.labelEmailAddress.Size = new System.Drawing.Size(75, 13);
             this.labelEmailAddress.TabIndex = 20;
@@ -75,7 +77,7 @@
             // labelNom
             // 
             this.labelNom.AutoSize = true;
-            this.labelNom.Location = new System.Drawing.Point(67, 201);
+            this.labelNom.Location = new System.Drawing.Point(476, 165);
             this.labelNom.Name = "labelNom";
             this.labelNom.Size = new System.Drawing.Size(76, 13);
             this.labelNom.TabIndex = 18;
@@ -92,14 +94,14 @@
             // 
             // tbCompagny
             // 
-            this.tbCompagny.Location = new System.Drawing.Point(149, 319);
+            this.tbCompagny.Location = new System.Drawing.Point(558, 240);
             this.tbCompagny.Name = "tbCompagny";
             this.tbCompagny.Size = new System.Drawing.Size(100, 20);
             this.tbCompagny.TabIndex = 16;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(149, 279);
+            this.tbEmail.Location = new System.Drawing.Point(345, 256);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(100, 20);
             this.tbEmail.TabIndex = 15;
@@ -113,7 +115,7 @@
             // 
             // tbLastName
             // 
-            this.tbLastName.Location = new System.Drawing.Point(149, 194);
+            this.tbLastName.Location = new System.Drawing.Point(558, 158);
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(100, 20);
             this.tbLastName.TabIndex = 13;
@@ -153,6 +155,7 @@
             this.rButton1.Text = "modifier";
             this.rButton1.TextColor = System.Drawing.Color.White;
             this.rButton1.UseVisualStyleBackColor = false;
+            this.rButton1.Click += new System.EventHandler(this.rButton1_Click);
             // 
             // rButton2
             // 
@@ -172,11 +175,29 @@
             this.rButton2.TextColor = System.Drawing.Color.White;
             this.rButton2.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(324, 131);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 13);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "id";
+            // 
+            // tbId
+            // 
+            this.tbId.Location = new System.Drawing.Point(345, 128);
+            this.tbId.Name = "tbId";
+            this.tbId.Size = new System.Drawing.Size(100, 20);
+            this.tbId.TabIndex = 26;
+            // 
             // gClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tbId);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.rButton2);
             this.Controls.Add(this.rButton1);
             this.Controls.Add(this.logo);
@@ -213,5 +234,7 @@
         private System.Windows.Forms.PictureBox logo;
         private CustomControls.RJControls.RButton rButton1;
         private CustomControls.RJControls.RButton rButton2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbId;
     }
 }
