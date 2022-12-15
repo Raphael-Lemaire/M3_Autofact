@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using AutoFact.model;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace AutoFact
 {
@@ -16,11 +19,6 @@ namespace AutoFact
         public formAF()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -186,18 +184,52 @@ namespace AutoFact
         private void dataGridViewCustomer_Click(object sender, EventArgs e)
         {
                 SQLiteConnection db = Database.getInstance().getConnection();
-                SQLiteCommand cmd = new SQLiteCommand("SELECT id, (first_name) as Prenom, (last_name) as Nom_Famille, (phone_number) as Numéro_de_téléplhone, mail, (compagny_name) as Nom_compagny FROM customer", db);
+                SQLiteCommand cmd = new SQLiteCommand("SELECT id, (first_name) as Prenom, (last_name) as 'Nom de Famille', (phone_number) as 'Numéro de téléplhone', mail, (compagny_name) as 'Nom de la compagnie' FROM customer", db);
                 SQLiteDataReader reader = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
 
                 dt.Load(reader);
                 dataGridViewCustomer.DataSource = dt;
                 db.Close();
-            }
 
-        private void dataGridViewCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+              
+            
+        }
+
+        private void Button_Delete_Click(object sender, EventArgs e)
         {
+ 
+        }
 
+
+        private void bSearch_Click(object sender, EventArgs e)
+        {
+            string firstNameR = tbScreachCustomer.Text;
+
+
+            SQLiteConnection db = Database.getInstance().getConnection();
+
+            //requete SQL
+            string querySearch = ("SELECT id, (first_name) as Prenom, (last_name) as 'Nom de Famille', (phone_number) as 'Numéro de téléplhone', mail, (compagny_name) as 'Nom de la compagnie'\r\nFROM customer\r\nWHERE first_name LIKE @firstNameR");
+
+
+            SQLiteCommand sqlite_cmd = new SQLiteCommand(querySearch, db);
+            // Ajouter les valeurs des paramètres de la requête
+            sqlite_cmd.Parameters.AddWithValue("@firstNameR", firstNameR + "%");
+
+
+
+            // Exécuter la requête d'insertion
+
+            SQLiteDataReader reader = sqlite_cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+
+            dt.Load(reader);
+            dataGridViewCustomer.DataSource = dt;
+            db.Close();
+
+            dataGridViewCustomer.Refresh();
         }
     }
 }

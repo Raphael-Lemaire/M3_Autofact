@@ -29,9 +29,9 @@ namespace AutoFact
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAF));
             this.pageselection = new System.Windows.Forms.TabControl();
             this.firstpage = new System.Windows.Forms.TabPage();
@@ -61,14 +61,16 @@ namespace AutoFact
             this.ldDevis = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.clientpage = new System.Windows.Forms.TabPage();
+            this.bSearch = new CustomControls.RJControls.RButton();
+            this.tbScreachCustomer = new System.Windows.Forms.TextBox();
+            this.ReadCustomer = new CustomControls.RJControls.RButton();
+            this.Button_Delete = new CustomControls.RJControls.RButton();
             this.dataGridViewCustomer = new System.Windows.Forms.DataGridView();
             this.rButton5 = new CustomControls.RJControls.RButton();
             this.rButton4 = new CustomControls.RJControls.RButton();
             this.listecliClient = new System.Windows.Forms.Label();
             this.parametrepage = new System.Windows.Forms.TabPage();
             this.logo = new System.Windows.Forms.PictureBox();
-            this.Modifier = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Supprimer = new System.Windows.Forms.DataGridViewButtonColumn();
             this.pageselection.SuspendLayout();
             this.firstpage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -146,19 +148,19 @@ namespace AutoFact
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(541, 107);
             this.chart1.Name = "chart1";
             this.chart1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "CA";
-            series1.YValuesPerPoint = 4;
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "CA";
+            series2.YValuesPerPoint = 4;
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(350, 350);
             this.chart1.TabIndex = 5;
             this.chart1.Text = "chart1";
@@ -461,6 +463,10 @@ namespace AutoFact
             // 
             // clientpage
             // 
+            this.clientpage.Controls.Add(this.bSearch);
+            this.clientpage.Controls.Add(this.tbScreachCustomer);
+            this.clientpage.Controls.Add(this.ReadCustomer);
+            this.clientpage.Controls.Add(this.Button_Delete);
             this.clientpage.Controls.Add(this.dataGridViewCustomer);
             this.clientpage.Controls.Add(this.rButton5);
             this.clientpage.Controls.Add(this.rButton4);
@@ -474,17 +480,80 @@ namespace AutoFact
             this.clientpage.Text = "Client";
             this.clientpage.UseVisualStyleBackColor = true;
             // 
+            // bSearch
+            // 
+            this.bSearch.BackColor = System.Drawing.Color.SkyBlue;
+            this.bSearch.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.bSearch.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bSearch.BorderRadius = 10;
+            this.bSearch.BorderSize = 0;
+            this.bSearch.FlatAppearance.BorderSize = 0;
+            this.bSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bSearch.ForeColor = System.Drawing.Color.White;
+            this.bSearch.Location = new System.Drawing.Point(595, 106);
+            this.bSearch.Name = "bSearch";
+            this.bSearch.Size = new System.Drawing.Size(116, 25);
+            this.bSearch.TabIndex = 10;
+            this.bSearch.Text = "Recherche";
+            this.bSearch.TextColor = System.Drawing.Color.White;
+            this.bSearch.UseVisualStyleBackColor = false;
+            this.bSearch.Click += new System.EventHandler(this.bSearch_Click);
+            // 
+            // tbScreachCustomer
+            // 
+            this.tbScreachCustomer.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.tbScreachCustomer.Location = new System.Drawing.Point(717, 107);
+            this.tbScreachCustomer.Name = "tbScreachCustomer";
+            this.tbScreachCustomer.Size = new System.Drawing.Size(203, 22);
+            this.tbScreachCustomer.TabIndex = 9;
+            this.tbScreachCustomer.TextChanged += new System.EventHandler(this.bSearch_Click);
+            // 
+            // ReadCustomer
+            // 
+            this.ReadCustomer.BackColor = System.Drawing.Color.DarkCyan;
+            this.ReadCustomer.BackgroundColor = System.Drawing.Color.DarkCyan;
+            this.ReadCustomer.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.ReadCustomer.BorderRadius = 15;
+            this.ReadCustomer.BorderSize = 0;
+            this.ReadCustomer.FlatAppearance.BorderSize = 0;
+            this.ReadCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReadCustomer.ForeColor = System.Drawing.Color.White;
+            this.ReadCustomer.Location = new System.Drawing.Point(191, 86);
+            this.ReadCustomer.Name = "ReadCustomer";
+            this.ReadCustomer.Size = new System.Drawing.Size(150, 40);
+            this.ReadCustomer.TabIndex = 8;
+            this.ReadCustomer.Text = "Afficher";
+            this.ReadCustomer.TextColor = System.Drawing.Color.White;
+            this.ReadCustomer.UseVisualStyleBackColor = false;
+            this.ReadCustomer.Click += new System.EventHandler(this.dataGridViewCustomer_Click);
+            // 
+            // Button_Delete
+            // 
+            this.Button_Delete.BackColor = System.Drawing.Color.DarkCyan;
+            this.Button_Delete.BackgroundColor = System.Drawing.Color.DarkCyan;
+            this.Button_Delete.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.Button_Delete.BorderRadius = 15;
+            this.Button_Delete.BorderSize = 0;
+            this.Button_Delete.FlatAppearance.BorderSize = 0;
+            this.Button_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Delete.ForeColor = System.Drawing.Color.White;
+            this.Button_Delete.Location = new System.Drawing.Point(8, 86);
+            this.Button_Delete.Name = "Button_Delete";
+            this.Button_Delete.Size = new System.Drawing.Size(150, 40);
+            this.Button_Delete.TabIndex = 7;
+            this.Button_Delete.Text = "Supprimer";
+            this.Button_Delete.TextColor = System.Drawing.Color.White;
+            this.Button_Delete.UseVisualStyleBackColor = false;
+            // 
             // dataGridViewCustomer
             // 
             this.dataGridViewCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Modifier,
-            this.Supprimer});
-            this.dataGridViewCustomer.Location = new System.Drawing.Point(3, 95);
+            this.dataGridViewCustomer.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dataGridViewCustomer.Location = new System.Drawing.Point(5, 147);
             this.dataGridViewCustomer.Name = "dataGridViewCustomer";
+            this.dataGridViewCustomer.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.RoyalBlue;
             this.dataGridViewCustomer.Size = new System.Drawing.Size(915, 290);
             this.dataGridViewCustomer.TabIndex = 6;
-            this.dataGridViewCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCustomer_CellContentClick);
             this.dataGridViewCustomer.Click += new System.EventHandler(this.dataGridViewCustomer_Click);
             // 
             // rButton5
@@ -559,25 +628,6 @@ namespace AutoFact
             this.logo.TabIndex = 1;
             this.logo.TabStop = false;
             // 
-            // Modifier
-            // 
-            this.Modifier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Modifier.HeaderText = "";
-            this.Modifier.Name = "Modifier";
-            this.Modifier.ReadOnly = true;
-            this.Modifier.Text = "Modifier";
-            this.Modifier.UseColumnTextForButtonValue = true;
-            this.Modifier.Width = 75;
-            // 
-            // Supprimer
-            // 
-            this.Supprimer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Supprimer.HeaderText = "";
-            this.Supprimer.Name = "Supprimer";
-            this.Supprimer.Text = "Supprimer";
-            this.Supprimer.UseColumnTextForButtonValue = true;
-            this.Supprimer.Width = 75;
-            // 
             // formAF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -648,8 +698,10 @@ namespace AutoFact
         private CustomControls.RJControls.RButton loadgraph;
         private CustomControls.RJControls.RButton LoadGridview4;
         private System.Windows.Forms.DataGridView dataGridViewCustomer;
-        private System.Windows.Forms.DataGridViewButtonColumn Modifier;
-        private System.Windows.Forms.DataGridViewButtonColumn Supprimer;
+        private CustomControls.RJControls.RButton Button_Delete;
+        private CustomControls.RJControls.RButton ReadCustomer;
+        private System.Windows.Forms.TextBox tbScreachCustomer;
+        private CustomControls.RJControls.RButton bSearch;
     }
 }
 

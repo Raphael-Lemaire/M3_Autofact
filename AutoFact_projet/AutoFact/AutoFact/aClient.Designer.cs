@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(aClient));
-            this.buttonBack = new System.Windows.Forms.Button();
-            this.buttonAdd = new System.Windows.Forms.Button();
             this.tbFirstName = new System.Windows.Forms.TextBox();
             this.tbLastName = new System.Windows.Forms.TextBox();
             this.tbNumberPhone = new System.Windows.Forms.TextBox();
@@ -42,28 +40,10 @@
             this.logo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbCompagny = new System.Windows.Forms.TextBox();
+            this.bAddCustomer = new CustomControls.RJControls.RButton();
+            this.rButton2 = new CustomControls.RJControls.RButton();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonBack
-            // 
-            this.buttonBack.Location = new System.Drawing.Point(463, 317);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(75, 23);
-            this.buttonBack.TabIndex = 0;
-            this.buttonBack.Text = "Annuler";
-            this.buttonBack.UseVisualStyleBackColor = true;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
-            // 
-            // buttonAdd
-            // 
-            this.buttonAdd.Location = new System.Drawing.Point(600, 317);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
-            this.buttonAdd.TabIndex = 1;
-            this.buttonAdd.Text = "Ajouter";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.button2_Click);
             // 
             // tbFirstName
             // 
@@ -74,7 +54,7 @@
             // 
             // tbLastName
             // 
-            this.tbLastName.Location = new System.Drawing.Point(148, 198);
+            this.tbLastName.Location = new System.Drawing.Point(557, 157);
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(100, 20);
             this.tbLastName.TabIndex = 3;
@@ -88,7 +68,7 @@
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(148, 283);
+            this.tbEmail.Location = new System.Drawing.Point(557, 241);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(100, 20);
             this.tbEmail.TabIndex = 5;
@@ -105,7 +85,7 @@
             // labelNom
             // 
             this.labelNom.AutoSize = true;
-            this.labelNom.Location = new System.Drawing.Point(66, 205);
+            this.labelNom.Location = new System.Drawing.Point(475, 164);
             this.labelNom.Name = "labelNom";
             this.labelNom.Size = new System.Drawing.Size(76, 13);
             this.labelNom.TabIndex = 8;
@@ -123,7 +103,7 @@
             // labelEmailAddress
             // 
             this.labelEmailAddress.AutoSize = true;
-            this.labelEmailAddress.Location = new System.Drawing.Point(67, 286);
+            this.labelEmailAddress.Location = new System.Drawing.Point(476, 244);
             this.labelEmailAddress.Name = "labelEmailAddress";
             this.labelEmailAddress.Size = new System.Drawing.Size(75, 13);
             this.labelEmailAddress.TabIndex = 10;
@@ -143,7 +123,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(80, 327);
+            this.label1.Location = new System.Drawing.Point(253, 301);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 13;
@@ -151,16 +131,56 @@
             // 
             // tbCompagny
             // 
-            this.tbCompagny.Location = new System.Drawing.Point(148, 320);
+            this.tbCompagny.Location = new System.Drawing.Point(312, 301);
             this.tbCompagny.Name = "tbCompagny";
             this.tbCompagny.Size = new System.Drawing.Size(100, 20);
             this.tbCompagny.TabIndex = 14;
+            // 
+            // bAddCustomer
+            // 
+            this.bAddCustomer.BackColor = System.Drawing.Color.RoyalBlue;
+            this.bAddCustomer.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.bAddCustomer.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bAddCustomer.BorderRadius = 15;
+            this.bAddCustomer.BorderSize = 0;
+            this.bAddCustomer.FlatAppearance.BorderSize = 0;
+            this.bAddCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bAddCustomer.ForeColor = System.Drawing.Color.White;
+            this.bAddCustomer.Location = new System.Drawing.Point(148, 352);
+            this.bAddCustomer.Name = "bAddCustomer";
+            this.bAddCustomer.Size = new System.Drawing.Size(150, 40);
+            this.bAddCustomer.TabIndex = 15;
+            this.bAddCustomer.Text = "retour";
+            this.bAddCustomer.TextColor = System.Drawing.Color.White;
+            this.bAddCustomer.UseVisualStyleBackColor = false;
+            this.bAddCustomer.Click += new System.EventHandler(this.bAddCustomer_Click);
+            // 
+            // rButton2
+            // 
+            this.rButton2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.rButton2.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.rButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rButton2.BorderRadius = 15;
+            this.rButton2.BorderSize = 0;
+            this.rButton2.FlatAppearance.BorderSize = 0;
+            this.rButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rButton2.ForeColor = System.Drawing.Color.White;
+            this.rButton2.Location = new System.Drawing.Point(507, 352);
+            this.rButton2.Name = "rButton2";
+            this.rButton2.Size = new System.Drawing.Size(150, 40);
+            this.rButton2.TabIndex = 16;
+            this.rButton2.Text = "Ajouter";
+            this.rButton2.TextColor = System.Drawing.Color.White;
+            this.rButton2.UseVisualStyleBackColor = false;
+            this.rButton2.Click += new System.EventHandler(this.rButton2_Click);
             // 
             // aClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(815, 450);
+            this.Controls.Add(this.rButton2);
+            this.Controls.Add(this.bAddCustomer);
             this.Controls.Add(this.tbCompagny);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logo);
@@ -172,8 +192,6 @@
             this.Controls.Add(this.tbNumberPhone);
             this.Controls.Add(this.tbLastName);
             this.Controls.Add(this.tbFirstName);
-            this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.buttonBack);
             this.Name = "aClient";
             this.Text = "Ajouter un client";
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
@@ -183,9 +201,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.TextBox tbFirstName;
         private System.Windows.Forms.TextBox tbLastName;
         private System.Windows.Forms.TextBox tbNumberPhone;
@@ -197,5 +212,7 @@
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbCompagny;
+        private CustomControls.RJControls.RButton bAddCustomer;
+        private CustomControls.RJControls.RButton rButton2;
     }
 }

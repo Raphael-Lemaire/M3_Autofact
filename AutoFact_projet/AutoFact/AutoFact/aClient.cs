@@ -21,8 +21,7 @@ namespace AutoFact
         }
 
 
-
-        private void button2_Click(object sender, EventArgs e)
+        private void rButton2_Click(object sender, EventArgs e)
         {
             string firstName = tbFirstName.Text;
             string lastName = tbLastName.Text;
@@ -30,18 +29,15 @@ namespace AutoFact
             string numberphone = tbNumberPhone.Text;
             string compagny = tbCompagny.Text;
 
-            CustomerModel.addCustomer( firstName, lastName,  email, numberphone, compagny);
+            CustomerModel.addCustomer(firstName, lastName, email, numberphone, compagny);
+
+
         }
 
-        private void buttonBack_Click(object sender, EventArgs e)
+        private void bAddCustomer_Click(object sender, EventArgs e)
         {
-            {
-                formAF AF = new formAF();
-                this.Hide();
-
-            }
+            formAF AF = new formAF();
+            this.Hide();
         }
-
-
     }
 }
