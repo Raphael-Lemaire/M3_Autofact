@@ -32,7 +32,6 @@ C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\
 C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.aClient.resources
 C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.aService.resources
 C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.formAF.resources
-C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.gClient.resources
 C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.gDevis.resources
 C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.gService.resources
 C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.Properties.Resources.resources
@@ -98,3 +97,4 @@ C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\
 C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\System.Data.SQLite.xml
 C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.csproj.CopyComplete
+C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.gClient.resources

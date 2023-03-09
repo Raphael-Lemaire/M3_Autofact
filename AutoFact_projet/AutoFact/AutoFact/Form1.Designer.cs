@@ -29,9 +29,9 @@ namespace AutoFact
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAF));
             this.pageselection = new System.Windows.Forms.TabControl();
             this.firstpage = new System.Windows.Forms.TabPage();
@@ -64,7 +64,6 @@ namespace AutoFact
             this.bSearch = new CustomControls.RJControls.RButton();
             this.tbScreachCustomer = new System.Windows.Forms.TextBox();
             this.ReadCustomer = new CustomControls.RJControls.RButton();
-            this.Button_Delete = new CustomControls.RJControls.RButton();
             this.dataGridViewCustomer = new System.Windows.Forms.DataGridView();
             this.rButton5 = new CustomControls.RJControls.RButton();
             this.rButton4 = new CustomControls.RJControls.RButton();
@@ -148,19 +147,19 @@ namespace AutoFact
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(541, 107);
             this.chart1.Name = "chart1";
             this.chart1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Legend = "Legend1";
-            series3.Name = "CA";
-            series3.YValuesPerPoint = 4;
-            this.chart1.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "CA";
+            series1.YValuesPerPoint = 4;
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(350, 350);
             this.chart1.TabIndex = 5;
             this.chart1.Text = "chart1";
@@ -466,7 +465,6 @@ namespace AutoFact
             this.clientpage.Controls.Add(this.bSearch);
             this.clientpage.Controls.Add(this.tbScreachCustomer);
             this.clientpage.Controls.Add(this.ReadCustomer);
-            this.clientpage.Controls.Add(this.Button_Delete);
             this.clientpage.Controls.Add(this.dataGridViewCustomer);
             this.clientpage.Controls.Add(this.rButton5);
             this.clientpage.Controls.Add(this.rButton4);
@@ -518,7 +516,7 @@ namespace AutoFact
             this.ReadCustomer.FlatAppearance.BorderSize = 0;
             this.ReadCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReadCustomer.ForeColor = System.Drawing.Color.White;
-            this.ReadCustomer.Location = new System.Drawing.Point(191, 86);
+            this.ReadCustomer.Location = new System.Drawing.Point(8, 98);
             this.ReadCustomer.Name = "ReadCustomer";
             this.ReadCustomer.Size = new System.Drawing.Size(150, 40);
             this.ReadCustomer.TabIndex = 8;
@@ -527,30 +525,11 @@ namespace AutoFact
             this.ReadCustomer.UseVisualStyleBackColor = false;
             this.ReadCustomer.Click += new System.EventHandler(this.dataGridViewCustomer_Click);
             // 
-            // Button_Delete
-            // 
-            this.Button_Delete.BackColor = System.Drawing.Color.DarkCyan;
-            this.Button_Delete.BackgroundColor = System.Drawing.Color.DarkCyan;
-            this.Button_Delete.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.Button_Delete.BorderRadius = 15;
-            this.Button_Delete.BorderSize = 0;
-            this.Button_Delete.FlatAppearance.BorderSize = 0;
-            this.Button_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Delete.ForeColor = System.Drawing.Color.White;
-            this.Button_Delete.Location = new System.Drawing.Point(8, 86);
-            this.Button_Delete.Name = "Button_Delete";
-            this.Button_Delete.Size = new System.Drawing.Size(150, 40);
-            this.Button_Delete.TabIndex = 7;
-            this.Button_Delete.Text = "Supprimer";
-            this.Button_Delete.TextColor = System.Drawing.Color.White;
-            this.Button_Delete.UseVisualStyleBackColor = false;
-            this.Button_Delete.Click += new System.EventHandler(this.Button_Delete_Click);
-            // 
             // dataGridViewCustomer
             // 
             this.dataGridViewCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCustomer.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGridViewCustomer.Location = new System.Drawing.Point(5, 147);
+            this.dataGridViewCustomer.Location = new System.Drawing.Point(5, 153);
             this.dataGridViewCustomer.Name = "dataGridViewCustomer";
             this.dataGridViewCustomer.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.RoyalBlue;
             this.dataGridViewCustomer.Size = new System.Drawing.Size(915, 290);
@@ -698,7 +677,6 @@ namespace AutoFact
         private CustomControls.RJControls.RButton loadgraph;
         private CustomControls.RJControls.RButton LoadGridview4;
         private System.Windows.Forms.DataGridView dataGridViewCustomer;
-        private CustomControls.RJControls.RButton Button_Delete;
         private CustomControls.RJControls.RButton ReadCustomer;
         private System.Windows.Forms.TextBox tbScreachCustomer;
         private CustomControls.RJControls.RButton bSearch;

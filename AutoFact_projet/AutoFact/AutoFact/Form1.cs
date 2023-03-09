@@ -12,6 +12,7 @@ using AutoFact.model;
 using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Windows.Controls;
+using System.Diagnostics.Eventing.Reader;
 
 namespace AutoFact
 {
@@ -180,82 +181,24 @@ namespace AutoFact
 
         private void dataGridViewCustomer_Click(object sender, EventArgs e)
         {
+            CustomerModel.GetCustomer(dataGridViewCustomer);
 
-            SQLiteConnection db = Database.getInstance().getConnection();
-            SQLiteCommand cmd = new SQLiteCommand("SELECT id, (first_name) as Prenom, (last_name) as 'Nom de Famille', (phone_number) as 'Numéro de téléplhone', mail, (compagny_name) as 'Nom de la compagnie' FROM customer", db);
-            SQLiteDataReader reader = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-
-            dt.Load(reader);
-            dataGridViewCustomer.DataSource = dt;
-            db.Close();
         }
 
 
         //todo suppression des données 
         private void bSearch_Click(object sender, EventArgs e)
         {
-            string firstNameR = tbScreachCustomer.Text;
-
-
-            SQLiteConnection db = Database.getInstance().getConnection();
-
-            //requete SQL
-            string querySearch = ("SELECT id, (first_name) as Prenom, (last_name) as 'Nom de Famille', (phone_number) as 'Numéro de téléplhone', mail, (compagny_name) as 'Nom de la compagnie'\r\nFROM customer\r\nWHERE first_name LIKE @firstNameR");
-
-
-            SQLiteCommand sqlite_cmd = new SQLiteCommand(querySearch, db);
-            // Ajouter les valeurs des paramètres de la requête
-            sqlite_cmd.Parameters.AddWithValue("@firstNameR", firstNameR + "%");
-
-
-
-            // Exécuter la requête d'insertion
-
-            SQLiteDataReader reader = sqlite_cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-
-            dt.Load(reader);
-            dataGridViewCustomer.DataSource = dt;
-            db.Close();
-            dataGridViewCustomer.Refresh();
+            string valeur = tbScreachCustomer.Text;
+            CustomerModel.recherche_client(valeur, dataGridViewCustomer);
         }
 
-        private void Button_Delete_Click(object sender, EventArgs e)
-        {
-            // Variable permettant d'avoir la cellule actuel
-            int rowindex = dataGridViewCustomer.CurrentCell.RowIndex;
-            int columnindex = dataGridViewCustomer.CurrentCell.ColumnIndex;
-
-            // Ligne permettant de mettre la valeur de l'id 
-            int id = Convert.ToInt32(dataGridViewCustomer.Rows[rowindex].Cells[columnindex].Value);
-
-            int numRows = dataGridViewCustomer.SelectedCells.Count;
-            if (numRows > 1)
-            {
-                string messageError = ("Vous pouvez selectioner qu'une seule cellule.");
-                string titleError = ("Erreur");
-                MessageBox.Show(messageError, titleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                // Traitement en fonction de l'option choisie par l'utilisateur
-                DialogResult confirmation = MessageBox.Show("Vous avez choisi de supprimer plusieur utilisateur voulez vous vraiment supprimer ces utilisateur?", "Confirmation", MessageBoxButtons.YesNo);
-
-                //Si le client appuis sur oui aloir
-                if (confirmation == DialogResult.Yes)
-                {
-                    CustomerModel.deleteCustommer(id);
-                }
-            }
-        }
         private void rButton4_Click(object sender, EventArgs e)
         {
-
-            // Ligne permettant de mettre la valeur de l'id 
             gClient gC = new gClient();
             gC.Show();
         }
-
     }
+
 }
+
