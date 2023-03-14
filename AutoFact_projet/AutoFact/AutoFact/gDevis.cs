@@ -29,14 +29,12 @@ namespace AutoFact
         }
 
         private void SaveQuote_Click(object sender, EventArgs e)
+        {   
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
-            string Name;
-            float Total_Price;
-            Total_Price = Int32.Parse(this.tbTotal_Price.Text) ;
-            Name = this.tbName.Text;
-            QuotationModel.QuotationAdd(Name, Total_Price);
-            
-            
+
         }
     }
 }

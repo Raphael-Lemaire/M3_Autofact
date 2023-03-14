@@ -112,6 +112,11 @@ namespace AutoFact
                 else
                 {
                     CustomerModel.UpdateCustomer(id, firstNameU, lastNameU, emailU, numberphoneU, compagnyU);
+                    TBfirstNameUp.Text = string.Empty;
+                    TBlasttNameUpdate.Text = string.Empty;
+                    TBmailUpdate.Text = string.Empty;
+                    TBnumberPhoneUpdate.Text = string.Empty;
+                    TBcompagnyMailUpdate.Text = string.Empty;
                 }
             }
         }
@@ -121,7 +126,7 @@ namespace AutoFact
             // Variable permettant d'avoir la cellule actuel
             int rowindex = dataGridViewCustomer.CurrentCell.RowIndex;
             int columnindex = dataGridViewCustomer.CurrentCell.ColumnIndex;
-            if (rowindex == 0)
+            if (columnindex == 0)
             {
                 // Ligne permettant de mettre la valeur de l'id 
                 int id = Convert.ToInt32(dataGridViewCustomer.Rows[rowindex].Cells[columnindex].Value);
@@ -141,5 +146,34 @@ namespace AutoFact
                 MessageBox.Show(messageError, titleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void gClient_Load_1(object sender, EventArgs e)
+        {
+            CustomerModel.GetCustomer(dataGridViewCustomer);
+        }
+
+        private void dataGridViewCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowindex = dataGridViewCustomer.CurrentCell.RowIndex; if (rowindex >= 0)
+            {  
+                // Récupérez la ligne sur laquelle vous avez cliqué
+                DataGridViewRow row = dataGridViewCustomer.Rows[rowindex]; 
+                // Récupérez toutes les informations de la ligne
+                string col1Value = row.Cells[1].Value.ToString(); 
+                string col2Value = row.Cells[2].Value.ToString();
+                string col3Value = row.Cells[3].Value.ToString(); 
+                string col4Value = row.Cells[4].Value.ToString(); 
+                string col5Value = row.Cells[5].Value.ToString();
+                // Ajoutez autant de colonnes que nécessaire 
+                // Utilisez les informations récupérées pour effectuer les traitements souhaités   
+                // Par exemple, afficher les informations dans une zone de texte 
+                TBfirstNameUp.Text = $"{col1Value}";       
+                TBlasttNameUpdate.Text = $"{col2Value}";      
+                TBmailUpdate.Text = $"{col4Value}"; 
+                TBnumberPhoneUpdate.Text = $"{col3Value}";      
+                TBcompagnyMailUpdate.Text = $"{col5Value}";     
+            }
+        }
+
     }
 }

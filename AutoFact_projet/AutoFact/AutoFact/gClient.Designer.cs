@@ -42,9 +42,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.rButton2 = new CustomControls.RJControls.RButton();
+            this.rButton1 = new CustomControls.RJControls.RButton();
             this.Updatebot = new CustomControls.RJControls.RButton();
             this.ReadCustomer = new CustomControls.RJControls.RButton();
-            this.rButton1 = new CustomControls.RJControls.RButton();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomer)).BeginInit();
             this.SuspendLayout();
@@ -69,14 +70,16 @@
             this.dataGridViewCustomer.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.RoyalBlue;
             this.dataGridViewCustomer.Size = new System.Drawing.Size(852, 382);
             this.dataGridViewCustomer.TabIndex = 23;
+            this.dataGridViewCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCustomer_CellClick);
             // 
             // tbScreachCustomer
             // 
             this.tbScreachCustomer.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbScreachCustomer.Location = new System.Drawing.Point(673, 166);
+            this.tbScreachCustomer.Location = new System.Drawing.Point(673, 175);
             this.tbScreachCustomer.Name = "tbScreachCustomer";
             this.tbScreachCustomer.Size = new System.Drawing.Size(203, 20);
             this.tbScreachCustomer.TabIndex = 25;
+            this.tbScreachCustomer.TextChanged += new System.EventHandler(this.tbScreachCustomer_TextChanged);
             // 
             // TBfirstNameUp
             // 
@@ -152,11 +155,48 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(483, 651);
+            this.label5.Location = new System.Drawing.Point(483, 647);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 13);
             this.label5.TabIndex = 36;
             this.label5.Text = "Numéro Téléphone";
+            // 
+            // rButton2
+            // 
+            this.rButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.rButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.rButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rButton2.BorderRadius = 8;
+            this.rButton2.BorderSize = 0;
+            this.rButton2.FlatAppearance.BorderSize = 0;
+            this.rButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rButton2.ForeColor = System.Drawing.Color.White;
+            this.rButton2.Location = new System.Drawing.Point(955, 211);
+            this.rButton2.Name = "rButton2";
+            this.rButton2.Size = new System.Drawing.Size(8, 8);
+            this.rButton2.TabIndex = 39;
+            this.rButton2.Text = "rButton2";
+            this.rButton2.TextColor = System.Drawing.Color.White;
+            this.rButton2.UseVisualStyleBackColor = false;
+            // 
+            // rButton1
+            // 
+            this.rButton1.BackColor = System.Drawing.Color.DarkCyan;
+            this.rButton1.BackgroundColor = System.Drawing.Color.DarkCyan;
+            this.rButton1.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.rButton1.BorderRadius = 15;
+            this.rButton1.BorderSize = 0;
+            this.rButton1.FlatAppearance.BorderSize = 0;
+            this.rButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rButton1.ForeColor = System.Drawing.Color.White;
+            this.rButton1.Location = new System.Drawing.Point(892, 211);
+            this.rButton1.Name = "rButton1";
+            this.rButton1.Size = new System.Drawing.Size(150, 40);
+            this.rButton1.TabIndex = 38;
+            this.rButton1.Text = "Supprimer";
+            this.rButton1.TextColor = System.Drawing.Color.White;
+            this.rButton1.UseVisualStyleBackColor = false;
+            this.rButton1.Click += new System.EventHandler(this.rButton1_Click);
             // 
             // Updatebot
             // 
@@ -191,35 +231,17 @@
             this.ReadCustomer.Name = "ReadCustomer";
             this.ReadCustomer.Size = new System.Drawing.Size(150, 40);
             this.ReadCustomer.TabIndex = 24;
-            this.ReadCustomer.Text = "Afficher";
+            this.ReadCustomer.Text = "Actualiser";
             this.ReadCustomer.TextColor = System.Drawing.Color.White;
             this.ReadCustomer.UseVisualStyleBackColor = false;
             this.ReadCustomer.Click += new System.EventHandler(this.ReadCustomer_Click_1);
-            // 
-            // rButton1
-            // 
-            this.rButton1.BackColor = System.Drawing.Color.DarkCyan;
-            this.rButton1.BackgroundColor = System.Drawing.Color.DarkCyan;
-            this.rButton1.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.rButton1.BorderRadius = 15;
-            this.rButton1.BorderSize = 0;
-            this.rButton1.FlatAppearance.BorderSize = 0;
-            this.rButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rButton1.ForeColor = System.Drawing.Color.White;
-            this.rButton1.Location = new System.Drawing.Point(892, 211);
-            this.rButton1.Name = "rButton1";
-            this.rButton1.Size = new System.Drawing.Size(150, 40);
-            this.rButton1.TabIndex = 38;
-            this.rButton1.Text = "Supprimer";
-            this.rButton1.TextColor = System.Drawing.Color.White;
-            this.rButton1.UseVisualStyleBackColor = false;
-            this.rButton1.Click += new System.EventHandler(this.rButton1_Click);
             // 
             // gClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1066, 680);
+            this.Controls.Add(this.rButton2);
             this.Controls.Add(this.rButton1);
             this.Controls.Add(this.Updatebot);
             this.Controls.Add(this.label5);
@@ -238,6 +260,7 @@
             this.Controls.Add(this.logo);
             this.Name = "gClient";
             this.Text = "Gérer les clients";
+            this.Load += new System.EventHandler(this.gClient_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomer)).EndInit();
             this.ResumeLayout(false);
@@ -262,5 +285,6 @@
         private System.Windows.Forms.Label label5;
         private CustomControls.RJControls.RButton Updatebot;
         private CustomControls.RJControls.RButton rButton1;
+        private CustomControls.RJControls.RButton rButton2;
     }
 }

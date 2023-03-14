@@ -29,9 +29,9 @@ namespace AutoFact
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAF));
             this.pageselection = new System.Windows.Forms.TabControl();
             this.firstpage = new System.Windows.Forms.TabPage();
@@ -55,12 +55,9 @@ namespace AutoFact
             this.nom_des_services = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prix_unitaire = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.devispage = new System.Windows.Forms.TabPage();
-            this.LoadGridview4 = new CustomControls.RJControls.RButton();
-            this.rButton3 = new CustomControls.RJControls.RButton();
-            this.filtreDevis = new System.Windows.Forms.ComboBox();
-            this.ldDevis = new System.Windows.Forms.Label();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.clientpage = new System.Windows.Forms.TabPage();
+            this.parametrepage = new System.Windows.Forms.TabPage();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.bSearch = new CustomControls.RJControls.RButton();
             this.tbScreachCustomer = new System.Windows.Forms.TextBox();
             this.ReadCustomer = new CustomControls.RJControls.RButton();
@@ -68,8 +65,13 @@ namespace AutoFact
             this.rButton5 = new CustomControls.RJControls.RButton();
             this.rButton4 = new CustomControls.RJControls.RButton();
             this.listecliClient = new System.Windows.Forms.Label();
-            this.parametrepage = new System.Windows.Forms.TabPage();
-            this.logo = new System.Windows.Forms.PictureBox();
+            this.rButton3 = new CustomControls.RJControls.RButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.rButton6 = new CustomControls.RJControls.RButton();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.rButton7 = new CustomControls.RJControls.RButton();
+            this.rButton8 = new CustomControls.RJControls.RButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.pageselection.SuspendLayout();
             this.firstpage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -78,10 +80,10 @@ namespace AutoFact
             this.servicespage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.devispage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.clientpage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // pageselection
@@ -147,19 +149,19 @@ namespace AutoFact
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(541, 107);
             this.chart1.Name = "chart1";
             this.chart1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "CA";
-            series1.YValuesPerPoint = 4;
-            this.chart1.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Legend = "Legend1";
+            series3.Name = "CA";
+            series3.YValuesPerPoint = 4;
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(350, 350);
             this.chart1.TabIndex = 5;
             this.chart1.Text = "chart1";
@@ -376,11 +378,13 @@ namespace AutoFact
             // 
             // devispage
             // 
-            this.devispage.Controls.Add(this.LoadGridview4);
             this.devispage.Controls.Add(this.rButton3);
-            this.devispage.Controls.Add(this.filtreDevis);
-            this.devispage.Controls.Add(this.ldDevis);
+            this.devispage.Controls.Add(this.textBox1);
+            this.devispage.Controls.Add(this.rButton6);
             this.devispage.Controls.Add(this.dataGridView4);
+            this.devispage.Controls.Add(this.rButton7);
+            this.devispage.Controls.Add(this.rButton8);
+            this.devispage.Controls.Add(this.label1);
             this.devispage.Location = new System.Drawing.Point(4, 34);
             this.devispage.Margin = new System.Windows.Forms.Padding(2);
             this.devispage.Name = "devispage";
@@ -389,76 +393,6 @@ namespace AutoFact
             this.devispage.TabIndex = 2;
             this.devispage.Text = "Devis";
             this.devispage.UseVisualStyleBackColor = true;
-            // 
-            // LoadGridview4
-            // 
-            this.LoadGridview4.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.LoadGridview4.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.LoadGridview4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.LoadGridview4.BorderRadius = 15;
-            this.LoadGridview4.BorderSize = 0;
-            this.LoadGridview4.FlatAppearance.BorderSize = 0;
-            this.LoadGridview4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoadGridview4.ForeColor = System.Drawing.Color.White;
-            this.LoadGridview4.Location = new System.Drawing.Point(8, 18);
-            this.LoadGridview4.Margin = new System.Windows.Forms.Padding(2);
-            this.LoadGridview4.Name = "LoadGridview4";
-            this.LoadGridview4.Size = new System.Drawing.Size(149, 32);
-            this.LoadGridview4.TabIndex = 5;
-            this.LoadGridview4.Text = "Charger les données";
-            this.LoadGridview4.TextColor = System.Drawing.Color.White;
-            this.LoadGridview4.UseVisualStyleBackColor = false;
-            this.LoadGridview4.Click += new System.EventHandler(this.LoadGridview4_Click);
-            // 
-            // rButton3
-            // 
-            this.rButton3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.rButton3.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.rButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rButton3.BorderRadius = 12;
-            this.rButton3.BorderSize = 0;
-            this.rButton3.FlatAppearance.BorderSize = 0;
-            this.rButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rButton3.ForeColor = System.Drawing.Color.White;
-            this.rButton3.Location = new System.Drawing.Point(823, 31);
-            this.rButton3.Name = "rButton3";
-            this.rButton3.Size = new System.Drawing.Size(100, 32);
-            this.rButton3.TabIndex = 4;
-            this.rButton3.Text = "Gérer";
-            this.rButton3.TextColor = System.Drawing.Color.White;
-            this.rButton3.UseVisualStyleBackColor = false;
-            this.rButton3.Click += new System.EventHandler(this.rButton3_Click);
-            // 
-            // filtreDevis
-            // 
-            this.filtreDevis.FormattingEnabled = true;
-            this.filtreDevis.Location = new System.Drawing.Point(742, 35);
-            this.filtreDevis.Name = "filtreDevis";
-            this.filtreDevis.Size = new System.Drawing.Size(75, 24);
-            this.filtreDevis.TabIndex = 2;
-            this.filtreDevis.Text = "Filtre";
-            this.filtreDevis.UseWaitCursor = true;
-            // 
-            // ldDevis
-            // 
-            this.ldDevis.AutoSize = true;
-            this.ldDevis.Location = new System.Drawing.Point(5, 53);
-            this.ldDevis.Name = "ldDevis";
-            this.ldDevis.Size = new System.Drawing.Size(103, 16);
-            this.ldDevis.TabIndex = 1;
-            this.ldDevis.Text = "Liste des devis :";
-            this.ldDevis.UseWaitCursor = true;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(5, 69);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.Size = new System.Drawing.Size(918, 150);
-            this.dataGridView4.TabIndex = 0;
-            this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             // 
             // clientpage
             // 
@@ -477,113 +411,6 @@ namespace AutoFact
             this.clientpage.TabIndex = 3;
             this.clientpage.Text = "Client";
             this.clientpage.UseVisualStyleBackColor = true;
-            // 
-            // bSearch
-            // 
-            this.bSearch.BackColor = System.Drawing.Color.SkyBlue;
-            this.bSearch.BackgroundColor = System.Drawing.Color.SkyBlue;
-            this.bSearch.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bSearch.BorderRadius = 10;
-            this.bSearch.BorderSize = 0;
-            this.bSearch.FlatAppearance.BorderSize = 0;
-            this.bSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bSearch.ForeColor = System.Drawing.Color.White;
-            this.bSearch.Location = new System.Drawing.Point(595, 106);
-            this.bSearch.Name = "bSearch";
-            this.bSearch.Size = new System.Drawing.Size(116, 25);
-            this.bSearch.TabIndex = 10;
-            this.bSearch.Text = "Recherche";
-            this.bSearch.TextColor = System.Drawing.Color.White;
-            this.bSearch.UseVisualStyleBackColor = false;
-            this.bSearch.Click += new System.EventHandler(this.bSearch_Click);
-            // 
-            // tbScreachCustomer
-            // 
-            this.tbScreachCustomer.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbScreachCustomer.Location = new System.Drawing.Point(717, 107);
-            this.tbScreachCustomer.Name = "tbScreachCustomer";
-            this.tbScreachCustomer.Size = new System.Drawing.Size(203, 22);
-            this.tbScreachCustomer.TabIndex = 9;
-            this.tbScreachCustomer.TextChanged += new System.EventHandler(this.bSearch_Click);
-            // 
-            // ReadCustomer
-            // 
-            this.ReadCustomer.BackColor = System.Drawing.Color.DarkCyan;
-            this.ReadCustomer.BackgroundColor = System.Drawing.Color.DarkCyan;
-            this.ReadCustomer.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.ReadCustomer.BorderRadius = 15;
-            this.ReadCustomer.BorderSize = 0;
-            this.ReadCustomer.FlatAppearance.BorderSize = 0;
-            this.ReadCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ReadCustomer.ForeColor = System.Drawing.Color.White;
-            this.ReadCustomer.Location = new System.Drawing.Point(8, 98);
-            this.ReadCustomer.Name = "ReadCustomer";
-            this.ReadCustomer.Size = new System.Drawing.Size(150, 40);
-            this.ReadCustomer.TabIndex = 8;
-            this.ReadCustomer.Text = "Afficher";
-            this.ReadCustomer.TextColor = System.Drawing.Color.White;
-            this.ReadCustomer.UseVisualStyleBackColor = false;
-            this.ReadCustomer.Click += new System.EventHandler(this.dataGridViewCustomer_Click);
-            // 
-            // dataGridViewCustomer
-            // 
-            this.dataGridViewCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCustomer.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGridViewCustomer.Location = new System.Drawing.Point(5, 153);
-            this.dataGridViewCustomer.Name = "dataGridViewCustomer";
-            this.dataGridViewCustomer.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.RoyalBlue;
-            this.dataGridViewCustomer.Size = new System.Drawing.Size(915, 290);
-            this.dataGridViewCustomer.TabIndex = 6;
-            // 
-            // rButton5
-            // 
-            this.rButton5.BackColor = System.Drawing.Color.RoyalBlue;
-            this.rButton5.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.rButton5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rButton5.BorderRadius = 12;
-            this.rButton5.BorderSize = 0;
-            this.rButton5.FlatAppearance.BorderSize = 0;
-            this.rButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rButton5.ForeColor = System.Drawing.Color.White;
-            this.rButton5.Location = new System.Drawing.Point(823, 31);
-            this.rButton5.Name = "rButton5";
-            this.rButton5.Size = new System.Drawing.Size(100, 32);
-            this.rButton5.TabIndex = 5;
-            this.rButton5.Text = "Ajouter";
-            this.rButton5.TextColor = System.Drawing.Color.White;
-            this.rButton5.UseVisualStyleBackColor = false;
-            this.rButton5.Click += new System.EventHandler(this.rButton5_Click);
-            // 
-            // rButton4
-            // 
-            this.rButton4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.rButton4.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.rButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rButton4.BorderRadius = 12;
-            this.rButton4.BorderSize = 0;
-            this.rButton4.FlatAppearance.BorderSize = 0;
-            this.rButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rButton4.ForeColor = System.Drawing.Color.White;
-            this.rButton4.Location = new System.Drawing.Point(717, 31);
-            this.rButton4.Name = "rButton4";
-            this.rButton4.Size = new System.Drawing.Size(100, 32);
-            this.rButton4.TabIndex = 4;
-            this.rButton4.Text = "Gérer";
-            this.rButton4.TextColor = System.Drawing.Color.White;
-            this.rButton4.UseVisualStyleBackColor = false;
-            this.rButton4.Click += new System.EventHandler(this.rButton4_Click);
-            // 
-            // listecliClient
-            // 
-            this.listecliClient.AutoSize = true;
-            this.listecliClient.Location = new System.Drawing.Point(5, 53);
-            this.listecliClient.Name = "listecliClient";
-            this.listecliClient.Size = new System.Drawing.Size(108, 16);
-            this.listecliClient.TabIndex = 1;
-            this.listecliClient.Text = "Liste des clients :";
-            this.listecliClient.UseWaitCursor = true;
             // 
             // parametrepage
             // 
@@ -606,6 +433,210 @@ namespace AutoFact
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logo.TabIndex = 1;
             this.logo.TabStop = false;
+            // 
+            // bSearch
+            // 
+            this.bSearch.BackColor = System.Drawing.Color.SkyBlue;
+            this.bSearch.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.bSearch.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bSearch.BorderRadius = 10;
+            this.bSearch.BorderSize = 0;
+            this.bSearch.FlatAppearance.BorderSize = 0;
+            this.bSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bSearch.ForeColor = System.Drawing.Color.White;
+            this.bSearch.Location = new System.Drawing.Point(595, 107);
+            this.bSearch.Name = "bSearch";
+            this.bSearch.Size = new System.Drawing.Size(116, 25);
+            this.bSearch.TabIndex = 17;
+            this.bSearch.Text = "Recherche";
+            this.bSearch.TextColor = System.Drawing.Color.White;
+            this.bSearch.UseVisualStyleBackColor = false;
+            // 
+            // tbScreachCustomer
+            // 
+            this.tbScreachCustomer.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.tbScreachCustomer.Location = new System.Drawing.Point(717, 108);
+            this.tbScreachCustomer.Name = "tbScreachCustomer";
+            this.tbScreachCustomer.Size = new System.Drawing.Size(203, 22);
+            this.tbScreachCustomer.TabIndex = 16;
+            // 
+            // ReadCustomer
+            // 
+            this.ReadCustomer.BackColor = System.Drawing.Color.DarkCyan;
+            this.ReadCustomer.BackgroundColor = System.Drawing.Color.DarkCyan;
+            this.ReadCustomer.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.ReadCustomer.BorderRadius = 15;
+            this.ReadCustomer.BorderSize = 0;
+            this.ReadCustomer.FlatAppearance.BorderSize = 0;
+            this.ReadCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReadCustomer.ForeColor = System.Drawing.Color.White;
+            this.ReadCustomer.Location = new System.Drawing.Point(8, 99);
+            this.ReadCustomer.Name = "ReadCustomer";
+            this.ReadCustomer.Size = new System.Drawing.Size(150, 40);
+            this.ReadCustomer.TabIndex = 15;
+            this.ReadCustomer.Text = "Afficher";
+            this.ReadCustomer.TextColor = System.Drawing.Color.White;
+            this.ReadCustomer.UseVisualStyleBackColor = false;
+            // 
+            // dataGridViewCustomer
+            // 
+            this.dataGridViewCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCustomer.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dataGridViewCustomer.Location = new System.Drawing.Point(5, 154);
+            this.dataGridViewCustomer.Name = "dataGridViewCustomer";
+            this.dataGridViewCustomer.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.RoyalBlue;
+            this.dataGridViewCustomer.Size = new System.Drawing.Size(915, 290);
+            this.dataGridViewCustomer.TabIndex = 14;
+            // 
+            // rButton5
+            // 
+            this.rButton5.BackColor = System.Drawing.Color.RoyalBlue;
+            this.rButton5.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.rButton5.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rButton5.BorderRadius = 12;
+            this.rButton5.BorderSize = 0;
+            this.rButton5.FlatAppearance.BorderSize = 0;
+            this.rButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rButton5.ForeColor = System.Drawing.Color.White;
+            this.rButton5.Location = new System.Drawing.Point(823, 32);
+            this.rButton5.Name = "rButton5";
+            this.rButton5.Size = new System.Drawing.Size(100, 32);
+            this.rButton5.TabIndex = 13;
+            this.rButton5.Text = "Ajouter";
+            this.rButton5.TextColor = System.Drawing.Color.White;
+            this.rButton5.UseVisualStyleBackColor = false;
+            // 
+            // rButton4
+            // 
+            this.rButton4.BackColor = System.Drawing.Color.RoyalBlue;
+            this.rButton4.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.rButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rButton4.BorderRadius = 12;
+            this.rButton4.BorderSize = 0;
+            this.rButton4.FlatAppearance.BorderSize = 0;
+            this.rButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rButton4.ForeColor = System.Drawing.Color.White;
+            this.rButton4.Location = new System.Drawing.Point(717, 32);
+            this.rButton4.Name = "rButton4";
+            this.rButton4.Size = new System.Drawing.Size(100, 32);
+            this.rButton4.TabIndex = 12;
+            this.rButton4.Text = "Gérer";
+            this.rButton4.TextColor = System.Drawing.Color.White;
+            this.rButton4.UseVisualStyleBackColor = false;
+            // 
+            // listecliClient
+            // 
+            this.listecliClient.AutoSize = true;
+            this.listecliClient.Location = new System.Drawing.Point(5, 54);
+            this.listecliClient.Name = "listecliClient";
+            this.listecliClient.Size = new System.Drawing.Size(108, 16);
+            this.listecliClient.TabIndex = 11;
+            this.listecliClient.Text = "Liste des clients :";
+            this.listecliClient.UseWaitCursor = true;
+            // 
+            // rButton3
+            // 
+            this.rButton3.BackColor = System.Drawing.Color.SkyBlue;
+            this.rButton3.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.rButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rButton3.BorderRadius = 10;
+            this.rButton3.BorderSize = 0;
+            this.rButton3.FlatAppearance.BorderSize = 0;
+            this.rButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rButton3.ForeColor = System.Drawing.Color.White;
+            this.rButton3.Location = new System.Drawing.Point(595, 107);
+            this.rButton3.Name = "rButton3";
+            this.rButton3.Size = new System.Drawing.Size(116, 25);
+            this.rButton3.TabIndex = 24;
+            this.rButton3.Text = "Recherche";
+            this.rButton3.TextColor = System.Drawing.Color.White;
+            this.rButton3.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.textBox1.Location = new System.Drawing.Point(717, 108);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(203, 22);
+            this.textBox1.TabIndex = 23;
+            // 
+            // rButton6
+            // 
+            this.rButton6.BackColor = System.Drawing.Color.DarkCyan;
+            this.rButton6.BackgroundColor = System.Drawing.Color.DarkCyan;
+            this.rButton6.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rButton6.BorderRadius = 15;
+            this.rButton6.BorderSize = 0;
+            this.rButton6.FlatAppearance.BorderSize = 0;
+            this.rButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rButton6.ForeColor = System.Drawing.Color.White;
+            this.rButton6.Location = new System.Drawing.Point(8, 99);
+            this.rButton6.Name = "rButton6";
+            this.rButton6.Size = new System.Drawing.Size(150, 40);
+            this.rButton6.TabIndex = 22;
+            this.rButton6.Text = "Afficher";
+            this.rButton6.TextColor = System.Drawing.Color.White;
+            this.rButton6.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dataGridView4.Location = new System.Drawing.Point(5, 154);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.RoyalBlue;
+            this.dataGridView4.Size = new System.Drawing.Size(915, 290);
+            this.dataGridView4.TabIndex = 21;
+            // 
+            // rButton7
+            // 
+            this.rButton7.BackColor = System.Drawing.Color.RoyalBlue;
+            this.rButton7.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.rButton7.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rButton7.BorderRadius = 12;
+            this.rButton7.BorderSize = 0;
+            this.rButton7.FlatAppearance.BorderSize = 0;
+            this.rButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rButton7.ForeColor = System.Drawing.Color.White;
+            this.rButton7.Location = new System.Drawing.Point(823, 32);
+            this.rButton7.Name = "rButton7";
+            this.rButton7.Size = new System.Drawing.Size(100, 32);
+            this.rButton7.TabIndex = 20;
+            this.rButton7.Text = "Ajouter";
+            this.rButton7.TextColor = System.Drawing.Color.White;
+            this.rButton7.UseVisualStyleBackColor = false;
+            // 
+            // rButton8
+            // 
+            this.rButton8.BackColor = System.Drawing.Color.RoyalBlue;
+            this.rButton8.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.rButton8.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rButton8.BorderRadius = 12;
+            this.rButton8.BorderSize = 0;
+            this.rButton8.FlatAppearance.BorderSize = 0;
+            this.rButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rButton8.ForeColor = System.Drawing.Color.White;
+            this.rButton8.Location = new System.Drawing.Point(717, 32);
+            this.rButton8.Name = "rButton8";
+            this.rButton8.Size = new System.Drawing.Size(100, 32);
+            this.rButton8.TabIndex = 19;
+            this.rButton8.Text = "Gérer";
+            this.rButton8.TextColor = System.Drawing.Color.White;
+            this.rButton8.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(5, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 16);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Liste des devis:";
+            this.label1.UseWaitCursor = true;
             // 
             // formAF
             // 
@@ -632,11 +663,11 @@ namespace AutoFact
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.devispage.ResumeLayout(false);
             this.devispage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.clientpage.ResumeLayout(false);
             this.clientpage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -663,23 +694,25 @@ namespace AutoFact
         private System.Windows.Forms.DataGridViewTextBoxColumn categorie;
         private System.Windows.Forms.DataGridViewTextBoxColumn nom_des_services;
         private System.Windows.Forms.DataGridViewTextBoxColumn prix_unitaire;
-        private System.Windows.Forms.ComboBox filtreDevis;
-        private System.Windows.Forms.Label ldDevis;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.Label listecliClient;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.TabPage firstpage;
         private CustomControls.RJControls.RButton rButton1;
         private CustomControls.RJControls.RButton rButton2;
+        private CustomControls.RJControls.RButton loadgraph;
         private CustomControls.RJControls.RButton rButton3;
+        private System.Windows.Forms.TextBox textBox1;
+        private CustomControls.RJControls.RButton rButton6;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private CustomControls.RJControls.RButton rButton7;
+        private CustomControls.RJControls.RButton rButton8;
+        private System.Windows.Forms.Label label1;
+        private CustomControls.RJControls.RButton bSearch;
+        private System.Windows.Forms.TextBox tbScreachCustomer;
+        private CustomControls.RJControls.RButton ReadCustomer;
+        private System.Windows.Forms.DataGridView dataGridViewCustomer;
         private CustomControls.RJControls.RButton rButton5;
         private CustomControls.RJControls.RButton rButton4;
-        private CustomControls.RJControls.RButton loadgraph;
-        private CustomControls.RJControls.RButton LoadGridview4;
-        private System.Windows.Forms.DataGridView dataGridViewCustomer;
-        private CustomControls.RJControls.RButton ReadCustomer;
-        private System.Windows.Forms.TextBox tbScreachCustomer;
-        private CustomControls.RJControls.RButton bSearch;
+        private System.Windows.Forms.Label listecliClient;
     }
 }
 
