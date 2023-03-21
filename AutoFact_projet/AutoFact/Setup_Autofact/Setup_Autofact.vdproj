@@ -16,7 +16,7 @@
         "Entry"
         {
         "MsmKey" = "8:_07A980C9CDADFBFB306924417BEC50C2"
-        "OwnerKey" = "8:_33A0752392004E9F8421F76F16F8B96D"
+        "OwnerKey" = "8:_0E25CEA08582433985329A6A1DD70205"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -33,26 +33,26 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_1CFA90504E1F72026152102BF79A2897"
-        "OwnerKey" = "8:_33A0752392004E9F8421F76F16F8B96D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_33A0752392004E9F8421F76F16F8B96D"
+        "MsmKey" = "8:_0E25CEA08582433985329A6A1DD70205"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_1CFA90504E1F72026152102BF79A2897"
+        "OwnerKey" = "8:_0E25CEA08582433985329A6A1DD70205"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_39A6640E92C688E54307C0FAA7F0C63D"
-        "OwnerKey" = "8:_33A0752392004E9F8421F76F16F8B96D"
+        "OwnerKey" = "8:_0E25CEA08582433985329A6A1DD70205"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_41A734502BD05B89D0629E93BDB3B6D3"
-        "OwnerKey" = "8:_33A0752392004E9F8421F76F16F8B96D"
+        "OwnerKey" = "8:_0E25CEA08582433985329A6A1DD70205"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -70,13 +70,19 @@
         "Entry"
         {
         "MsmKey" = "8:_537B8B5628BA23912A161EFBD0E645E3"
-        "OwnerKey" = "8:_33A0752392004E9F8421F76F16F8B96D"
+        "OwnerKey" = "8:_0E25CEA08582433985329A6A1DD70205"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_860B99FEE7CC482FB1B203A91D1DD929"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_8BA9E02D18B2C3FB18F42551114A37C1"
-        "OwnerKey" = "8:_33A0752392004E9F8421F76F16F8B96D"
+        "OwnerKey" = "8:_0E25CEA08582433985329A6A1DD70205"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -88,7 +94,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_33A0752392004E9F8421F76F16F8B96D"
+        "OwnerKey" = "8:_0E25CEA08582433985329A6A1DD70205"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -139,6 +145,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -155,6 +169,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -200,7 +222,7 @@
             "SourcePath" = "8:EntityFramework.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_0B6B53CE23D448D68A8049EC3C86CF7B"
+            "Folder" = "8:_F0B601B060554C4482E582BF327B786D"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -231,7 +253,7 @@
             "SourcePath" = "8:System.Data.SQLite.Linq.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_0B6B53CE23D448D68A8049EC3C86CF7B"
+            "Folder" = "8:_F0B601B060554C4482E582BF327B786D"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -262,7 +284,7 @@
             "SourcePath" = "8:EntityFramework.SqlServer.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_0B6B53CE23D448D68A8049EC3C86CF7B"
+            "Folder" = "8:_F0B601B060554C4482E582BF327B786D"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -293,7 +315,7 @@
             "SourcePath" = "8:System.Data.SQLite.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_0B6B53CE23D448D68A8049EC3C86CF7B"
+            "Folder" = "8:_F0B601B060554C4482E582BF327B786D"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -324,7 +346,7 @@
             "SourcePath" = "8:System.Data.SQLite.EF6.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_0B6B53CE23D448D68A8049EC3C86CF7B"
+            "Folder" = "8:_F0B601B060554C4482E582BF327B786D"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -337,6 +359,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_860B99FEE7CC482FB1B203A91D1DD929"
+            {
+            "SourcePath" = "8:..\\AutoFact\\bin\\Debug\\x86\\SQLite.Interop.dll"
+            "TargetName" = "8:SQLite.Interop.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_F0B601B060554C4482E582BF327B786D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8BA9E02D18B2C3FB18F42551114A37C1"
@@ -355,7 +397,7 @@
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_0B6B53CE23D448D68A8049EC3C86CF7B"
+            "Folder" = "8:_F0B601B060554C4482E582BF327B786D"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -386,6 +428,17 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_F0B601B060554C4482E582BF327B786D"
+                    {
+                    "Name" = "8:Assembly"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_5235F79341CE4C4EA90D34827683BF74"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_9106C2F5C4C1466A8751FACB85AC1312"
@@ -547,15 +600,15 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D63DCAE10C9644A18EB58D58754748FF"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_65DA560831D44AAFA211D6AD6C118802"
             {
-            "Name" = "8:Setup"
+            "Name" = "8:Shortcut to Sortie principale from AutoFact (Active)"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_33A0752392004E9F8421F76F16F8B96D"
+            "Target" = "8:_0E25CEA08582433985329A6A1DD70205"
             "Folder" = "8:_9106C2F5C4C1466A8751FACB85AC1312"
             "WorkingFolder" = "8:_0B6B53CE23D448D68A8049EC3C86CF7B"
             "Icon" = "8:"
@@ -960,7 +1013,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_33A0752392004E9F8421F76F16F8B96D"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0E25CEA08582433985329A6A1DD70205"
             {
             "SourcePath" = "8:..\\AutoFact\\obj\\Debug\\AutoFact.exe"
             "TargetName" = "8:"

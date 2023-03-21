@@ -98,3 +98,5 @@ C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\
 C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\System.Data.SQLite.xml
 C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.csproj.CopyComplete
 C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.gClient.resources
+C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\x86\sqlite3.dll
+C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\x64\sqlite3.dll
