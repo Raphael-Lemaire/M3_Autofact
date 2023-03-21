@@ -68,12 +68,6 @@ namespace AutoFact
 
 
 
-        private void rButton5_Click(object sender, EventArgs e)
-        {
-            aClient aC = new aClient();
-            aC.Show();
-        }
-
         private void formAF_Load(object sender, EventArgs e)
         {
 
@@ -193,10 +187,24 @@ namespace AutoFact
             CustomerModel.recherche_client(valeur, dataGridViewCustomer);
         }
 
-        private void rButton4_Click(object sender, EventArgs e)
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void GererButton_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void GererButton_Click_1(object sender, EventArgs e)
         {
             gClient gC = new gClient();
             gC.Show();
+        }
+
+        private void addButton_Click_1(object sender, EventArgs e)
+        {
+            aClient aC = new aClient();
+            aC.Show();
         }
     }
 
