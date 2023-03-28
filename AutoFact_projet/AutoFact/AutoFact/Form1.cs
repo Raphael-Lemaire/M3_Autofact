@@ -70,7 +70,7 @@ namespace AutoFact
 
         private void formAF_Load(object sender, EventArgs e)
         {
-
+            CustomerModel.GetCustomer(dataGridViewCustomer);
         }
         private void fillchart()
         {
@@ -205,6 +205,11 @@ namespace AutoFact
         {
             aClient aC = new aClient();
             aC.Show();
+        }
+
+        private void ReadCustomer_Click(object sender, EventArgs e)
+        {
+            CustomerModel.GetCustomer(dataGridViewCustomer);
         }
     }
 

@@ -29,9 +29,9 @@ namespace AutoFact
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAF));
             this.pageselection = new System.Windows.Forms.TabControl();
             this.firstpage = new System.Windows.Forms.TabPage();
@@ -149,19 +149,19 @@ namespace AutoFact
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(541, 107);
             this.chart1.Name = "chart1";
             this.chart1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "CA";
-            series2.YValuesPerPoint = 4;
-            this.chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "CA";
+            series1.YValuesPerPoint = 4;
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(350, 350);
             this.chart1.TabIndex = 5;
             this.chart1.Text = "chart1";
@@ -554,9 +554,10 @@ namespace AutoFact
             this.ReadCustomer.Name = "ReadCustomer";
             this.ReadCustomer.Size = new System.Drawing.Size(150, 40);
             this.ReadCustomer.TabIndex = 15;
-            this.ReadCustomer.Text = "Afficher";
+            this.ReadCustomer.Text = "Actualiser";
             this.ReadCustomer.TextColor = System.Drawing.Color.White;
             this.ReadCustomer.UseVisualStyleBackColor = false;
+            this.ReadCustomer.Click += new System.EventHandler(this.ReadCustomer_Click);
             // 
             // dataGridViewCustomer
             // 
