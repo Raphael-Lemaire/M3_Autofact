@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.Data;
 
+
 namespace AutoFact
 {
     class Database
@@ -35,12 +36,13 @@ namespace AutoFact
 
                 _instance = new Database();
             }
-            // SQLiteConnection Conn = new SQLiteConnection(conString);
-            //SQLiteCommand command = new SQLiteCommand();
+             SQLiteConnection Conn = new SQLiteConnection(conString);
+             SQLiteCommand command = new SQLiteCommand();
             return _instance;
         }
         public SQLiteConnection getConnection()
         {
+                
                 SQLiteConnection Conn = new SQLiteConnection(conString);
                 Conn.Open();
                 Console.WriteLine("Connected");

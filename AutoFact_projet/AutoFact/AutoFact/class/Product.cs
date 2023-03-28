@@ -35,8 +35,6 @@ namespace AutoFact
         //setter
 
 
-
-
         public void setName(string aName) {this._Name=aName;}
 
         public void setPriceUnit(float aPrice_Unit) {this._Unit_Price=aPrice_Unit;}

@@ -92,6 +92,7 @@
     <Compile Include="class\Quotation .cs" />
     <Compile Include="class\QuotationLine.cs" />
     <Compile Include="class\TypeStatus.cs" />
+    <Compile Include="CustomerCrud.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

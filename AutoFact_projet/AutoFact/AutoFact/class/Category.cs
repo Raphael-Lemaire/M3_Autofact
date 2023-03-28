@@ -29,6 +29,7 @@ namespace AutoFact
 
         //setter
         
+
         public void setlibelle(string aLibelle){this._Libelle=aLibelle;}
 
     }
