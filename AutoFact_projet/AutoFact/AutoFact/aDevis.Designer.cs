@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(aDevis));
             this.rButton2 = new CustomControls.RJControls.RButton();
             this.bAddCustomer = new CustomControls.RJControls.RButton();
-            this.tbCompagny = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.logo = new System.Windows.Forms.PictureBox();
             this.labelEmailAddress = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.tbNumberPhone = new System.Windows.Forms.TextBox();
             this.tbLastName = new System.Windows.Forms.TextBox();
             this.tbFirstName = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,17 +81,10 @@
             this.bAddCustomer.TextColor = System.Drawing.Color.White;
             this.bAddCustomer.UseVisualStyleBackColor = false;
             // 
-            // tbCompagny
-            // 
-            this.tbCompagny.Location = new System.Drawing.Point(338, 298);
-            this.tbCompagny.Name = "tbCompagny";
-            this.tbCompagny.Size = new System.Drawing.Size(100, 20);
-            this.tbCompagny.TabIndex = 27;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(279, 301);
+            this.label1.Location = new System.Drawing.Point(115, 261);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 26;
@@ -120,7 +113,7 @@
             // labelNumberPhone
             // 
             this.labelNumberPhone.AutoSize = true;
-            this.labelNumberPhone.Location = new System.Drawing.Point(70, 244);
+            this.labelNumberPhone.Location = new System.Drawing.Point(70, 217);
             this.labelNumberPhone.Name = "labelNumberPhone";
             this.labelNumberPhone.Size = new System.Drawing.Size(98, 13);
             this.labelNumberPhone.TabIndex = 23;
@@ -153,7 +146,7 @@
             // 
             // tbNumberPhone
             // 
-            this.tbNumberPhone.Location = new System.Drawing.Point(174, 241);
+            this.tbNumberPhone.Location = new System.Drawing.Point(174, 210);
             this.tbNumberPhone.Name = "tbNumberPhone";
             this.tbNumberPhone.Size = new System.Drawing.Size(100, 20);
             this.tbNumberPhone.TabIndex = 19;
@@ -172,14 +165,22 @@
             this.tbFirstName.Size = new System.Drawing.Size(100, 20);
             this.tbFirstName.TabIndex = 17;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(174, 258);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.TabIndex = 30;
+            // 
             // aDevis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.rButton2);
             this.Controls.Add(this.bAddCustomer);
-            this.Controls.Add(this.tbCompagny);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.labelEmailAddress);
@@ -192,6 +193,7 @@
             this.Controls.Add(this.tbFirstName);
             this.Name = "aDevis";
             this.Text = "aDevis";
+            this.Load += new System.EventHandler(this.aDevis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -202,7 +204,6 @@
 
         private CustomControls.RJControls.RButton rButton2;
         private CustomControls.RJControls.RButton bAddCustomer;
-        private System.Windows.Forms.TextBox tbCompagny;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label labelEmailAddress;
@@ -213,5 +214,6 @@
         private System.Windows.Forms.TextBox tbNumberPhone;
         private System.Windows.Forms.TextBox tbLastName;
         private System.Windows.Forms.TextBox tbFirstName;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

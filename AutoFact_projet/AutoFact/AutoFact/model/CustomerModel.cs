@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System.Collections.Generic;
+using System.Data;
 using System.Data.SQLite;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
@@ -151,6 +152,16 @@ namespace AutoFact.model
             db.Close();
             return dt;
 
+        }
+
+        public static List<int> GetIdCustomer(List<int> aId)
+        {
+            var id = new List<int>();
+            SQLiteConnection db = Database.getInstance().getConnection();
+            SQLiteCommand cmd = new SQLiteCommand("SELECT id FROM customer", db);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+
+            return id;
         }
 
 

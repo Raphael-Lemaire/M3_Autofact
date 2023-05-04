@@ -16,5 +16,10 @@ namespace AutoFact
         {
             InitializeComponent();
         }
+
+        private void aDevis_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
