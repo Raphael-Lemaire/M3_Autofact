@@ -216,6 +216,12 @@ namespace AutoFact
             gDevis gD = new gDevis();
             gD.Show();
         }
+
+        private void rButton7_Click(object sender, EventArgs e)
+        {
+            aDevis aD = new aDevis();
+            aD.Show();
+        }
     }
 
 }

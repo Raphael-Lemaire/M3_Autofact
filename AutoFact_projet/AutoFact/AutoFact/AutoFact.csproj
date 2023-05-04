@@ -75,6 +75,12 @@
     <Compile Include="aClient.Designer.cs">
       <DependentUpon>aClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="aDevis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aDevis.Designer.cs">
+      <DependentUpon>aDevis.cs</DependentUpon>
+    </Compile>
     <Compile Include="aService.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="aClient.resx">
       <DependentUpon>aClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aDevis.resx">
+      <DependentUpon>aDevis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="aService.resx">
       <DependentUpon>aService.cs</DependentUpon>

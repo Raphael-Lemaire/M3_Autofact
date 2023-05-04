@@ -126,3 +126,4 @@ C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\Auto
 C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.csproj.CopyComplete
 C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.exe
 C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.pdb
+C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.aDevis.resources
