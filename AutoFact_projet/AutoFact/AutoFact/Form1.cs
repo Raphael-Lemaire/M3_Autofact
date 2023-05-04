@@ -62,8 +62,7 @@ namespace AutoFact
 
         private void rButton3_Click(object sender, EventArgs e)
         {
-            gDevis gD = new gDevis();
-            gD.Show();
+
         }
 
 
@@ -210,6 +209,12 @@ namespace AutoFact
         private void ReadCustomer_Click(object sender, EventArgs e)
         {
             CustomerModel.GetCustomer(dataGridViewCustomer);
+        }
+
+        private void rButton8_Click(object sender, EventArgs e)
+        {
+            gDevis gD = new gDevis();
+            gD.Show();
         }
     }
 

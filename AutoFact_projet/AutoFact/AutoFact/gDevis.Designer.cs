@@ -36,12 +36,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TBmailUpdate = new System.Windows.Forms.TextBox();
-            this.TBlasttNameUpdate = new System.Windows.Forms.TextBox();
             this.TBfirstNameUp = new System.Windows.Forms.TextBox();
             this.tbScreachCustomer = new System.Windows.Forms.TextBox();
             this.ReadCustomer = new CustomControls.RJControls.RButton();
             this.dataGridViewQuotation = new System.Windows.Forms.DataGridView();
             this.logo = new System.Windows.Forms.PictureBox();
+            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
+            this.comboBoxClient = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuotation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -56,9 +58,10 @@
             this.rButton2.FlatAppearance.BorderSize = 0;
             this.rButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rButton2.ForeColor = System.Drawing.Color.White;
-            this.rButton2.Location = new System.Drawing.Point(943, 198);
+            this.rButton2.Location = new System.Drawing.Point(1257, 244);
+            this.rButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rButton2.Name = "rButton2";
-            this.rButton2.Size = new System.Drawing.Size(8, 8);
+            this.rButton2.Size = new System.Drawing.Size(11, 10);
             this.rButton2.TabIndex = 56;
             this.rButton2.Text = "rButton2";
             this.rButton2.TextColor = System.Drawing.Color.White;
@@ -74,9 +77,10 @@
             this.rButton1.FlatAppearance.BorderSize = 0;
             this.rButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rButton1.ForeColor = System.Drawing.Color.White;
-            this.rButton1.Location = new System.Drawing.Point(880, 198);
+            this.rButton1.Location = new System.Drawing.Point(1173, 244);
+            this.rButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rButton1.Name = "rButton1";
-            this.rButton1.Size = new System.Drawing.Size(150, 40);
+            this.rButton1.Size = new System.Drawing.Size(200, 49);
             this.rButton1.TabIndex = 55;
             this.rButton1.Text = "Supprimer";
             this.rButton1.TextColor = System.Drawing.Color.White;
@@ -92,9 +96,10 @@
             this.Updatebot.FlatAppearance.BorderSize = 0;
             this.Updatebot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Updatebot.ForeColor = System.Drawing.Color.White;
-            this.Updatebot.Location = new System.Drawing.Point(880, 265);
+            this.Updatebot.Location = new System.Drawing.Point(1173, 326);
+            this.Updatebot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Updatebot.Name = "Updatebot";
-            this.Updatebot.Size = new System.Drawing.Size(150, 40);
+            this.Updatebot.Size = new System.Drawing.Size(200, 49);
             this.Updatebot.TabIndex = 54;
             this.Updatebot.Text = "Modifier";
             this.Updatebot.TextColor = System.Drawing.Color.White;
@@ -103,9 +108,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(471, 593);
+            this.label3.Location = new System.Drawing.Point(628, 730);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.Size = new System.Drawing.Size(62, 17);
             this.label3.TabIndex = 51;
             this.label3.Text = "Prix total";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -113,48 +119,46 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(235, 637);
+            this.label2.Location = new System.Drawing.Point(313, 784);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(48, 17);
             this.label2.TabIndex = 50;
-            this.label2.Text = "Statut";
+            this.label2.Text = "Status";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(235, 596);
+            this.label1.Location = new System.Drawing.Point(313, 734);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(44, 17);
             this.label1.TabIndex = 49;
             this.label1.Text = "libelle";
             // 
             // TBmailUpdate
             // 
-            this.TBmailUpdate.Location = new System.Drawing.Point(365, 590);
+            this.TBmailUpdate.Location = new System.Drawing.Point(487, 726);
+            this.TBmailUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBmailUpdate.Name = "TBmailUpdate";
-            this.TBmailUpdate.Size = new System.Drawing.Size(100, 20);
+            this.TBmailUpdate.Size = new System.Drawing.Size(132, 22);
             this.TBmailUpdate.TabIndex = 46;
-            // 
-            // TBlasttNameUpdate
-            // 
-            this.TBlasttNameUpdate.Location = new System.Drawing.Point(116, 634);
-            this.TBlasttNameUpdate.Name = "TBlasttNameUpdate";
-            this.TBlasttNameUpdate.Size = new System.Drawing.Size(100, 20);
-            this.TBlasttNameUpdate.TabIndex = 45;
             // 
             // TBfirstNameUp
             // 
-            this.TBfirstNameUp.Location = new System.Drawing.Point(116, 593);
+            this.TBfirstNameUp.Location = new System.Drawing.Point(155, 730);
+            this.TBfirstNameUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBfirstNameUp.Name = "TBfirstNameUp";
-            this.TBfirstNameUp.Size = new System.Drawing.Size(100, 20);
+            this.TBfirstNameUp.Size = new System.Drawing.Size(132, 22);
             this.TBfirstNameUp.TabIndex = 44;
             // 
             // tbScreachCustomer
             // 
             this.tbScreachCustomer.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbScreachCustomer.Location = new System.Drawing.Point(661, 153);
+            this.tbScreachCustomer.Location = new System.Drawing.Point(881, 188);
+            this.tbScreachCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbScreachCustomer.Name = "tbScreachCustomer";
-            this.tbScreachCustomer.Size = new System.Drawing.Size(203, 20);
+            this.tbScreachCustomer.Size = new System.Drawing.Size(269, 22);
             this.tbScreachCustomer.TabIndex = 43;
             // 
             // ReadCustomer
@@ -167,9 +171,10 @@
             this.ReadCustomer.FlatAppearance.BorderSize = 0;
             this.ReadCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReadCustomer.ForeColor = System.Drawing.Color.White;
-            this.ReadCustomer.Location = new System.Drawing.Point(12, 133);
+            this.ReadCustomer.Location = new System.Drawing.Point(16, 164);
+            this.ReadCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ReadCustomer.Name = "ReadCustomer";
-            this.ReadCustomer.Size = new System.Drawing.Size(150, 40);
+            this.ReadCustomer.Size = new System.Drawing.Size(200, 49);
             this.ReadCustomer.TabIndex = 42;
             this.ReadCustomer.Text = "Actualiser";
             this.ReadCustomer.TextColor = System.Drawing.Color.White;
@@ -179,28 +184,59 @@
             // 
             this.dataGridViewQuotation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewQuotation.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGridViewQuotation.Location = new System.Drawing.Point(12, 188);
+            this.dataGridViewQuotation.Location = new System.Drawing.Point(16, 231);
+            this.dataGridViewQuotation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewQuotation.Name = "dataGridViewQuotation";
+            this.dataGridViewQuotation.RowHeadersWidth = 51;
             this.dataGridViewQuotation.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.RoyalBlue;
-            this.dataGridViewQuotation.Size = new System.Drawing.Size(852, 382);
+            this.dataGridViewQuotation.Size = new System.Drawing.Size(1136, 470);
             this.dataGridViewQuotation.TabIndex = 41;
             // 
             // logo
             // 
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(12, -2);
-            this.logo.Margin = new System.Windows.Forms.Padding(2);
+            this.logo.Location = new System.Drawing.Point(16, -2);
+            this.logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(97, 93);
+            this.logo.Size = new System.Drawing.Size(129, 114);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logo.TabIndex = 40;
             this.logo.TabStop = false;
             // 
+            // comboBoxStatus
+            // 
+            this.comboBoxStatus.FormattingEnabled = true;
+            this.comboBoxStatus.Location = new System.Drawing.Point(155, 784);
+            this.comboBoxStatus.Name = "comboBoxStatus";
+            this.comboBoxStatus.Size = new System.Drawing.Size(132, 24);
+            this.comboBoxStatus.TabIndex = 57;
+            // 
+            // comboBoxClient
+            // 
+            this.comboBoxClient.FormattingEnabled = true;
+            this.comboBoxClient.Location = new System.Drawing.Point(487, 784);
+            this.comboBoxClient.Name = "comboBoxClient";
+            this.comboBoxClient.Size = new System.Drawing.Size(132, 24);
+            this.comboBoxClient.TabIndex = 58;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(628, 787);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 17);
+            this.label4.TabIndex = 59;
+            this.label4.Text = "Client";
+            // 
             // gDevis
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1050, 720);
+            this.ClientSize = new System.Drawing.Size(1400, 886);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.comboBoxClient);
+            this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.rButton2);
             this.Controls.Add(this.rButton1);
             this.Controls.Add(this.Updatebot);
@@ -208,12 +244,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TBmailUpdate);
-            this.Controls.Add(this.TBlasttNameUpdate);
             this.Controls.Add(this.TBfirstNameUp);
             this.Controls.Add(this.tbScreachCustomer);
             this.Controls.Add(this.ReadCustomer);
             this.Controls.Add(this.dataGridViewQuotation);
             this.Controls.Add(this.logo);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "gDevis";
             this.Text = "Gérer les devis";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuotation)).EndInit();
@@ -232,11 +268,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TBmailUpdate;
-        private System.Windows.Forms.TextBox TBlasttNameUpdate;
         private System.Windows.Forms.TextBox TBfirstNameUp;
         private System.Windows.Forms.TextBox tbScreachCustomer;
         private CustomControls.RJControls.RButton ReadCustomer;
         private System.Windows.Forms.DataGridView dataGridViewQuotation;
         private System.Windows.Forms.PictureBox logo;
+        private System.Windows.Forms.ComboBox comboBoxStatus;
+        private System.Windows.Forms.ComboBox comboBoxClient;
+        private System.Windows.Forms.Label label4;
     }
 }

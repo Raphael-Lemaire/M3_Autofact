@@ -100,3 +100,29 @@ C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\
 C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.gClient.resources
 C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\x86\sqlite3.dll
 C:\Users\EDELINE\Documents\GitHub\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\x64\sqlite3.dll
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\x86\sqlite3.dll
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\x64\sqlite3.dll
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\AutoFact.exe.config
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\AutoFact.exe
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\AutoFact.pdb
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\EntityFramework.dll
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\System.Data.SQLite.dll
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\EntityFramework.xml
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\bin\Debug\System.Data.SQLite.xml
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.csproj.AssemblyReference.cache
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.aClient.resources
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.aService.resources
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.formAF.resources
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.gClient.resources
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.gDevis.resources
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.gService.resources
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.Properties.Resources.resources
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.csproj.GenerateResource.cache
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.csproj.CoreCompileInputs.cache
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.csproj.CopyComplete
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.exe
+C:\Users\utilisateur\Desktop\Cours SIO\M3_Autofact\AutoFact_projet\AutoFact\AutoFact\obj\Debug\AutoFact.pdb
