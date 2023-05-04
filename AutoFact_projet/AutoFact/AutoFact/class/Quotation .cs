@@ -12,17 +12,17 @@ namespace AutoFact
         private int _Id;
         private string _Name;
         private float _Total_Price;
-        private string _Status;
+        private int _CustomerId;
 
         //construct
 
 
-        public Quotation(int anID, string anName,float aTotal_Price, string aStatus)
+        public Quotation(int anID, string anName,float aTotal_Price, int aCustomerId)
         {
             this._Id = anID;
             this._Name = anName;
             this._Total_Price = aTotal_Price;
-            this._Status = aStatus;
+            this._CustomerId = aCustomerId;
                
         }
 
@@ -34,7 +34,7 @@ namespace AutoFact
         public string getName() {return (this._Name);}
 
         public float getTotalPrice() {return this._Total_Price;}
-        public string getStatus() {return this._Status;}
+        public int getCustomerId() {return this._CustomerId;}
 
         //setter
 
@@ -42,6 +42,6 @@ namespace AutoFact
      
         public void setName(string anName) {this._Name=anName;}
         public void setTotalPrice( float aTotalPrice) {this._Total_Price = aTotalPrice;}
-        public void setStatus(string aStatus) { this._Status = aStatus; }
+        public void setStatus(int aCustomerId) { this._CustomerId = aCustomerId; }
     }
 }

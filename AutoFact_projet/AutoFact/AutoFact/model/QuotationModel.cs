@@ -50,7 +50,7 @@ namespace AutoFact.model
         }
 
         /// <summary>
-        /// La suppression du client
+        /// La suppression du devis
         /// </summary>
         /// <param name="id"></param>
 
@@ -73,7 +73,7 @@ namespace AutoFact.model
             MessageBox.Show(messageSucess, titleSucess);
         }
         /// <summary>
-        /// Modification des clients
+        /// Modification des devis
         /// </summary>
         /// <param name="name"></param>
         /// <param name="totalPrice"></param>
@@ -130,7 +130,7 @@ namespace AutoFact.model
             return dt;
         }
         /// <summary>
-        /// Permet de récuperer les clients
+        /// Permet de récuperer les devis
         /// </summary>
         /// <param name="dataGridView"></param>
         /// <returns></returns>
