@@ -29,9 +29,9 @@ namespace AutoFact
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAF));
             this.pageselection = new System.Windows.Forms.TabControl();
             this.firstpage = new System.Windows.Forms.TabPage();
@@ -50,10 +50,6 @@ namespace AutoFact
             this.rButton1 = new CustomControls.RJControls.RButton();
             this.filtrecatservice = new System.Windows.Forms.ComboBox();
             this.dsservice = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.categorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nom_des_services = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prix_unitaire = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.devispage = new System.Windows.Forms.TabPage();
             this.rButton3 = new CustomControls.RJControls.RButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -72,18 +68,22 @@ namespace AutoFact
             this.listecliClient = new System.Windows.Forms.Label();
             this.parametrepage = new System.Windows.Forms.TabPage();
             this.logo = new System.Windows.Forms.PictureBox();
+            this.bSearchService = new CustomControls.RJControls.RButton();
+            this.tbSearchService = new System.Windows.Forms.TextBox();
+            this.ReadService = new CustomControls.RJControls.RButton();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.pageselection.SuspendLayout();
             this.firstpage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.servicespage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.devispage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.clientpage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // pageselection
@@ -98,12 +98,12 @@ namespace AutoFact
             this.pageselection.Controls.Add(this.parametrepage);
             this.pageselection.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pageselection.ItemSize = new System.Drawing.Size(64, 30);
-            this.pageselection.Location = new System.Drawing.Point(107, 8);
-            this.pageselection.Margin = new System.Windows.Forms.Padding(2);
+            this.pageselection.Location = new System.Drawing.Point(143, 10);
+            this.pageselection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pageselection.Name = "pageselection";
             this.pageselection.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.pageselection.SelectedIndex = 0;
-            this.pageselection.Size = new System.Drawing.Size(936, 514);
+            this.pageselection.Size = new System.Drawing.Size(1248, 633);
             this.pageselection.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.pageselection.TabIndex = 0;
             // 
@@ -117,11 +117,11 @@ namespace AutoFact
             this.firstpage.Controls.Add(this.cadashboard);
             this.firstpage.Controls.Add(this.dataGridView1);
             this.firstpage.Location = new System.Drawing.Point(4, 34);
-            this.firstpage.Margin = new System.Windows.Forms.Padding(2);
+            this.firstpage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.firstpage.Name = "firstpage";
-            this.firstpage.Padding = new System.Windows.Forms.Padding(2);
+            this.firstpage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.firstpage.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.firstpage.Size = new System.Drawing.Size(928, 476);
+            this.firstpage.Size = new System.Drawing.Size(1240, 595);
             this.firstpage.TabIndex = 0;
             this.firstpage.Text = "Dashboard";
             this.firstpage.UseVisualStyleBackColor = true;
@@ -136,10 +136,10 @@ namespace AutoFact
             this.loadgraph.FlatAppearance.BorderSize = 0;
             this.loadgraph.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loadgraph.ForeColor = System.Drawing.Color.White;
-            this.loadgraph.Location = new System.Drawing.Point(636, 39);
-            this.loadgraph.Margin = new System.Windows.Forms.Padding(2);
+            this.loadgraph.Location = new System.Drawing.Point(848, 48);
+            this.loadgraph.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loadgraph.Name = "loadgraph";
-            this.loadgraph.Size = new System.Drawing.Size(112, 32);
+            this.loadgraph.Size = new System.Drawing.Size(149, 39);
             this.loadgraph.TabIndex = 6;
             this.loadgraph.Text = "LoadGraph";
             this.loadgraph.TextColor = System.Drawing.Color.White;
@@ -149,20 +149,21 @@ namespace AutoFact
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(541, 107);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(721, 132);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chart1.Name = "chart1";
             this.chart1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "CA";
-            series2.YValuesPerPoint = 4;
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(350, 350);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "CA";
+            series1.YValuesPerPoint = 4;
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(467, 431);
             this.chart1.TabIndex = 5;
             this.chart1.Text = "chart1";
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
@@ -170,9 +171,10 @@ namespace AutoFact
             // rvs
             // 
             this.rvs.AutoSize = true;
-            this.rvs.Location = new System.Drawing.Point(538, 82);
+            this.rvs.Location = new System.Drawing.Point(717, 101);
+            this.rvs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.rvs.Name = "rvs";
-            this.rvs.Size = new System.Drawing.Size(214, 16);
+            this.rvs.Size = new System.Drawing.Size(251, 20);
             this.rvs.TabIndex = 4;
             this.rvs.Text = "Répartition des ventes de services";
             this.rvs.UseWaitCursor = true;
@@ -181,9 +183,10 @@ namespace AutoFact
             // dfdashboard
             // 
             this.dfdashboard.AutoSize = true;
-            this.dfdashboard.Location = new System.Drawing.Point(5, 238);
+            this.dfdashboard.Location = new System.Drawing.Point(7, 293);
+            this.dfdashboard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dfdashboard.Name = "dfdashboard";
-            this.dfdashboard.Size = new System.Drawing.Size(130, 16);
+            this.dfdashboard.Size = new System.Drawing.Size(158, 20);
             this.dfdashboard.TabIndex = 3;
             this.dfdashboard.Text = "Dernières facturation";
             this.dfdashboard.Click += new System.EventHandler(this.label2_Click);
@@ -191,10 +194,11 @@ namespace AutoFact
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(5, 257);
+            this.dataGridView2.Location = new System.Drawing.Point(7, 316);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(474, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(632, 185);
             this.dataGridView2.TabIndex = 2;
             // 
             // cadashboard
@@ -203,10 +207,9 @@ namespace AutoFact
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cadashboard.AutoSize = true;
-            this.cadashboard.Location = new System.Drawing.Point(5, 21);
-            this.cadashboard.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.cadashboard.Location = new System.Drawing.Point(7, 26);
             this.cadashboard.Name = "cadashboard";
-            this.cadashboard.Size = new System.Drawing.Size(95, 16);
+            this.cadashboard.Size = new System.Drawing.Size(117, 20);
             this.cadashboard.TabIndex = 1;
             this.cadashboard.Text = "Chiffre d\'affaire";
             this.cadashboard.Click += new System.EventHandler(this.label1_Click);
@@ -224,13 +227,13 @@ namespace AutoFact
             this.colservices,
             this.colca,
             this.colannee});
-            this.dataGridView1.Location = new System.Drawing.Point(5, 39);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 48);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(474, 125);
+            this.dataGridView1.Size = new System.Drawing.Size(632, 154);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -260,16 +263,19 @@ namespace AutoFact
             // 
             // servicespage
             // 
+            this.servicespage.Controls.Add(this.bSearchService);
+            this.servicespage.Controls.Add(this.tbSearchService);
+            this.servicespage.Controls.Add(this.ReadService);
+            this.servicespage.Controls.Add(this.dataGridView3);
             this.servicespage.Controls.Add(this.rButton2);
             this.servicespage.Controls.Add(this.rButton1);
             this.servicespage.Controls.Add(this.filtrecatservice);
             this.servicespage.Controls.Add(this.dsservice);
-            this.servicespage.Controls.Add(this.dataGridView3);
             this.servicespage.Location = new System.Drawing.Point(4, 34);
-            this.servicespage.Margin = new System.Windows.Forms.Padding(2);
+            this.servicespage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.servicespage.Name = "servicespage";
-            this.servicespage.Padding = new System.Windows.Forms.Padding(2);
-            this.servicespage.Size = new System.Drawing.Size(928, 476);
+            this.servicespage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.servicespage.Size = new System.Drawing.Size(1240, 595);
             this.servicespage.TabIndex = 1;
             this.servicespage.Text = "Services";
             this.servicespage.UseVisualStyleBackColor = true;
@@ -286,9 +292,10 @@ namespace AutoFact
             this.rButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rButton2.ForeColor = System.Drawing.Color.White;
-            this.rButton2.Location = new System.Drawing.Point(823, 31);
+            this.rButton2.Location = new System.Drawing.Point(1097, 38);
+            this.rButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rButton2.Name = "rButton2";
-            this.rButton2.Size = new System.Drawing.Size(100, 32);
+            this.rButton2.Size = new System.Drawing.Size(133, 39);
             this.rButton2.TabIndex = 6;
             this.rButton2.Text = "Ajouter";
             this.rButton2.TextColor = System.Drawing.Color.White;
@@ -306,9 +313,10 @@ namespace AutoFact
             this.rButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rButton1.ForeColor = System.Drawing.Color.White;
-            this.rButton1.Location = new System.Drawing.Point(717, 31);
+            this.rButton1.Location = new System.Drawing.Point(956, 38);
+            this.rButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rButton1.Name = "rButton1";
-            this.rButton1.Size = new System.Drawing.Size(100, 32);
+            this.rButton1.Size = new System.Drawing.Size(133, 39);
             this.rButton1.TabIndex = 5;
             this.rButton1.Text = "Gérer";
             this.rButton1.TextColor = System.Drawing.Color.White;
@@ -322,9 +330,10 @@ namespace AutoFact
             "Par défaut",
             "Service",
             "Produit"});
-            this.filtrecatservice.Location = new System.Drawing.Point(636, 35);
+            this.filtrecatservice.Location = new System.Drawing.Point(848, 43);
+            this.filtrecatservice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.filtrecatservice.Name = "filtrecatservice";
-            this.filtrecatservice.Size = new System.Drawing.Size(75, 24);
+            this.filtrecatservice.Size = new System.Drawing.Size(99, 28);
             this.filtrecatservice.TabIndex = 4;
             this.filtrecatservice.Text = "Catégorie";
             this.filtrecatservice.UseWaitCursor = true;
@@ -332,49 +341,13 @@ namespace AutoFact
             // dsservice
             // 
             this.dsservice.AutoSize = true;
-            this.dsservice.Location = new System.Drawing.Point(5, 53);
+            this.dsservice.Location = new System.Drawing.Point(7, 65);
+            this.dsservice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dsservice.Name = "dsservice";
-            this.dsservice.Size = new System.Drawing.Size(146, 16);
+            this.dsservice.Size = new System.Drawing.Size(175, 20);
             this.dsservice.TabIndex = 1;
             this.dsservice.Text = "Les différents services :";
             this.dsservice.UseWaitCursor = true;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.categorie,
-            this.nom_des_services,
-            this.prix_unitaire});
-            this.dataGridView3.Location = new System.Drawing.Point(5, 69);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.Size = new System.Drawing.Size(918, 150);
-            this.dataGridView3.TabIndex = 0;
-            // 
-            // categorie
-            // 
-            this.categorie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.categorie.HeaderText = "Catégorie";
-            this.categorie.MinimumWidth = 6;
-            this.categorie.Name = "categorie";
-            this.categorie.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // nom_des_services
-            // 
-            this.nom_des_services.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nom_des_services.HeaderText = "Nom des services";
-            this.nom_des_services.MinimumWidth = 6;
-            this.nom_des_services.Name = "nom_des_services";
-            this.nom_des_services.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // prix_unitaire
-            // 
-            this.prix_unitaire.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.prix_unitaire.HeaderText = "Prix unitaire";
-            this.prix_unitaire.MinimumWidth = 6;
-            this.prix_unitaire.Name = "prix_unitaire";
-            this.prix_unitaire.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // devispage
             // 
@@ -386,10 +359,10 @@ namespace AutoFact
             this.devispage.Controls.Add(this.rButton8);
             this.devispage.Controls.Add(this.label1);
             this.devispage.Location = new System.Drawing.Point(4, 34);
-            this.devispage.Margin = new System.Windows.Forms.Padding(2);
+            this.devispage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.devispage.Name = "devispage";
-            this.devispage.Padding = new System.Windows.Forms.Padding(2);
-            this.devispage.Size = new System.Drawing.Size(928, 476);
+            this.devispage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.devispage.Size = new System.Drawing.Size(1240, 595);
             this.devispage.TabIndex = 2;
             this.devispage.Text = "Devis";
             this.devispage.UseVisualStyleBackColor = true;
@@ -404,9 +377,10 @@ namespace AutoFact
             this.rButton3.FlatAppearance.BorderSize = 0;
             this.rButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rButton3.ForeColor = System.Drawing.Color.White;
-            this.rButton3.Location = new System.Drawing.Point(595, 107);
+            this.rButton3.Location = new System.Drawing.Point(793, 132);
+            this.rButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rButton3.Name = "rButton3";
-            this.rButton3.Size = new System.Drawing.Size(116, 25);
+            this.rButton3.Size = new System.Drawing.Size(155, 31);
             this.rButton3.TabIndex = 24;
             this.rButton3.Text = "Recherche";
             this.rButton3.TextColor = System.Drawing.Color.White;
@@ -415,9 +389,10 @@ namespace AutoFact
             // textBox1
             // 
             this.textBox1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.textBox1.Location = new System.Drawing.Point(717, 108);
+            this.textBox1.Location = new System.Drawing.Point(956, 133);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(203, 22);
+            this.textBox1.Size = new System.Drawing.Size(269, 25);
             this.textBox1.TabIndex = 23;
             // 
             // rButton6
@@ -430,9 +405,10 @@ namespace AutoFact
             this.rButton6.FlatAppearance.BorderSize = 0;
             this.rButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rButton6.ForeColor = System.Drawing.Color.White;
-            this.rButton6.Location = new System.Drawing.Point(8, 99);
+            this.rButton6.Location = new System.Drawing.Point(11, 122);
+            this.rButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rButton6.Name = "rButton6";
-            this.rButton6.Size = new System.Drawing.Size(150, 40);
+            this.rButton6.Size = new System.Drawing.Size(200, 49);
             this.rButton6.TabIndex = 22;
             this.rButton6.Text = "Afficher";
             this.rButton6.TextColor = System.Drawing.Color.White;
@@ -442,10 +418,12 @@ namespace AutoFact
             // 
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGridView4.Location = new System.Drawing.Point(5, 154);
+            this.dataGridView4.Location = new System.Drawing.Point(7, 190);
+            this.dataGridView4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowHeadersWidth = 51;
             this.dataGridView4.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.RoyalBlue;
-            this.dataGridView4.Size = new System.Drawing.Size(915, 290);
+            this.dataGridView4.Size = new System.Drawing.Size(1220, 357);
             this.dataGridView4.TabIndex = 21;
             // 
             // rButton7
@@ -459,9 +437,10 @@ namespace AutoFact
             this.rButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rButton7.ForeColor = System.Drawing.Color.White;
-            this.rButton7.Location = new System.Drawing.Point(823, 32);
+            this.rButton7.Location = new System.Drawing.Point(1097, 39);
+            this.rButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rButton7.Name = "rButton7";
-            this.rButton7.Size = new System.Drawing.Size(100, 32);
+            this.rButton7.Size = new System.Drawing.Size(133, 39);
             this.rButton7.TabIndex = 20;
             this.rButton7.Text = "Ajouter";
             this.rButton7.TextColor = System.Drawing.Color.White;
@@ -478,9 +457,10 @@ namespace AutoFact
             this.rButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rButton8.ForeColor = System.Drawing.Color.White;
-            this.rButton8.Location = new System.Drawing.Point(717, 32);
+            this.rButton8.Location = new System.Drawing.Point(956, 39);
+            this.rButton8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rButton8.Name = "rButton8";
-            this.rButton8.Size = new System.Drawing.Size(100, 32);
+            this.rButton8.Size = new System.Drawing.Size(133, 39);
             this.rButton8.TabIndex = 19;
             this.rButton8.Text = "Gérer";
             this.rButton8.TextColor = System.Drawing.Color.White;
@@ -489,9 +469,10 @@ namespace AutoFact
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 54);
+            this.label1.Location = new System.Drawing.Point(7, 66);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 16);
+            this.label1.Size = new System.Drawing.Size(117, 20);
             this.label1.TabIndex = 18;
             this.label1.Text = "Liste des devis:";
             this.label1.UseWaitCursor = true;
@@ -506,10 +487,10 @@ namespace AutoFact
             this.clientpage.Controls.Add(this.GererButton);
             this.clientpage.Controls.Add(this.listecliClient);
             this.clientpage.Location = new System.Drawing.Point(4, 34);
-            this.clientpage.Margin = new System.Windows.Forms.Padding(2);
+            this.clientpage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.clientpage.Name = "clientpage";
-            this.clientpage.Padding = new System.Windows.Forms.Padding(2);
-            this.clientpage.Size = new System.Drawing.Size(928, 476);
+            this.clientpage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.clientpage.Size = new System.Drawing.Size(1240, 595);
             this.clientpage.TabIndex = 3;
             this.clientpage.Text = "Client";
             this.clientpage.UseVisualStyleBackColor = true;
@@ -524,9 +505,10 @@ namespace AutoFact
             this.bSearch.FlatAppearance.BorderSize = 0;
             this.bSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bSearch.ForeColor = System.Drawing.Color.White;
-            this.bSearch.Location = new System.Drawing.Point(595, 107);
+            this.bSearch.Location = new System.Drawing.Point(793, 132);
+            this.bSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bSearch.Name = "bSearch";
-            this.bSearch.Size = new System.Drawing.Size(116, 25);
+            this.bSearch.Size = new System.Drawing.Size(155, 31);
             this.bSearch.TabIndex = 17;
             this.bSearch.Text = "Recherche";
             this.bSearch.TextColor = System.Drawing.Color.White;
@@ -535,9 +517,10 @@ namespace AutoFact
             // tbScreachCustomer
             // 
             this.tbScreachCustomer.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbScreachCustomer.Location = new System.Drawing.Point(717, 108);
+            this.tbScreachCustomer.Location = new System.Drawing.Point(956, 133);
+            this.tbScreachCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbScreachCustomer.Name = "tbScreachCustomer";
-            this.tbScreachCustomer.Size = new System.Drawing.Size(203, 22);
+            this.tbScreachCustomer.Size = new System.Drawing.Size(269, 25);
             this.tbScreachCustomer.TabIndex = 16;
             // 
             // ReadCustomer
@@ -550,9 +533,10 @@ namespace AutoFact
             this.ReadCustomer.FlatAppearance.BorderSize = 0;
             this.ReadCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReadCustomer.ForeColor = System.Drawing.Color.White;
-            this.ReadCustomer.Location = new System.Drawing.Point(8, 99);
+            this.ReadCustomer.Location = new System.Drawing.Point(11, 122);
+            this.ReadCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ReadCustomer.Name = "ReadCustomer";
-            this.ReadCustomer.Size = new System.Drawing.Size(150, 40);
+            this.ReadCustomer.Size = new System.Drawing.Size(200, 49);
             this.ReadCustomer.TabIndex = 15;
             this.ReadCustomer.Text = "Afficher";
             this.ReadCustomer.TextColor = System.Drawing.Color.White;
@@ -562,10 +546,12 @@ namespace AutoFact
             // 
             this.dataGridViewCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCustomer.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGridViewCustomer.Location = new System.Drawing.Point(5, 154);
+            this.dataGridViewCustomer.Location = new System.Drawing.Point(7, 190);
+            this.dataGridViewCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewCustomer.Name = "dataGridViewCustomer";
+            this.dataGridViewCustomer.RowHeadersWidth = 51;
             this.dataGridViewCustomer.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.RoyalBlue;
-            this.dataGridViewCustomer.Size = new System.Drawing.Size(915, 290);
+            this.dataGridViewCustomer.Size = new System.Drawing.Size(1220, 357);
             this.dataGridViewCustomer.TabIndex = 14;
             // 
             // addButton
@@ -579,9 +565,10 @@ namespace AutoFact
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton.ForeColor = System.Drawing.Color.White;
-            this.addButton.Location = new System.Drawing.Point(823, 32);
+            this.addButton.Location = new System.Drawing.Point(1097, 39);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(100, 32);
+            this.addButton.Size = new System.Drawing.Size(133, 39);
             this.addButton.TabIndex = 13;
             this.addButton.Text = "Ajouter";
             this.addButton.TextColor = System.Drawing.Color.White;
@@ -599,9 +586,10 @@ namespace AutoFact
             this.GererButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GererButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GererButton.ForeColor = System.Drawing.Color.White;
-            this.GererButton.Location = new System.Drawing.Point(717, 32);
+            this.GererButton.Location = new System.Drawing.Point(956, 39);
+            this.GererButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GererButton.Name = "GererButton";
-            this.GererButton.Size = new System.Drawing.Size(100, 32);
+            this.GererButton.Size = new System.Drawing.Size(133, 39);
             this.GererButton.TabIndex = 12;
             this.GererButton.Text = "Gérer";
             this.GererButton.TextColor = System.Drawing.Color.White;
@@ -611,9 +599,10 @@ namespace AutoFact
             // listecliClient
             // 
             this.listecliClient.AutoSize = true;
-            this.listecliClient.Location = new System.Drawing.Point(5, 54);
+            this.listecliClient.Location = new System.Drawing.Point(7, 66);
+            this.listecliClient.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.listecliClient.Name = "listecliClient";
-            this.listecliClient.Size = new System.Drawing.Size(108, 16);
+            this.listecliClient.Size = new System.Drawing.Size(130, 20);
             this.listecliClient.TabIndex = 11;
             this.listecliClient.Text = "Liste des clients :";
             this.listecliClient.UseWaitCursor = true;
@@ -621,10 +610,10 @@ namespace AutoFact
             // parametrepage
             // 
             this.parametrepage.Location = new System.Drawing.Point(4, 34);
-            this.parametrepage.Margin = new System.Windows.Forms.Padding(2);
+            this.parametrepage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.parametrepage.Name = "parametrepage";
-            this.parametrepage.Padding = new System.Windows.Forms.Padding(2);
-            this.parametrepage.Size = new System.Drawing.Size(928, 476);
+            this.parametrepage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.parametrepage.Size = new System.Drawing.Size(1240, 595);
             this.parametrepage.TabIndex = 4;
             this.parametrepage.Text = "Paramètres";
             this.parametrepage.UseVisualStyleBackColor = true;
@@ -632,25 +621,84 @@ namespace AutoFact
             // logo
             // 
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(8, 8);
-            this.logo.Margin = new System.Windows.Forms.Padding(2);
+            this.logo.Location = new System.Drawing.Point(11, 10);
+            this.logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(97, 93);
+            this.logo.Size = new System.Drawing.Size(129, 114);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logo.TabIndex = 1;
             this.logo.TabStop = false;
             // 
+            // bSearchService
+            // 
+            this.bSearchService.BackColor = System.Drawing.Color.SkyBlue;
+            this.bSearchService.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.bSearchService.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bSearchService.BorderRadius = 10;
+            this.bSearchService.BorderSize = 0;
+            this.bSearchService.FlatAppearance.BorderSize = 0;
+            this.bSearchService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bSearchService.ForeColor = System.Drawing.Color.White;
+            this.bSearchService.Location = new System.Drawing.Point(793, 132);
+            this.bSearchService.Margin = new System.Windows.Forms.Padding(4);
+            this.bSearchService.Name = "bSearchService";
+            this.bSearchService.Size = new System.Drawing.Size(155, 31);
+            this.bSearchService.TabIndex = 28;
+            this.bSearchService.Text = "Recherche";
+            this.bSearchService.TextColor = System.Drawing.Color.White;
+            this.bSearchService.UseVisualStyleBackColor = false;
+            // 
+            // tbSearchService
+            // 
+            this.tbSearchService.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.tbSearchService.Location = new System.Drawing.Point(956, 133);
+            this.tbSearchService.Margin = new System.Windows.Forms.Padding(4);
+            this.tbSearchService.Name = "tbSearchService";
+            this.tbSearchService.Size = new System.Drawing.Size(269, 25);
+            this.tbSearchService.TabIndex = 27;
+            // 
+            // ReadService
+            // 
+            this.ReadService.BackColor = System.Drawing.Color.DarkCyan;
+            this.ReadService.BackgroundColor = System.Drawing.Color.DarkCyan;
+            this.ReadService.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.ReadService.BorderRadius = 15;
+            this.ReadService.BorderSize = 0;
+            this.ReadService.FlatAppearance.BorderSize = 0;
+            this.ReadService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReadService.ForeColor = System.Drawing.Color.White;
+            this.ReadService.Location = new System.Drawing.Point(11, 122);
+            this.ReadService.Margin = new System.Windows.Forms.Padding(4);
+            this.ReadService.Name = "ReadService";
+            this.ReadService.Size = new System.Drawing.Size(200, 49);
+            this.ReadService.TabIndex = 26;
+            this.ReadService.Text = "Afficher";
+            this.ReadService.TextColor = System.Drawing.Color.White;
+            this.ReadService.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dataGridView3.Location = new System.Drawing.Point(7, 190);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.RoyalBlue;
+            this.dataGridView3.Size = new System.Drawing.Size(1220, 357);
+            this.dataGridView3.TabIndex = 25;
+            // 
             // formAF
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1047, 530);
+            this.ClientSize = new System.Drawing.Size(1396, 652);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.pageselection);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "formAF";
             this.Text = "AutoFact";
             this.Load += new System.EventHandler(this.formAF_Load);
@@ -662,7 +710,6 @@ namespace AutoFact
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.servicespage.ResumeLayout(false);
             this.servicespage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.devispage.ResumeLayout(false);
             this.devispage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
@@ -670,6 +717,7 @@ namespace AutoFact
             this.clientpage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -691,11 +739,7 @@ namespace AutoFact
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label rvs;
         private System.Windows.Forms.Label dsservice;
-        private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.ComboBox filtrecatservice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categorie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nom_des_services;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prix_unitaire;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.TabPage firstpage;
         private CustomControls.RJControls.RButton rButton1;
@@ -715,6 +759,10 @@ namespace AutoFact
         private CustomControls.RJControls.RButton addButton;
         private CustomControls.RJControls.RButton GererButton;
         private System.Windows.Forms.Label listecliClient;
+        private CustomControls.RJControls.RButton bSearchService;
+        private System.Windows.Forms.TextBox tbSearchService;
+        private CustomControls.RJControls.RButton ReadService;
+        private System.Windows.Forms.DataGridView dataGridView3;
     }
 }
 

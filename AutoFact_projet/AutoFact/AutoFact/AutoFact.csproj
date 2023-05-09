@@ -119,6 +119,7 @@
     </Compile>
     <Compile Include="model\CustomerModel.cs" />
     <Compile Include="model\QuotationModel.cs" />
+    <Compile Include="model\ServiceModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="aClient.resx">
