@@ -16,5 +16,10 @@ namespace AutoFact
         {
             InitializeComponent();
         }
+
+        private void rButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

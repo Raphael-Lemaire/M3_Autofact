@@ -111,7 +111,7 @@ namespace AutoFact.model
             SQLiteConnection db = Database.getInstance().getConnection();
 
             //requete SQL
-            string querySearch = ("SELECT id, (name) as Nom du devis, (total_price) as 'Prix total du devis', (customer_id) as 'Nom du client' \r\nFROM quotation\r\nWHERE name LIKE @name OR total_price Like @totalPrice OR customer_id like @customerId");
+            string querySearch = ("SELECT id, (name) as 'Nom du devis', (total_price) as 'Prix total du devis', (customer_id) as 'Nom du client' \r\nFROM quotation\r\nWHERE name LIKE @name OR total_price Like @totalPrice OR customer_id like @customerId");
 
             SQLiteCommand sqlite_cmd = new SQLiteCommand(querySearch, db);
             // Ajouter les valeurs des paramètres de la requête
@@ -137,7 +137,7 @@ namespace AutoFact.model
         public static DataTable getQuotation(DataGridView dataGridView)
         {
             SQLiteConnection db = Database.getInstance().getConnection();
-            SQLiteCommand cmd = new SQLiteCommand("SELECT id, (name) as Nom du devis, (total_price) as 'Prix total du devis', (customer_id) as 'Nom du client' FROM quotation", db);
+            SQLiteCommand cmd = new SQLiteCommand("SELECT id, (name) as 'Nom du devis', (total_price) as 'Prix total du devis', (customer_id) as 'Nom du client' FROM quotation", db);
             SQLiteDataReader reader = cmd.ExecuteReader();
             DataTable dt = new DataTable();
 

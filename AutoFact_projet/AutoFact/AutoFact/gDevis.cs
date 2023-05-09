@@ -36,5 +36,26 @@ namespace AutoFact
         {
 
         }
+
+        private void gDevis_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rButtonStatus_Click(object sender, EventArgs e)
+        {
+            string libelle = textBoxStatus.Text;
+
+            if (libelle == null)
+            {
+                string messageErreurFirstName = ("Le champ ne peux pas être vide.");
+                string titleErreur = ("Erreur !");
+                MessageBox.Show(messageErreurFirstName, titleErreur, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                TypeStatusModel.addTypeStatus(libelle);
+            }
+        }
     }
 }
