@@ -47,75 +47,83 @@
             // 
             // tbFirstName
             // 
-            this.tbFirstName.Location = new System.Drawing.Point(148, 161);
+            this.tbFirstName.Location = new System.Drawing.Point(197, 198);
+            this.tbFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbFirstName.Name = "tbFirstName";
-            this.tbFirstName.Size = new System.Drawing.Size(100, 20);
+            this.tbFirstName.Size = new System.Drawing.Size(132, 22);
             this.tbFirstName.TabIndex = 2;
             // 
             // tbLastName
             // 
-            this.tbLastName.Location = new System.Drawing.Point(557, 157);
+            this.tbLastName.Location = new System.Drawing.Point(743, 193);
+            this.tbLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbLastName.Name = "tbLastName";
-            this.tbLastName.Size = new System.Drawing.Size(100, 20);
+            this.tbLastName.Size = new System.Drawing.Size(132, 22);
             this.tbLastName.TabIndex = 3;
             // 
             // tbNumberPhone
             // 
-            this.tbNumberPhone.Location = new System.Drawing.Point(148, 241);
+            this.tbNumberPhone.Location = new System.Drawing.Point(197, 297);
+            this.tbNumberPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbNumberPhone.Name = "tbNumberPhone";
-            this.tbNumberPhone.Size = new System.Drawing.Size(100, 20);
+            this.tbNumberPhone.Size = new System.Drawing.Size(132, 22);
             this.tbNumberPhone.TabIndex = 4;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(557, 241);
+            this.tbEmail.Location = new System.Drawing.Point(743, 297);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(100, 20);
+            this.tbEmail.Size = new System.Drawing.Size(132, 22);
             this.tbEmail.TabIndex = 5;
             // 
             // labelFirstName
             // 
             this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Location = new System.Drawing.Point(99, 164);
+            this.labelFirstName.Location = new System.Drawing.Point(132, 202);
+            this.labelFirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(43, 13);
+            this.labelFirstName.Size = new System.Drawing.Size(54, 16);
             this.labelFirstName.TabIndex = 7;
             this.labelFirstName.Text = "Prénom";
             // 
             // labelNom
             // 
             this.labelNom.AutoSize = true;
-            this.labelNom.Location = new System.Drawing.Point(475, 164);
+            this.labelNom.Location = new System.Drawing.Point(633, 202);
+            this.labelNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNom.Name = "labelNom";
-            this.labelNom.Size = new System.Drawing.Size(76, 13);
+            this.labelNom.Size = new System.Drawing.Size(97, 16);
             this.labelNom.TabIndex = 8;
             this.labelNom.Text = "Nom de famille";
             // 
             // labelNumberPhone
             // 
             this.labelNumberPhone.AutoSize = true;
-            this.labelNumberPhone.Location = new System.Drawing.Point(44, 244);
+            this.labelNumberPhone.Location = new System.Drawing.Point(59, 300);
+            this.labelNumberPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNumberPhone.Name = "labelNumberPhone";
-            this.labelNumberPhone.Size = new System.Drawing.Size(98, 13);
+            this.labelNumberPhone.Size = new System.Drawing.Size(124, 16);
             this.labelNumberPhone.TabIndex = 9;
             this.labelNumberPhone.Text = "Numéro Téléphone";
             // 
             // labelEmailAddress
             // 
             this.labelEmailAddress.AutoSize = true;
-            this.labelEmailAddress.Location = new System.Drawing.Point(476, 244);
+            this.labelEmailAddress.Location = new System.Drawing.Point(635, 300);
+            this.labelEmailAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEmailAddress.Name = "labelEmailAddress";
-            this.labelEmailAddress.Size = new System.Drawing.Size(75, 13);
+            this.labelEmailAddress.Size = new System.Drawing.Size(98, 16);
             this.labelEmailAddress.TabIndex = 10;
             this.labelEmailAddress.Text = "Adresse e-mail";
             // 
             // logo
             // 
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(11, 11);
-            this.logo.Margin = new System.Windows.Forms.Padding(2);
+            this.logo.Location = new System.Drawing.Point(15, 14);
+            this.logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(97, 93);
+            this.logo.Size = new System.Drawing.Size(129, 114);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logo.TabIndex = 12;
             this.logo.TabStop = false;
@@ -123,17 +131,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(253, 301);
+            this.label1.Location = new System.Drawing.Point(337, 370);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.Size = new System.Drawing.Size(67, 16);
             this.label1.TabIndex = 13;
             this.label1.Text = "entreprise";
             // 
             // tbCompagny
             // 
-            this.tbCompagny.Location = new System.Drawing.Point(312, 301);
+            this.tbCompagny.Location = new System.Drawing.Point(416, 370);
+            this.tbCompagny.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbCompagny.Name = "tbCompagny";
-            this.tbCompagny.Size = new System.Drawing.Size(100, 20);
+            this.tbCompagny.Size = new System.Drawing.Size(132, 22);
             this.tbCompagny.TabIndex = 14;
             // 
             // bAddCustomer
@@ -146,9 +156,10 @@
             this.bAddCustomer.FlatAppearance.BorderSize = 0;
             this.bAddCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bAddCustomer.ForeColor = System.Drawing.Color.White;
-            this.bAddCustomer.Location = new System.Drawing.Point(148, 352);
+            this.bAddCustomer.Location = new System.Drawing.Point(197, 433);
+            this.bAddCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bAddCustomer.Name = "bAddCustomer";
-            this.bAddCustomer.Size = new System.Drawing.Size(150, 40);
+            this.bAddCustomer.Size = new System.Drawing.Size(200, 49);
             this.bAddCustomer.TabIndex = 15;
             this.bAddCustomer.Text = "retour";
             this.bAddCustomer.TextColor = System.Drawing.Color.White;
@@ -165,9 +176,10 @@
             this.rButton2.FlatAppearance.BorderSize = 0;
             this.rButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rButton2.ForeColor = System.Drawing.Color.White;
-            this.rButton2.Location = new System.Drawing.Point(507, 352);
+            this.rButton2.Location = new System.Drawing.Point(676, 433);
+            this.rButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rButton2.Name = "rButton2";
-            this.rButton2.Size = new System.Drawing.Size(150, 40);
+            this.rButton2.Size = new System.Drawing.Size(200, 49);
             this.rButton2.TabIndex = 16;
             this.rButton2.Text = "Ajouter";
             this.rButton2.TextColor = System.Drawing.Color.White;
@@ -176,9 +188,9 @@
             // 
             // aClient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 450);
+            this.ClientSize = new System.Drawing.Size(1087, 554);
             this.Controls.Add(this.rButton2);
             this.Controls.Add(this.bAddCustomer);
             this.Controls.Add(this.tbCompagny);
@@ -192,8 +204,10 @@
             this.Controls.Add(this.tbNumberPhone);
             this.Controls.Add(this.tbLastName);
             this.Controls.Add(this.tbFirstName);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "aClient";
             this.Text = "Ajouter un client";
+            this.Load += new System.EventHandler(this.aClient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
