@@ -53,5 +53,10 @@ namespace AutoFact
             formAF AF = new formAF();
             this.Hide();
         }
+
+        private void aClient_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
