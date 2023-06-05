@@ -39,7 +39,10 @@ namespace AutoFact
 
         private void gDevis_Load(object sender, EventArgs e)
         {
-
+            TypeStatusModel.GetListTypeStatus(comboBoxGStatus);
+            TypeStatusModel.GetListTypeStatus(comboBoxStatus);
+            CustomerModel.GetListCustomer(comboBoxClientGQuotation);
+            //QuotationModel.getAllInfoQuotation(dataGridViewQuotation);
         }
 
         private void rButtonStatus_Click(object sender, EventArgs e)
@@ -56,6 +59,36 @@ namespace AutoFact
             {
                 TypeStatusModel.addTypeStatus(libelle);
             }
+        }
+
+        private void textBoxStatus_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReadCustomer_Click(object sender, EventArgs e)
+        {
+            TypeStatusModel.GetListTypeStatus(comboBoxGStatus);
+            TypeStatusModel.GetListTypeStatus(comboBoxStatus);
+        }
+
+        private void UpdateButtonStatus_Click(object sender, EventArgs e)
+        {
+            string libelle = textBoxUpdateStatus.Text;
+            int selectedValue = Convert.ToInt32(comboBoxGStatus.SelectedValue);
+
+            TypeStatusModel.UpdateTypeStatus(selectedValue, libelle);
+            TypeStatusModel.GetListTypeStatus(comboBoxGStatus);
+            TypeStatusModel.GetListTypeStatus(comboBoxStatus);
+        }
+
+        private void DeleteButtonStatus_Click(object sender, EventArgs e)
+        {
+            int selectedValue = Convert.ToInt32(comboBoxGStatus.SelectedValue);
+
+            TypeStatusModel.deleteTypeStatus(selectedValue);
+            TypeStatusModel.GetListTypeStatus(comboBoxGStatus);
+            TypeStatusModel.GetListTypeStatus(comboBoxStatus);
         }
     }
 }

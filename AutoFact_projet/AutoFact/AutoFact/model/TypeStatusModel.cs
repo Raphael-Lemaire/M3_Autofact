@@ -22,7 +22,7 @@ namespace AutoFact.model
             SQLiteConnection db = Database.getInstance().getConnection();
 
             //requete SQL
-            string queryString = "INSERT INTO type-status (libelle) VALUES (@libelle)";
+            string queryString = "INSERT INTO type_status (libelle) VALUES (@libelle)";
             SQLiteCommand sqlite_cmd = new SQLiteCommand(queryString, db);
 
             // Ajouter les valeurs des paramètres de la requête
@@ -54,7 +54,7 @@ namespace AutoFact.model
         {
             SQLiteConnection db = Database.getInstance().getConnection();
             //requete SQL
-            string queryDelete = "DELETE from type-status WHERE id = @id";
+            string queryDelete = "DELETE from type_status WHERE id = @id";
 
             SQLiteCommand sqlite_cmd = new SQLiteCommand(queryDelete, db);
 
@@ -74,7 +74,7 @@ namespace AutoFact.model
         /// <param name="libelle"></param>
         public static void UpdateTypeStatus(int id, string libelle)
         {
-            string querySearch = ("UPDATE type-status \r\n SET \r\n libelle = CASE \r\n WHEN @libelle <> '' THEN @libelle \r\n ELSE libelle \r\n END\r\n WHERE id = @id;");
+            string querySearch = ("UPDATE type_status \r\n SET \r\n libelle = CASE \r\n WHEN @libelle <> '' THEN @libelle \r\n ELSE libelle \r\n END\r\n WHERE id = @id;");
             SQLiteConnection db = Database.getInstance().getConnection();
 
             SQLiteCommand sqlite_cmd = new SQLiteCommand(querySearch, db);
@@ -96,18 +96,23 @@ namespace AutoFact.model
         /// </summary>
         /// <param name="comboBox"></param>
         /// <returns></returns>
-        public static DataTable getTypeStatus(ComboBox comboBox)
+
+        public static ComboBox GetListTypeStatus(ComboBox combobox)
         {
             SQLiteConnection db = Database.getInstance().getConnection();
-            SQLiteCommand cmd = new SQLiteCommand("SELECT id, (libelle) as 'Status' FROM type-status", db);
+            SQLiteCommand cmd = new SQLiteCommand("SELECT id, libelle FROM type_status", db);
             SQLiteDataReader reader = cmd.ExecuteReader();
             DataTable dt = new DataTable();
+            dt.Columns.Add("id", typeof(string));
+            dt.Columns.Add("libelle", typeof(string));
 
             dt.Load(reader);
-            comboBox.DataSource = dt;
-            db.Close();
-            return dt;
 
+            combobox.ValueMember = "id";
+            combobox.DisplayMember = "libelle";
+            combobox.DataSource = dt;
+            db.Close();
+            return combobox;
         }
 
 

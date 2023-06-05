@@ -175,5 +175,9 @@ namespace AutoFact
             }
         }
 
+        private void dataGridViewCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

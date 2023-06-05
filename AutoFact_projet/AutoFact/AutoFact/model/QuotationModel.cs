@@ -137,7 +137,7 @@ namespace AutoFact.model
         public static DataTable getQuotation(DataGridView dataGridView)
         {
             SQLiteConnection db = Database.getInstance().getConnection();
-            SQLiteCommand cmd = new SQLiteCommand("SELECT id, (name) as 'Nom du devis', (total_price) as 'Prix total du devis', (customer_id) as 'Nom du client' FROM quotation", db);
+            SQLiteCommand cmd = new SQLiteCommand("SELECT q.id, q.name as 'Nom du devis', q.total_price as 'Prix total du devis', first_name || ' ' || last_name AS 'Nom du client', compagny_name as 'Nom de la compagnie' FROM quotation q JOIN customer c ON q.customer_id = c.id WHERE c.id = customer_id; ", db);
             SQLiteDataReader reader = cmd.ExecuteReader();
             DataTable dt = new DataTable();
 
@@ -147,6 +147,8 @@ namespace AutoFact.model
             return dt;
 
         }
+
+
 
 
 

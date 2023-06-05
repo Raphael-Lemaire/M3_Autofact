@@ -29,52 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(aDevis));
-            this.rButton2 = new CustomControls.RJControls.RButton();
-            this.bAddCustomer = new CustomControls.RJControls.RButton();
             this.logo = new System.Windows.Forms.PictureBox();
             this.labelNumberPhone = new System.Windows.Forms.Label();
             this.labelNom = new System.Windows.Forms.Label();
             this.labelFirstName = new System.Windows.Forms.Label();
             this.tbFirstName = new System.Windows.Forms.TextBox();
             this.comboBoxClient = new System.Windows.Forms.ComboBox();
+            this.CreateQuotationButton = new CustomControls.RJControls.RButton();
+            this.bAddCustomer = new CustomControls.RJControls.RButton();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // rButton2
-            // 
-            this.rButton2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.rButton2.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.rButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rButton2.BorderRadius = 15;
-            this.rButton2.BorderSize = 0;
-            this.rButton2.FlatAppearance.BorderSize = 0;
-            this.rButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rButton2.ForeColor = System.Drawing.Color.White;
-            this.rButton2.Location = new System.Drawing.Point(533, 352);
-            this.rButton2.Name = "rButton2";
-            this.rButton2.Size = new System.Drawing.Size(150, 40);
-            this.rButton2.TabIndex = 29;
-            this.rButton2.Text = "Créer devis";
-            this.rButton2.TextColor = System.Drawing.Color.White;
-            this.rButton2.UseVisualStyleBackColor = false;
-            // 
-            // bAddCustomer
-            // 
-            this.bAddCustomer.BackColor = System.Drawing.Color.RoyalBlue;
-            this.bAddCustomer.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.bAddCustomer.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bAddCustomer.BorderRadius = 15;
-            this.bAddCustomer.BorderSize = 0;
-            this.bAddCustomer.FlatAppearance.BorderSize = 0;
-            this.bAddCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bAddCustomer.ForeColor = System.Drawing.Color.White;
-            this.bAddCustomer.Location = new System.Drawing.Point(174, 352);
-            this.bAddCustomer.Name = "bAddCustomer";
-            this.bAddCustomer.Size = new System.Drawing.Size(150, 40);
-            this.bAddCustomer.TabIndex = 28;
-            this.bAddCustomer.Text = "retour";
-            this.bAddCustomer.TextColor = System.Drawing.Color.White;
-            this.bAddCustomer.UseVisualStyleBackColor = false;
             // 
             // logo
             // 
@@ -127,6 +91,45 @@
             this.comboBoxClient.Name = "comboBoxClient";
             this.comboBoxClient.Size = new System.Drawing.Size(100, 21);
             this.comboBoxClient.TabIndex = 32;
+            this.comboBoxClient.SelectedIndexChanged += new System.EventHandler(this.comboBoxClient_SelectedIndexChanged);
+            // 
+            // CreateQuotationButton
+            // 
+            this.CreateQuotationButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.CreateQuotationButton.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.CreateQuotationButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.CreateQuotationButton.BorderRadius = 15;
+            this.CreateQuotationButton.BorderSize = 0;
+            this.CreateQuotationButton.FlatAppearance.BorderSize = 0;
+            this.CreateQuotationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CreateQuotationButton.ForeColor = System.Drawing.Color.White;
+            this.CreateQuotationButton.Location = new System.Drawing.Point(533, 352);
+            this.CreateQuotationButton.Name = "CreateQuotationButton";
+            this.CreateQuotationButton.Size = new System.Drawing.Size(150, 40);
+            this.CreateQuotationButton.TabIndex = 29;
+            this.CreateQuotationButton.Text = "Créer devis";
+            this.CreateQuotationButton.TextColor = System.Drawing.Color.White;
+            this.CreateQuotationButton.UseVisualStyleBackColor = false;
+            this.CreateQuotationButton.Click += new System.EventHandler(this.CreateQuotationButton_Click);
+            // 
+            // bAddCustomer
+            // 
+            this.bAddCustomer.BackColor = System.Drawing.Color.RoyalBlue;
+            this.bAddCustomer.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.bAddCustomer.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bAddCustomer.BorderRadius = 15;
+            this.bAddCustomer.BorderSize = 0;
+            this.bAddCustomer.FlatAppearance.BorderSize = 0;
+            this.bAddCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bAddCustomer.ForeColor = System.Drawing.Color.White;
+            this.bAddCustomer.Location = new System.Drawing.Point(174, 352);
+            this.bAddCustomer.Name = "bAddCustomer";
+            this.bAddCustomer.Size = new System.Drawing.Size(150, 40);
+            this.bAddCustomer.TabIndex = 28;
+            this.bAddCustomer.Text = "retour";
+            this.bAddCustomer.TextColor = System.Drawing.Color.White;
+            this.bAddCustomer.UseVisualStyleBackColor = false;
+            this.bAddCustomer.Click += new System.EventHandler(this.bAddCustomer_Click);
             // 
             // aDevis
             // 
@@ -134,7 +137,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.comboBoxClient);
-            this.Controls.Add(this.rButton2);
+            this.Controls.Add(this.CreateQuotationButton);
             this.Controls.Add(this.bAddCustomer);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.labelNumberPhone);
@@ -143,6 +146,7 @@
             this.Controls.Add(this.tbFirstName);
             this.Name = "aDevis";
             this.Text = "aDevis";
+            this.Load += new System.EventHandler(this.aDevis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -151,7 +155,7 @@
 
         #endregion
 
-        private CustomControls.RJControls.RButton rButton2;
+        private CustomControls.RJControls.RButton CreateQuotationButton;
         private CustomControls.RJControls.RButton bAddCustomer;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label labelNumberPhone;

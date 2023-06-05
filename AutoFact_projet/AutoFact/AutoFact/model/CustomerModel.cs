@@ -153,8 +153,28 @@ namespace AutoFact.model
 
         }
 
+        /// <summary>
+        /// Permet de récuperer les clients
+        /// </summary>
+        /// <param name="combobox"></param>
+        /// <returns></returns>
+        public static ComboBox GetListCustomer(ComboBox combobox)
+        {
+            SQLiteConnection db = Database.getInstance().getConnection();
+            SQLiteCommand cmd = new SQLiteCommand("SELECT id, first_name || ' ' || last_name AS FullName FROM Customer", db);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id", typeof(string));
+            dt.Columns.Add("FullName", typeof(string));
 
+            dt.Load(reader);
 
+            combobox.ValueMember = "id";
+            combobox.DisplayMember = "FullName";
+            combobox.DataSource = dt;
+            db.Close();
+            return combobox;
+        }
 
     }
 

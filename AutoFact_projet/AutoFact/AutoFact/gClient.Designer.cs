@@ -71,6 +71,7 @@
             this.dataGridViewCustomer.Size = new System.Drawing.Size(852, 382);
             this.dataGridViewCustomer.TabIndex = 23;
             this.dataGridViewCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCustomer_CellClick);
+            this.dataGridViewCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCustomer_CellContentClick);
             // 
             // tbScreachCustomer
             // 
