@@ -131,7 +131,7 @@ namespace AutoFact.model
         public static DataTable GetProduct(DataGridView dataGridView)
         {
             SQLiteConnection db = Database.getInstance().getConnection();
-            SQLiteCommand cmd = new SQLiteCommand("SELECT id, (name) as Nom du Service, (unit_price) as 'Prix Unitaire' FROM product", db);
+            SQLiteCommand cmd = new SQLiteCommand("SELECT id, (name) as Nom du Service, (unit_price) as 'Prix Unitaire', c.libelle 'Catégorie du produit' FROM product p JOIN category c ON p.category_id = c.id WHERE c.id = p.customer_id; ", db);
             SQLiteDataReader reader = cmd.ExecuteReader();
             DataTable dt = new DataTable();
 

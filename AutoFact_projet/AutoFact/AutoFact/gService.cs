@@ -29,10 +29,8 @@ namespace AutoFact
 
         private void gService_Load(object sender, EventArgs e)
         {
-            ServiceModel.GetProduct(dataGridViewProduct);
+            //ServiceModel.GetProduct(dataGridViewProduct);
         }
-
-
 
         private void tbSearchProduct_TextChanged(object sender, EventArgs e)
         {
@@ -151,7 +149,7 @@ namespace AutoFact
 
         private void ReadProduct_Click_1(object sender, EventArgs e)
         {
-            ServiceModel.GetProduct(dataGridViewProduct);
+            //ServiceModel.GetProduct(dataGridViewProduct);
         }
     }
 }

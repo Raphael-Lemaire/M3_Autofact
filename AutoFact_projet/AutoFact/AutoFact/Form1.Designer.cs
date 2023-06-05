@@ -29,9 +29,9 @@ namespace AutoFact
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAF));
             this.pageselection = new System.Windows.Forms.TabControl();
             this.firstpage = new System.Windows.Forms.TabPage();
@@ -48,12 +48,8 @@ namespace AutoFact
             this.servicespage = new System.Windows.Forms.TabPage();
             this.rButton2 = new CustomControls.RJControls.RButton();
             this.rButton1 = new CustomControls.RJControls.RButton();
-            this.filtrecatservice = new System.Windows.Forms.ComboBox();
             this.dsservice = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.categorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nom_des_services = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prix_unitaire = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.devispage = new System.Windows.Forms.TabPage();
             this.rButton3 = new CustomControls.RJControls.RButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -72,6 +68,9 @@ namespace AutoFact
             this.listecliClient = new System.Windows.Forms.Label();
             this.parametrepage = new System.Windows.Forms.TabPage();
             this.logo = new System.Windows.Forms.PictureBox();
+            this.ReadService = new CustomControls.RJControls.RButton();
+            this.rButton4 = new CustomControls.RJControls.RButton();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.pageselection.SuspendLayout();
             this.firstpage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -149,19 +148,19 @@ namespace AutoFact
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(541, 107);
             this.chart1.Name = "chart1";
             this.chart1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "CA";
-            series1.YValuesPerPoint = 4;
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "CA";
+            series2.YValuesPerPoint = 4;
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(350, 350);
             this.chart1.TabIndex = 5;
             this.chart1.Text = "chart1";
@@ -260,9 +259,11 @@ namespace AutoFact
             // 
             // servicespage
             // 
+            this.servicespage.Controls.Add(this.rButton4);
+            this.servicespage.Controls.Add(this.textBox2);
+            this.servicespage.Controls.Add(this.ReadService);
             this.servicespage.Controls.Add(this.rButton2);
             this.servicespage.Controls.Add(this.rButton1);
-            this.servicespage.Controls.Add(this.filtrecatservice);
             this.servicespage.Controls.Add(this.dsservice);
             this.servicespage.Controls.Add(this.dataGridView3);
             this.servicespage.Location = new System.Drawing.Point(4, 34);
@@ -315,20 +316,6 @@ namespace AutoFact
             this.rButton1.UseVisualStyleBackColor = false;
             this.rButton1.Click += new System.EventHandler(this.rButton1_Click);
             // 
-            // filtrecatservice
-            // 
-            this.filtrecatservice.FormattingEnabled = true;
-            this.filtrecatservice.Items.AddRange(new object[] {
-            "Par défaut",
-            "Service",
-            "Produit"});
-            this.filtrecatservice.Location = new System.Drawing.Point(636, 35);
-            this.filtrecatservice.Name = "filtrecatservice";
-            this.filtrecatservice.Size = new System.Drawing.Size(75, 24);
-            this.filtrecatservice.TabIndex = 4;
-            this.filtrecatservice.Text = "Catégorie";
-            this.filtrecatservice.UseWaitCursor = true;
-            // 
             // dsservice
             // 
             this.dsservice.AutoSize = true;
@@ -342,39 +329,11 @@ namespace AutoFact
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.categorie,
-            this.nom_des_services,
-            this.prix_unitaire});
-            this.dataGridView3.Location = new System.Drawing.Point(5, 69);
+            this.dataGridView3.Location = new System.Drawing.Point(8, 137);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.Size = new System.Drawing.Size(918, 150);
+            this.dataGridView3.Size = new System.Drawing.Size(918, 334);
             this.dataGridView3.TabIndex = 0;
-            // 
-            // categorie
-            // 
-            this.categorie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.categorie.HeaderText = "Catégorie";
-            this.categorie.MinimumWidth = 6;
-            this.categorie.Name = "categorie";
-            this.categorie.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // nom_des_services
-            // 
-            this.nom_des_services.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nom_des_services.HeaderText = "Nom des services";
-            this.nom_des_services.MinimumWidth = 6;
-            this.nom_des_services.Name = "nom_des_services";
-            this.nom_des_services.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // prix_unitaire
-            // 
-            this.prix_unitaire.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.prix_unitaire.HeaderText = "Prix unitaire";
-            this.prix_unitaire.MinimumWidth = 6;
-            this.prix_unitaire.Name = "prix_unitaire";
-            this.prix_unitaire.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // devispage
             // 
@@ -648,6 +607,51 @@ namespace AutoFact
             this.logo.TabIndex = 1;
             this.logo.TabStop = false;
             // 
+            // ReadService
+            // 
+            this.ReadService.BackColor = System.Drawing.Color.DarkCyan;
+            this.ReadService.BackgroundColor = System.Drawing.Color.DarkCyan;
+            this.ReadService.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.ReadService.BorderRadius = 15;
+            this.ReadService.BorderSize = 0;
+            this.ReadService.FlatAppearance.BorderSize = 0;
+            this.ReadService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReadService.ForeColor = System.Drawing.Color.White;
+            this.ReadService.Location = new System.Drawing.Point(8, 88);
+            this.ReadService.Name = "ReadService";
+            this.ReadService.Size = new System.Drawing.Size(150, 40);
+            this.ReadService.TabIndex = 23;
+            this.ReadService.Text = "Actualiser";
+            this.ReadService.TextColor = System.Drawing.Color.White;
+            this.ReadService.UseVisualStyleBackColor = false;
+            this.ReadService.Click += new System.EventHandler(this.ReadService_Click);
+            // 
+            // rButton4
+            // 
+            this.rButton4.BackColor = System.Drawing.Color.SkyBlue;
+            this.rButton4.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.rButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rButton4.BorderRadius = 10;
+            this.rButton4.BorderSize = 0;
+            this.rButton4.FlatAppearance.BorderSize = 0;
+            this.rButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rButton4.ForeColor = System.Drawing.Color.White;
+            this.rButton4.Location = new System.Drawing.Point(598, 96);
+            this.rButton4.Name = "rButton4";
+            this.rButton4.Size = new System.Drawing.Size(116, 25);
+            this.rButton4.TabIndex = 26;
+            this.rButton4.Text = "Recherche";
+            this.rButton4.TextColor = System.Drawing.Color.White;
+            this.rButton4.UseVisualStyleBackColor = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.textBox2.Location = new System.Drawing.Point(720, 97);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(203, 22);
+            this.textBox2.TabIndex = 25;
+            // 
             // formAF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -700,10 +704,6 @@ namespace AutoFact
         private System.Windows.Forms.Label rvs;
         private System.Windows.Forms.Label dsservice;
         private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.ComboBox filtrecatservice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categorie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nom_des_services;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prix_unitaire;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.TabPage firstpage;
         private CustomControls.RJControls.RButton rButton1;
@@ -723,6 +723,9 @@ namespace AutoFact
         private CustomControls.RJControls.RButton addButton;
         private CustomControls.RJControls.RButton GererButton;
         private System.Windows.Forms.Label listecliClient;
+        private CustomControls.RJControls.RButton ReadService;
+        private CustomControls.RJControls.RButton rButton4;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 
