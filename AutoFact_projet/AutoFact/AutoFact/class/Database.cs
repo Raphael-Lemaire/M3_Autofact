@@ -15,7 +15,7 @@ namespace AutoFact
 
 
         //private static readonly object _syncObject = new object();
-        private static string conString = (@"Data Source = ../../../Base_Donnee/autofact.db");
+        private static string conString = (@"Data Source = database.db");
 
         private Database()
         {

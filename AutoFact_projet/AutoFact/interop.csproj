@@ -1,0 +1,14 @@
+<PropertyGroup> 
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>[Set by Visual Studio]</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>[Set by Visual Studio]</RootNamespace>
+    <AssemblyName>[Set by Visual Studio]</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>[Set by Visual Studio]</FileAlignment>
+    <!--Add the line below to your project file. Leave everything else untouched--> 
+    <Prefer32Bit>false</Prefer32Bit> 
+</PropertyGroup>
+
