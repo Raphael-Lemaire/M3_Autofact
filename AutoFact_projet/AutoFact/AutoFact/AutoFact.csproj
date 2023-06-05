@@ -144,6 +144,7 @@
     </Compile>
     <Compile Include="model\CategoryModel.cs" />
     <Compile Include="model\CustomerModel.cs" />
+    <Compile Include="model\ModificationStatusModel.cs" />
     <Compile Include="model\QuotationLineModel.cs" />
     <Compile Include="model\QuotationModel.cs" />
     <Compile Include="model\ServiceModel.cs" />

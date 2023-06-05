@@ -116,6 +116,7 @@ namespace AutoFact
             // Variable permettant d'avoir la cellule actuel
             string nameU = TBnameUpdate.Text;
             string unitPriceU = TBunitPriceUpdate.Text;
+            int selectedValue = Convert.ToInt32(comboBoxServiceCategory.SelectedValue);
             int rowindex = dataGridViewProduct.CurrentCell.RowIndex;
             int columnindex = dataGridViewProduct.CurrentCell.ColumnIndex;
             if (columnindex == 0)
@@ -130,7 +131,8 @@ namespace AutoFact
                 }
                 else
                 {
-                    ServiceModel.UpdateProduct(id, nameU, unitPriceU);
+
+                    ServiceModel.UpdateProduct(id, nameU, unitPriceU, selectedValue);
                     TBnameUpdate.Text = string.Empty;
                     TBunitPriceUpdate.Text = string.Empty;
                 }
@@ -170,11 +172,13 @@ namespace AutoFact
                 // Récupérez toutes les informations de la ligne
                 string col1Value = row.Cells[1].Value.ToString();
                 int col2Value = Convert.ToInt32(row.Cells[2].Value);
+                string valueFromCell = row.Cells[3].Value.ToString();
                 // Ajoutez autant de colonnes que nécessaire 
                 // Utilisez les informations récupérées pour effectuer les traitements souhaités   
                 // Par exemple, afficher les informations dans une zone de texte 
                 TBnameUpdate.Text = $"{col1Value}";
                 TBunitPriceUpdate.Text = $"{col2Value}";
+                comboBoxServiceCategory.SelectedIndex = comboBoxServiceCategory.FindStringExact(valueFromCell);
 
 
             }

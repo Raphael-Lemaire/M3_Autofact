@@ -24,12 +24,12 @@ namespace AutoFact
         }
 
         private void tbName_TextChanged(object sender, EventArgs e)
-        {        
+        {
 
         }
 
         private void SaveQuote_Click(object sender, EventArgs e)
-        {   
+        {
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -69,6 +69,7 @@ namespace AutoFact
 
         private void ReadCustomer_Click(object sender, EventArgs e)
         {
+            QuotationModel.getQuotation(dataGridViewQuotation);
             TypeStatusModel.GetListTypeStatus(comboBoxGStatus);
             TypeStatusModel.GetListTypeStatus(comboBoxStatus);
         }
@@ -106,12 +107,47 @@ namespace AutoFact
                 // Récupérez toutes les informations de la ligne
                 string col1Value = row.Cells[1].Value.ToString();
                 int col2Value = Convert.ToInt32(row.Cells[2].Value);
+                string valueFromCell = row.Cells[3].Value.ToString();
                 // Ajoutez autant de colonnes que nécessaire 
                 // Utilisez les informations récupérées pour effectuer les traitements souhaités   
                 // Par exemple, afficher les informations dans une zone de texte 
                 TBQuotationName.Text = $"{col1Value}";
                 TBTotalPrice.Text = $"{col2Value}";
+
+
+                // Sélection automatique de la ComboBox par index
+                // Remplacez "comboBox1" par le nom de votre ComboBox
+                comboBoxClientGQuotation.SelectedIndex = comboBoxClientGQuotation.FindStringExact(valueFromCell);
+
+                int columnindex = dataGridViewQuotation.CurrentCell.ColumnIndex;
+                if (columnindex == 0)
+                {
+                    // Ligne permettant de mettre la valeur de l'id 
+                    int id = Convert.ToInt32(dataGridViewQuotation.Rows[rowindex].Cells[columnindex].Value);
+                    int numRows = dataGridViewQuotation.SelectedCells.Count;
+                    if (numRows > 1)
+                    {
+                        string messageError = ("Vous pouvez selectioner qu'une seule cellule.");
+                        string titleError = ("Erreur");
+                        MessageBox.Show(messageError, titleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    QuotationLineModel.GetListQuotationLineProduct(comboBoxQuotationService, id);
+                    comboBoxQuotationService.SelectedIndexChanged += (eventSender, eventArgs) =>
+                    {
+                        // Récupération de la quantité sélectionnée dans la combobox
+                        string quantite = comboBoxQuotationService.SelectedValue.ToString();
+                        textBoxQuotationServiceAmount.Text = quantite;
+                    };
+                }
+                else
+                {
+                    string messageError = ("Veuillez selectionner la colonnes ID.");
+                    string titleError = ("Erreur");
+                    MessageBox.Show(messageError, titleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
+
         }
 
         private void rButton4_Click(object sender, EventArgs e)
@@ -134,7 +170,7 @@ namespace AutoFact
                 int amount;
                 if (int.TryParse(textBoxAmount.Text, out amount))
                 {
-                    QuotationLineModel.addQuotationLine(amount, selectedValue, id);          
+                    QuotationLineModel.addQuotationLine(amount, selectedValue, id);
                 }
                 else
                 {
@@ -142,13 +178,153 @@ namespace AutoFact
                     string titleError = ("Erreur");
                     MessageBox.Show(messageError, titleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
+
             }
             else
             {
                 string messageError = ("Veuillez selectionner la colonnes ID.");
                 string titleError = ("Erreur");
                 MessageBox.Show(messageError, titleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void rButton3_Click(object sender, EventArgs e)
+        {
+            // Variable permettant d'avoir la cellule actuel
+            int rowindex = dataGridViewQuotation.CurrentCell.RowIndex;
+            int columnindex = dataGridViewQuotation.CurrentCell.ColumnIndex;
+            if (columnindex == 0)
+            {
+                // Ligne permettant de mettre la valeur de l'id 
+                int id = Convert.ToInt32(dataGridViewQuotation.Rows[rowindex].Cells[columnindex].Value);
+                int numRows = dataGridViewQuotation.SelectedCells.Count;
+                if (numRows > 1)
+                {
+                    string messageError = ("Vous pouvez selectioner qu'une seule cellule.");
+                    string titleError = ("Erreur");
+                    MessageBox.Show(messageError, titleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                int updateProduct = Convert.ToInt32(comboBoxService.SelectedValue);
+                int oldProduct = Convert.ToInt32(comboBoxQuotationService.SelectedValue);
+                int amount;
+                if (int.TryParse(textBoxQuotationServiceAmount.Text, out amount))
+                {
+                    QuotationLineModel.UpdateQuotationLine(amount, id, oldProduct, updateProduct);
+                }
+                else
+                {
+                    string messageError = ("Entrez une quantité valide");
+                    string titleError = ("Erreur");
+                    MessageBox.Show(messageError, titleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else
+            {
+                string messageError = ("Veuillez selectionner la colonnes ID.");
+                string titleError = ("Erreur");
+                MessageBox.Show(messageError, titleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DeleteQuotationLineButton_Click(object sender, EventArgs e)
+        {
+            // Variable permettant d'avoir la cellule actuel
+            int rowindex = dataGridViewQuotation.CurrentCell.RowIndex;
+            int columnindex = dataGridViewQuotation.CurrentCell.ColumnIndex;
+            if (columnindex == 0)
+            {
+                // Ligne permettant de mettre la valeur de l'id 
+                int id = Convert.ToInt32(dataGridViewQuotation.Rows[rowindex].Cells[columnindex].Value);
+                int numRows = dataGridViewQuotation.SelectedCells.Count;
+                if (numRows > 1)
+                {
+                    string messageError = ("Vous pouvez selectioner qu'une seule cellule.");
+                    string titleError = ("Erreur");
+                    MessageBox.Show(messageError, titleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                int selectedValue = Convert.ToInt32(comboBoxService.SelectedValue);
+
+                QuotationLineModel.deleteQuotationLine(id, selectedValue);
+
+            }
+            else
+            {
+                string messageError = ("Veuillez selectionner la colonnes ID.");
+                string titleError = ("Erreur");
+                MessageBox.Show(messageError, titleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void TotalPriceButton_Click(object sender, EventArgs e)
+        {
+            // Variable permettant d'avoir la cellule actuel
+            int rowindex = dataGridViewQuotation.CurrentCell.RowIndex;
+            int columnindex = dataGridViewQuotation.CurrentCell.ColumnIndex;
+            if (columnindex == 0)
+            {
+                // Ligne permettant de mettre la valeur de l'id 
+                int id = Convert.ToInt32(dataGridViewQuotation.Rows[rowindex].Cells[columnindex].Value);
+                int numRows = dataGridViewQuotation.SelectedCells.Count;
+                if (numRows > 1)
+                {
+                    string messageError = ("Vous pouvez selectioner qu'une seule cellule.");
+                    string titleError = ("Erreur");
+                    MessageBox.Show(messageError, titleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                int total_price = QuotationLineModel.GetQuotationLineTotalPrice(id);
+                TBTotalPrice.Text = total_price.ToString();
+            }
+        }
+
+        private void Updatebot_Click(object sender, EventArgs e)
+        {
+            // Variable permettant d'avoir la cellule actuel
+            string name = TBQuotationName.Text;
+            int total_price = Convert.ToInt32(TBTotalPrice.Text);
+            int selectedValue = Convert.ToInt32(comboBoxClientGQuotation.SelectedValue);
+
+            int rowindex = dataGridViewQuotation.CurrentCell.RowIndex;
+            int columnindex = dataGridViewQuotation.CurrentCell.ColumnIndex;
+            if (columnindex == 0)
+            {
+                int id = Convert.ToInt32(dataGridViewQuotation.Rows[rowindex].Cells[columnindex].Value);
+                int numRows = dataGridViewQuotation.SelectedCells.Count;
+                if (numRows > 1)
+                {
+                    string messageError = ("Vous pouvez selectioner qu'une seule cellule.");
+                    string titleError = ("Erreur");
+                    MessageBox.Show(messageError, titleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    QuotationModel.UpdateQuotation(id, name, total_price, selectedValue);
+                    TBQuotationName.Text = string.Empty;
+                    TBTotalPrice.Text = string.Empty;
+                }
+            }
+        }
+
+        private void AddStatusDateModifButton_Click(object sender, EventArgs e)
+        {
+            // Variable permettant d'avoir la cellule actuel
+            int rowindex = dataGridViewQuotation.CurrentCell.RowIndex;
+            int columnindex = dataGridViewQuotation.CurrentCell.ColumnIndex;
+            if (columnindex == 0)
+            {
+                // Ligne permettant de mettre la valeur de l'id 
+                int id = Convert.ToInt32(dataGridViewQuotation.Rows[rowindex].Cells[columnindex].Value);
+                int numRows = dataGridViewQuotation.SelectedCells.Count;
+                if (numRows > 1)
+                {
+                    string messageError = ("Vous pouvez selectioner qu'une seule cellule.");
+                    string titleError = ("Erreur");
+                    MessageBox.Show(messageError, titleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                int selectedValue = Convert.ToInt32(comboBoxStatus.SelectedValue);
+                ModificationStatusModel.addModificationStatus(selectedValue, id);
+
             }
         }
     }

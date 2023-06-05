@@ -75,9 +75,9 @@ namespace AutoFact.model
         /// </summary>
         /// <param name="nameU"></param>
         /// <param name="unitPriceU"></param>
-        public static void UpdateProduct(int id, string nameU, string unitPriceU)
+        public static void UpdateProduct(int id, string nameU, string unitPriceU, int category_id)
         {
-            string querySearch = ("UPDATE product \r\n SET \r\n name = CASE \r\n WHEN @nameU <> '' THEN @nameU \r\n ELSE name \r\n END,\r\n unit_price = CASE \r\n WHEN @unitPriceU <> '' THEN @unitPriceU \r\n ELSE unit_price \r\n END\r\n WHERE id = @id;");
+            string querySearch = ("UPDATE product \r\n SET \r\n name = CASE \r\n WHEN @nameU <> '' THEN @nameU \r\n ELSE name \r\n END,\r\n unit_price = CASE \r\n WHEN @unitPriceU <> '' THEN @unitPriceU \r\n ELSE unit_price \r\n END,\r\n category_id = CASE \r\n WHEN @category_id <> '' THEN @category_id \r\n ELSE category_id \r\n END\r\n WHERE id = @id;");
             SQLiteConnection db = Database.getInstance().getConnection();
 
             SQLiteCommand sqlite_cmd = new SQLiteCommand(querySearch, db);
@@ -86,6 +86,7 @@ namespace AutoFact.model
             sqlite_cmd.Parameters.AddWithValue("@id", id);
             sqlite_cmd.Parameters.AddWithValue("@nameU", nameU);
             sqlite_cmd.Parameters.AddWithValue("@unitPriceU", unitPriceU);
+            sqlite_cmd.Parameters.AddWithValue("@category_id", category_id);
 
             // Exécuter la requête d'insertion  
             sqlite_cmd.ExecuteNonQuery();

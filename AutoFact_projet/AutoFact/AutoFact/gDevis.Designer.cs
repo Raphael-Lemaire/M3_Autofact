@@ -48,6 +48,7 @@
             this.comboBoxService = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxStatus = new System.Windows.Forms.TextBox();
+            this.textBoxAmount = new System.Windows.Forms.TextBox();
             this.rButton4 = new CustomControls.RJControls.RButton();
             this.DeleteButtonStatus = new CustomControls.RJControls.RButton();
             this.UpdateButtonStatus = new CustomControls.RJControls.RButton();
@@ -56,7 +57,14 @@
             this.rButton1 = new CustomControls.RJControls.RButton();
             this.Updatebot = new CustomControls.RJControls.RButton();
             this.RefreshButtonGQuotation = new CustomControls.RJControls.RButton();
-            this.textBoxAmount = new System.Windows.Forms.TextBox();
+            this.textBoxQuotationServiceAmount = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBoxQuotationService = new System.Windows.Forms.ComboBox();
+            this.rButton3 = new CustomControls.RJControls.RButton();
+            this.DeleteQuotationLineButton = new CustomControls.RJControls.RButton();
+            this.TotalPriceButton = new CustomControls.RJControls.RButton();
+            this.AddStatusDateModifButton = new CustomControls.RJControls.RButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuotation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +72,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(414, 588);
+            this.label3.Location = new System.Drawing.Point(298, 588);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 51;
@@ -74,7 +82,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(178, 632);
+            this.label2.Location = new System.Drawing.Point(93, 638);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 50;
@@ -83,7 +91,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(178, 591);
+            this.label1.Location = new System.Drawing.Point(73, 588);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 49;
@@ -91,14 +99,14 @@
             // 
             // TBTotalPrice
             // 
-            this.TBTotalPrice.Location = new System.Drawing.Point(308, 585);
+            this.TBTotalPrice.Location = new System.Drawing.Point(273, 603);
             this.TBTotalPrice.Name = "TBTotalPrice";
             this.TBTotalPrice.Size = new System.Drawing.Size(100, 20);
             this.TBTotalPrice.TabIndex = 46;
             // 
             // TBQuotationName
             // 
-            this.TBQuotationName.Location = new System.Drawing.Point(59, 588);
+            this.TBQuotationName.Location = new System.Drawing.Point(59, 603);
             this.TBQuotationName.Name = "TBQuotationName";
             this.TBQuotationName.Size = new System.Drawing.Size(100, 20);
             this.TBQuotationName.TabIndex = 44;
@@ -137,7 +145,7 @@
             // comboBoxStatus
             // 
             this.comboBoxStatus.FormattingEnabled = true;
-            this.comboBoxStatus.Location = new System.Drawing.Point(59, 632);
+            this.comboBoxStatus.Location = new System.Drawing.Point(59, 653);
             this.comboBoxStatus.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(100, 21);
@@ -146,7 +154,7 @@
             // comboBoxClientGQuotation
             // 
             this.comboBoxClientGQuotation.FormattingEnabled = true;
-            this.comboBoxClientGQuotation.Location = new System.Drawing.Point(308, 632);
+            this.comboBoxClientGQuotation.Location = new System.Drawing.Point(273, 653);
             this.comboBoxClientGQuotation.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxClientGQuotation.Name = "comboBoxClientGQuotation";
             this.comboBoxClientGQuotation.Size = new System.Drawing.Size(100, 21);
@@ -155,7 +163,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(414, 634);
+            this.label4.Location = new System.Drawing.Point(298, 638);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 13);
             this.label4.TabIndex = 59;
@@ -188,7 +196,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(794, 585);
+            this.label6.Location = new System.Drawing.Point(721, 573);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 13);
             this.label6.TabIndex = 65;
@@ -197,7 +205,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(644, 588);
+            this.label7.Location = new System.Drawing.Point(571, 573);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 13);
             this.label7.TabIndex = 64;
@@ -206,7 +214,7 @@
             // comboBoxService
             // 
             this.comboBoxService.FormattingEnabled = true;
-            this.comboBoxService.Location = new System.Drawing.Point(577, 605);
+            this.comboBoxService.Location = new System.Drawing.Point(516, 591);
             this.comboBoxService.Name = "comboBoxService";
             this.comboBoxService.Size = new System.Drawing.Size(169, 21);
             this.comboBoxService.TabIndex = 63;
@@ -228,6 +236,14 @@
             this.textBoxStatus.TabIndex = 61;
             this.textBoxStatus.TextChanged += new System.EventHandler(this.textBoxStatus_TextChanged);
             // 
+            // textBoxAmount
+            // 
+            this.textBoxAmount.Location = new System.Drawing.Point(691, 591);
+            this.textBoxAmount.Name = "textBoxAmount";
+            this.textBoxAmount.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAmount.TabIndex = 73;
+            this.textBoxAmount.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
             // rButton4
             // 
             this.rButton4.BackColor = System.Drawing.Color.RoyalBlue;
@@ -238,7 +254,7 @@
             this.rButton4.FlatAppearance.BorderSize = 0;
             this.rButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rButton4.ForeColor = System.Drawing.Color.White;
-            this.rButton4.Location = new System.Drawing.Point(618, 632);
+            this.rButton4.Location = new System.Drawing.Point(545, 617);
             this.rButton4.Name = "rButton4";
             this.rButton4.Size = new System.Drawing.Size(150, 40);
             this.rButton4.TabIndex = 72;
@@ -357,6 +373,7 @@
             this.Updatebot.Text = "Modifier";
             this.Updatebot.TextColor = System.Drawing.Color.White;
             this.Updatebot.UseVisualStyleBackColor = false;
+            this.Updatebot.Click += new System.EventHandler(this.Updatebot_Click);
             // 
             // RefreshButtonGQuotation
             // 
@@ -377,19 +394,128 @@
             this.RefreshButtonGQuotation.UseVisualStyleBackColor = false;
             this.RefreshButtonGQuotation.Click += new System.EventHandler(this.ReadCustomer_Click);
             // 
-            // textBoxAmount
+            // textBoxQuotationServiceAmount
             // 
-            this.textBoxAmount.Location = new System.Drawing.Point(764, 606);
-            this.textBoxAmount.Name = "textBoxAmount";
-            this.textBoxAmount.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAmount.TabIndex = 73;
-            this.textBoxAmount.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            this.textBoxQuotationServiceAmount.Location = new System.Drawing.Point(959, 591);
+            this.textBoxQuotationServiceAmount.Name = "textBoxQuotationServiceAmount";
+            this.textBoxQuotationServiceAmount.Size = new System.Drawing.Size(66, 20);
+            this.textBoxQuotationServiceAmount.TabIndex = 77;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(970, 575);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 13);
+            this.label9.TabIndex = 76;
+            this.label9.Text = "Quantité";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(802, 575);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(151, 13);
+            this.label10.TabIndex = 75;
+            this.label10.Text = "Services du devis sélectionner";
+            // 
+            // comboBoxQuotationService
+            // 
+            this.comboBoxQuotationService.FormattingEnabled = true;
+            this.comboBoxQuotationService.Location = new System.Drawing.Point(797, 591);
+            this.comboBoxQuotationService.Name = "comboBoxQuotationService";
+            this.comboBoxQuotationService.Size = new System.Drawing.Size(156, 21);
+            this.comboBoxQuotationService.TabIndex = 74;
+            // 
+            // rButton3
+            // 
+            this.rButton3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.rButton3.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.rButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rButton3.BorderRadius = 15;
+            this.rButton3.BorderSize = 0;
+            this.rButton3.FlatAppearance.BorderSize = 0;
+            this.rButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rButton3.ForeColor = System.Drawing.Color.White;
+            this.rButton3.Location = new System.Drawing.Point(739, 617);
+            this.rButton3.Name = "rButton3";
+            this.rButton3.Size = new System.Drawing.Size(108, 40);
+            this.rButton3.TabIndex = 78;
+            this.rButton3.Text = "Modifier";
+            this.rButton3.TextColor = System.Drawing.Color.White;
+            this.rButton3.UseVisualStyleBackColor = false;
+            this.rButton3.Click += new System.EventHandler(this.rButton3_Click);
+            // 
+            // DeleteQuotationLineButton
+            // 
+            this.DeleteQuotationLineButton.BackColor = System.Drawing.Color.DarkCyan;
+            this.DeleteQuotationLineButton.BackgroundColor = System.Drawing.Color.DarkCyan;
+            this.DeleteQuotationLineButton.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.DeleteQuotationLineButton.BorderRadius = 15;
+            this.DeleteQuotationLineButton.BorderSize = 0;
+            this.DeleteQuotationLineButton.FlatAppearance.BorderSize = 0;
+            this.DeleteQuotationLineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteQuotationLineButton.ForeColor = System.Drawing.Color.White;
+            this.DeleteQuotationLineButton.Location = new System.Drawing.Point(882, 617);
+            this.DeleteQuotationLineButton.Name = "DeleteQuotationLineButton";
+            this.DeleteQuotationLineButton.Size = new System.Drawing.Size(122, 40);
+            this.DeleteQuotationLineButton.TabIndex = 79;
+            this.DeleteQuotationLineButton.Text = "Supprimer";
+            this.DeleteQuotationLineButton.TextColor = System.Drawing.Color.White;
+            this.DeleteQuotationLineButton.UseVisualStyleBackColor = false;
+            this.DeleteQuotationLineButton.Click += new System.EventHandler(this.DeleteQuotationLineButton_Click);
+            // 
+            // TotalPriceButton
+            // 
+            this.TotalPriceButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.TotalPriceButton.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.TotalPriceButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.TotalPriceButton.BorderRadius = 15;
+            this.TotalPriceButton.BorderSize = 0;
+            this.TotalPriceButton.FlatAppearance.BorderSize = 0;
+            this.TotalPriceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TotalPriceButton.ForeColor = System.Drawing.Color.White;
+            this.TotalPriceButton.Location = new System.Drawing.Point(393, 591);
+            this.TotalPriceButton.Name = "TotalPriceButton";
+            this.TotalPriceButton.Size = new System.Drawing.Size(100, 33);
+            this.TotalPriceButton.TabIndex = 80;
+            this.TotalPriceButton.Text = "Calculer le total";
+            this.TotalPriceButton.TextColor = System.Drawing.Color.White;
+            this.TotalPriceButton.UseVisualStyleBackColor = false;
+            this.TotalPriceButton.Click += new System.EventHandler(this.TotalPriceButton_Click);
+            // 
+            // AddStatusDateModifButton
+            // 
+            this.AddStatusDateModifButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.AddStatusDateModifButton.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.AddStatusDateModifButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.AddStatusDateModifButton.BorderRadius = 15;
+            this.AddStatusDateModifButton.BorderSize = 0;
+            this.AddStatusDateModifButton.FlatAppearance.BorderSize = 0;
+            this.AddStatusDateModifButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddStatusDateModifButton.ForeColor = System.Drawing.Color.White;
+            this.AddStatusDateModifButton.Location = new System.Drawing.Point(164, 646);
+            this.AddStatusDateModifButton.Name = "AddStatusDateModifButton";
+            this.AddStatusDateModifButton.Size = new System.Drawing.Size(100, 33);
+            this.AddStatusDateModifButton.TabIndex = 81;
+            this.AddStatusDateModifButton.Text = "Définir le status";
+            this.AddStatusDateModifButton.TextColor = System.Drawing.Color.White;
+            this.AddStatusDateModifButton.UseVisualStyleBackColor = false;
+            this.AddStatusDateModifButton.Click += new System.EventHandler(this.AddStatusDateModifButton_Click);
             // 
             // gDevis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1050, 720);
+            this.Controls.Add(this.AddStatusDateModifButton);
+            this.Controls.Add(this.TotalPriceButton);
+            this.Controls.Add(this.DeleteQuotationLineButton);
+            this.Controls.Add(this.rButton3);
+            this.Controls.Add(this.textBoxQuotationServiceAmount);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.comboBoxQuotationService);
             this.Controls.Add(this.textBoxAmount);
             this.Controls.Add(this.rButton4);
             this.Controls.Add(this.DeleteButtonStatus);
@@ -458,5 +584,13 @@
         private System.Windows.Forms.TextBox textBoxStatus;
         private CustomControls.RJControls.RButton rButtonStatus;
         private System.Windows.Forms.TextBox textBoxAmount;
+        private System.Windows.Forms.TextBox textBoxQuotationServiceAmount;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBoxQuotationService;
+        private CustomControls.RJControls.RButton rButton3;
+        private CustomControls.RJControls.RButton DeleteQuotationLineButton;
+        private CustomControls.RJControls.RButton TotalPriceButton;
+        private CustomControls.RJControls.RButton AddStatusDateModifButton;
     }
 }
