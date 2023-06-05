@@ -71,6 +71,7 @@ namespace AutoFact
         {
             CustomerModel.GetCustomer(dataGridViewCustomer);
             QuotationModel.getQuotation(dataGridViewQuotation);
+            ServiceModel.GetProduct(dataGridView3);
         }
         private void fillchart()
         {
@@ -237,6 +238,11 @@ namespace AutoFact
         private void RefreshButtonQuotation_Click(object sender, EventArgs e)
         {
             QuotationModel.getQuotation(dataGridViewQuotation);
+        }
+
+        private void ReadService_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
