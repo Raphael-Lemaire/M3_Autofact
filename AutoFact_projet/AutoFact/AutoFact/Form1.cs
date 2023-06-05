@@ -62,15 +62,15 @@ namespace AutoFact
 
         private void rButton3_Click(object sender, EventArgs e)
         {
-            gDevis gD = new gDevis();
-            gD.Show();
+
         }
 
 
 
         private void formAF_Load(object sender, EventArgs e)
         {
-
+            CustomerModel.GetCustomer(dataGridViewCustomer);
+            QuotationModel.getQuotation(dataGridViewQuotation);
         }
         private void fillchart()
         {
@@ -166,7 +166,7 @@ namespace AutoFact
             DataTable dt = new DataTable();
 
             dt.Load(reader);
-            dataGridView4.DataSource = dt;
+            dataGridViewQuotation.DataSource = dt;
             db.Close();
 
 
@@ -205,6 +205,38 @@ namespace AutoFact
         {
             aClient aC = new aClient();
             aC.Show();
+        }
+
+        private void ReadCustomer_Click(object sender, EventArgs e)
+        {
+            CustomerModel.GetCustomer(dataGridViewCustomer);
+        }
+
+        private void rButton8_Click(object sender, EventArgs e)
+        {
+            gDevis gD = new gDevis();
+            gD.Show();
+        }
+
+        private void rButton7_Click(object sender, EventArgs e)
+        {
+            aDevis aD = new aDevis();
+            aD.Show();
+        }
+
+        private void dataGridViewQuotation_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void devispage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RefreshButtonQuotation_Click(object sender, EventArgs e)
+        {
+            QuotationModel.getQuotation(dataGridViewQuotation);
         }
     }
 
