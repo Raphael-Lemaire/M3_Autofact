@@ -40,6 +40,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TBunitPriceUpdate = new System.Windows.Forms.TextBox();
             this.TBnameUpdate = new System.Windows.Forms.TextBox();
+            this.comboBoxUpdateCategory = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxUpdateCategory = new System.Windows.Forms.TextBox();
+            this.DeleteCategoryButton = new CustomControls.RJControls.RButton();
+            this.UpdateCategoryButton = new CustomControls.RJControls.RButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBoxServiceCategory = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -54,10 +61,9 @@
             this.rButton2.FlatAppearance.BorderSize = 0;
             this.rButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rButton2.ForeColor = System.Drawing.Color.White;
-            this.rButton2.Location = new System.Drawing.Point(1273, 260);
-            this.rButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.rButton2.Location = new System.Drawing.Point(955, 211);
             this.rButton2.Name = "rButton2";
-            this.rButton2.Size = new System.Drawing.Size(11, 10);
+            this.rButton2.Size = new System.Drawing.Size(8, 8);
             this.rButton2.TabIndex = 46;
             this.rButton2.Text = "rButton2";
             this.rButton2.TextColor = System.Drawing.Color.White;
@@ -73,10 +79,9 @@
             this.deleteProduct.FlatAppearance.BorderSize = 0;
             this.deleteProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteProduct.ForeColor = System.Drawing.Color.White;
-            this.deleteProduct.Location = new System.Drawing.Point(1189, 260);
-            this.deleteProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.deleteProduct.Location = new System.Drawing.Point(892, 211);
             this.deleteProduct.Name = "deleteProduct";
-            this.deleteProduct.Size = new System.Drawing.Size(200, 49);
+            this.deleteProduct.Size = new System.Drawing.Size(150, 40);
             this.deleteProduct.TabIndex = 45;
             this.deleteProduct.Text = "Supprimer";
             this.deleteProduct.TextColor = System.Drawing.Color.White;
@@ -93,10 +98,9 @@
             this.UpdateProduct.FlatAppearance.BorderSize = 0;
             this.UpdateProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateProduct.ForeColor = System.Drawing.Color.White;
-            this.UpdateProduct.Location = new System.Drawing.Point(1189, 342);
-            this.UpdateProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.UpdateProduct.Location = new System.Drawing.Point(892, 278);
             this.UpdateProduct.Name = "UpdateProduct";
-            this.UpdateProduct.Size = new System.Drawing.Size(200, 49);
+            this.UpdateProduct.Size = new System.Drawing.Size(150, 40);
             this.UpdateProduct.TabIndex = 44;
             this.UpdateProduct.Text = "Modifier";
             this.UpdateProduct.TextColor = System.Drawing.Color.White;
@@ -106,10 +110,9 @@
             // tbSearchProduct
             // 
             this.tbSearchProduct.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbSearchProduct.Location = new System.Drawing.Point(897, 215);
-            this.tbSearchProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.tbSearchProduct.Location = new System.Drawing.Point(673, 175);
             this.tbSearchProduct.Name = "tbSearchProduct";
-            this.tbSearchProduct.Size = new System.Drawing.Size(269, 22);
+            this.tbSearchProduct.Size = new System.Drawing.Size(203, 20);
             this.tbSearchProduct.TabIndex = 43;
             // 
             // ReadProduct
@@ -122,10 +125,9 @@
             this.ReadProduct.FlatAppearance.BorderSize = 0;
             this.ReadProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReadProduct.ForeColor = System.Drawing.Color.White;
-            this.ReadProduct.Location = new System.Drawing.Point(32, 180);
-            this.ReadProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.ReadProduct.Location = new System.Drawing.Point(24, 146);
             this.ReadProduct.Name = "ReadProduct";
-            this.ReadProduct.Size = new System.Drawing.Size(200, 49);
+            this.ReadProduct.Size = new System.Drawing.Size(150, 40);
             this.ReadProduct.TabIndex = 42;
             this.ReadProduct.Text = "Actualiser";
             this.ReadProduct.TextColor = System.Drawing.Color.White;
@@ -136,21 +138,21 @@
             // 
             this.dataGridViewProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewProduct.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGridViewProduct.Location = new System.Drawing.Point(32, 247);
-            this.dataGridViewProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewProduct.Location = new System.Drawing.Point(24, 201);
             this.dataGridViewProduct.Name = "dataGridViewProduct";
             this.dataGridViewProduct.RowHeadersWidth = 51;
             this.dataGridViewProduct.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.RoyalBlue;
-            this.dataGridViewProduct.Size = new System.Drawing.Size(1136, 470);
+            this.dataGridViewProduct.Size = new System.Drawing.Size(852, 382);
             this.dataGridViewProduct.TabIndex = 41;
+            this.dataGridViewProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProduct_CellClick_1);
             // 
             // logo
             // 
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(32, 14);
-            this.logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.logo.Location = new System.Drawing.Point(24, 11);
+            this.logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(129, 114);
+            this.logo.Size = new System.Drawing.Size(97, 93);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logo.TabIndex = 40;
             this.logo.TabStop = false;
@@ -158,45 +160,127 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(663, 729);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(497, 592);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 16);
+            this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 50;
             this.label3.Text = "Prix Unitaire";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(348, 733);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(261, 596);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 16);
+            this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 49;
             this.label1.Text = "Nom du Service";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // TBunitPriceUpdate
             // 
-            this.TBunitPriceUpdate.Location = new System.Drawing.Point(522, 725);
-            this.TBunitPriceUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.TBunitPriceUpdate.Location = new System.Drawing.Point(392, 589);
             this.TBunitPriceUpdate.Name = "TBunitPriceUpdate";
-            this.TBunitPriceUpdate.Size = new System.Drawing.Size(132, 22);
+            this.TBunitPriceUpdate.Size = new System.Drawing.Size(100, 20);
             this.TBunitPriceUpdate.TabIndex = 47;
             // 
             // TBnameUpdate
             // 
-            this.TBnameUpdate.Location = new System.Drawing.Point(190, 729);
-            this.TBnameUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.TBnameUpdate.Location = new System.Drawing.Point(142, 592);
             this.TBnameUpdate.Name = "TBnameUpdate";
-            this.TBnameUpdate.Size = new System.Drawing.Size(132, 22);
+            this.TBnameUpdate.Size = new System.Drawing.Size(100, 20);
             this.TBnameUpdate.TabIndex = 48;
+            // 
+            // comboBoxUpdateCategory
+            // 
+            this.comboBoxUpdateCategory.FormattingEnabled = true;
+            this.comboBoxUpdateCategory.Location = new System.Drawing.Point(905, 387);
+            this.comboBoxUpdateCategory.Name = "comboBoxUpdateCategory";
+            this.comboBoxUpdateCategory.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxUpdateCategory.TabIndex = 51;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(940, 371);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Category";
+            // 
+            // textBoxUpdateCategory
+            // 
+            this.textBoxUpdateCategory.Location = new System.Drawing.Point(905, 426);
+            this.textBoxUpdateCategory.Name = "textBoxUpdateCategory";
+            this.textBoxUpdateCategory.Size = new System.Drawing.Size(121, 20);
+            this.textBoxUpdateCategory.TabIndex = 53;
+            // 
+            // DeleteCategoryButton
+            // 
+            this.DeleteCategoryButton.BackColor = System.Drawing.Color.DarkCyan;
+            this.DeleteCategoryButton.BackgroundColor = System.Drawing.Color.DarkCyan;
+            this.DeleteCategoryButton.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.DeleteCategoryButton.BorderRadius = 15;
+            this.DeleteCategoryButton.BorderSize = 0;
+            this.DeleteCategoryButton.FlatAppearance.BorderSize = 0;
+            this.DeleteCategoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteCategoryButton.ForeColor = System.Drawing.Color.White;
+            this.DeleteCategoryButton.Location = new System.Drawing.Point(882, 462);
+            this.DeleteCategoryButton.Name = "DeleteCategoryButton";
+            this.DeleteCategoryButton.Size = new System.Drawing.Size(87, 40);
+            this.DeleteCategoryButton.TabIndex = 54;
+            this.DeleteCategoryButton.Text = "Supprimer";
+            this.DeleteCategoryButton.TextColor = System.Drawing.Color.White;
+            this.DeleteCategoryButton.UseVisualStyleBackColor = false;
+            this.DeleteCategoryButton.Click += new System.EventHandler(this.DeleteCategoryButton_Click);
+            // 
+            // UpdateCategoryButton
+            // 
+            this.UpdateCategoryButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.UpdateCategoryButton.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.UpdateCategoryButton.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.UpdateCategoryButton.BorderRadius = 15;
+            this.UpdateCategoryButton.BorderSize = 0;
+            this.UpdateCategoryButton.FlatAppearance.BorderSize = 0;
+            this.UpdateCategoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateCategoryButton.ForeColor = System.Drawing.Color.White;
+            this.UpdateCategoryButton.Location = new System.Drawing.Point(975, 462);
+            this.UpdateCategoryButton.Name = "UpdateCategoryButton";
+            this.UpdateCategoryButton.Size = new System.Drawing.Size(85, 40);
+            this.UpdateCategoryButton.TabIndex = 55;
+            this.UpdateCategoryButton.Text = "Modifier";
+            this.UpdateCategoryButton.TextColor = System.Drawing.Color.White;
+            this.UpdateCategoryButton.UseVisualStyleBackColor = false;
+            this.UpdateCategoryButton.Click += new System.EventHandler(this.UpdateCategoryButton_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(610, 592);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 57;
+            this.label4.Text = "Category";
+            // 
+            // comboBoxServiceCategory
+            // 
+            this.comboBoxServiceCategory.FormattingEnabled = true;
+            this.comboBoxServiceCategory.Location = new System.Drawing.Point(665, 589);
+            this.comboBoxServiceCategory.Name = "comboBoxServiceCategory";
+            this.comboBoxServiceCategory.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxServiceCategory.TabIndex = 56;
             // 
             // gService
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1427, 944);
+            this.ClientSize = new System.Drawing.Size(1070, 767);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.comboBoxServiceCategory);
+            this.Controls.Add(this.UpdateCategoryButton);
+            this.Controls.Add(this.DeleteCategoryButton);
+            this.Controls.Add(this.textBoxUpdateCategory);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBoxUpdateCategory);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TBunitPriceUpdate);
@@ -208,7 +292,6 @@
             this.Controls.Add(this.ReadProduct);
             this.Controls.Add(this.dataGridViewProduct);
             this.Controls.Add(this.logo);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "gService";
             this.Text = "Gérer les services";
             this.Load += new System.EventHandler(this.gService_Load);
@@ -232,5 +315,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TBunitPriceUpdate;
         private System.Windows.Forms.TextBox TBnameUpdate;
+        private System.Windows.Forms.ComboBox comboBoxUpdateCategory;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxUpdateCategory;
+        private CustomControls.RJControls.RButton DeleteCategoryButton;
+        private CustomControls.RJControls.RButton UpdateCategoryButton;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBoxServiceCategory;
     }
 }

@@ -26,7 +26,7 @@ namespace AutoFact
 
         private void aService_Load(object sender, EventArgs e)
         {
-
+            CategoryModel.GetListCategory(comboBoxCategory);
         }
 
         private void labelNom_Click(object sender, EventArgs e)
@@ -40,6 +40,8 @@ namespace AutoFact
 
             string unitPrice = tbUnitPrice.Text;
 
+            int selectedValue = Convert.ToInt32(comboBoxCategory.SelectedValue);
+
             if (name == null || unitPrice == null)
             {
                 string messageErreurFirstName = ("Le champ ne pas être vide.");
@@ -48,7 +50,7 @@ namespace AutoFact
             }
             else
             {
-                ServiceModel.addProduct(name, unitPrice);
+                ServiceModel.addProduct(name, unitPrice, selectedValue);
             }
         }
 
@@ -56,6 +58,23 @@ namespace AutoFact
         {
             formAF AF = new formAF();
             this.Hide();
+        }
+
+        private void AddCategoryButton_Click(object sender, EventArgs e)
+        {
+           string nameCategory = textBoxNameCategory.Text;
+
+            if (nameCategory == null)
+            {
+                string messageErreurFirstName = ("Le champ ne pas être vide.");
+                string titleErreur = ("Erreur !");
+                MessageBox.Show(messageErreurFirstName, titleErreur, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                CategoryModel.addCategory(nameCategory);
+                CategoryModel.GetListCategory(comboBoxCategory);
+            }
         }
     }
 }

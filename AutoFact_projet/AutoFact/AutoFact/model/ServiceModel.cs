@@ -16,18 +16,19 @@ namespace AutoFact.model
         /// </summary>
         /// <param name="name"></param>
         /// <param name="unitPrice"></param>
-        public static void addProduct(string name, string unitPrice)
+        public static void addProduct(string name, string unitPrice, int category_id)
         {
             //Connexion a la base de données
             SQLiteConnection db = Database.getInstance().getConnection();
 
             //requete SQL
-            string queryString = "INSERT INTO product (name, unit_price) VALUES (@name,@unitPrice)";
+            string queryString = "INSERT INTO product (name, unit_price, category_id) VALUES (@name,@unitPrice,@category_id)";
             SQLiteCommand sqlite_cmd = new SQLiteCommand(queryString, db);
 
             // Ajouter les valeurs des paramètres de la requête
             sqlite_cmd.Parameters.AddWithValue("@name", name);
             sqlite_cmd.Parameters.AddWithValue("@unitPrice", unitPrice);
+            sqlite_cmd.Parameters.AddWithValue("@category_id", category_id);
 
             if (string.IsNullOrEmpty(name))
             {
@@ -76,15 +77,15 @@ namespace AutoFact.model
         /// <param name="unitPriceU"></param>
         public static void UpdateProduct(int id, string nameU, string unitPriceU)
         {
-            string querySearch = ("UPDATE customer \r\n SET \r\n first_name = CASE \r\n WHEN @firstNameU <> '' THEN @firstNameU \r\n ELSE first_name \r\n END,\r\n last_name = CASE \r\n WHEN @lastNameU <> '' THEN @lastNameU \r\n ELSE last_name \r\n END,\r\n phone_number = CASE \r\n WHEN @phone_numberU <> '' THEN @phone_numberU \r\n ELSE phone_number \r\n END,\r\n mail = CASE \r\n WHEN @mailU <> '' THEN @mailU \r\n ELSE mail \r\n END,\r\n compagny_name = CASE \r\n WHEN @compagnyU <> '' THEN @compagnyU \r\n ELSE compagny_name \r\n END\r\n WHERE id = @id;");
+            string querySearch = ("UPDATE product \r\n SET \r\n name = CASE \r\n WHEN @nameU <> '' THEN @nameU \r\n ELSE name \r\n END,\r\n unit_price = CASE \r\n WHEN @unitPriceU <> '' THEN @unitPriceU \r\n ELSE unit_price \r\n END\r\n WHERE id = @id;");
             SQLiteConnection db = Database.getInstance().getConnection();
 
             SQLiteCommand sqlite_cmd = new SQLiteCommand(querySearch, db);
 
             // Ajouter les valeurs des paramètres de la requête
             sqlite_cmd.Parameters.AddWithValue("@id", id);
-            sqlite_cmd.Parameters.AddWithValue("@firstNameU", nameU);
-            sqlite_cmd.Parameters.AddWithValue("@lastNameU", unitPriceU);
+            sqlite_cmd.Parameters.AddWithValue("@nameU", nameU);
+            sqlite_cmd.Parameters.AddWithValue("@unitPriceU", unitPriceU);
 
             // Exécuter la requête d'insertion  
             sqlite_cmd.ExecuteNonQuery();
@@ -106,7 +107,7 @@ namespace AutoFact.model
             SQLiteConnection db = Database.getInstance().getConnection();
 
             //requete SQL
-            string querySearch = ("SELECT id, (name) as Nom du Service, (last_name) as 'Nom de Famille'\r\nFROM product\r\nWHERE name LIKE @nameR OR unit_price Like @unitPriceR");
+            string querySearch = ("SELECT id, (name) as 'Nom du Service', (last_name) as 'Nom de Famille'\r\nFROM product\r\nWHERE name LIKE @nameR OR unit_price Like @unitPriceR");
 
             SQLiteCommand sqlite_cmd = new SQLiteCommand(querySearch, db);
             // Ajouter les valeurs des paramètres de la requête
@@ -131,7 +132,7 @@ namespace AutoFact.model
         public static DataTable GetProduct(DataGridView dataGridView)
         {
             SQLiteConnection db = Database.getInstance().getConnection();
-            SQLiteCommand cmd = new SQLiteCommand("SELECT id, (name) as Nom du Service, (unit_price) as 'Prix Unitaire', c.libelle 'Catégorie du produit' FROM product p JOIN category c ON p.category_id = c.id WHERE c.id = p.customer_id; ", db);
+            SQLiteCommand cmd = new SQLiteCommand("SELECT p.id, p.name as 'Nom du Service', p.unit_price as 'Prix Unitaire', c.libelle 'Catégorie du produit' FROM product p JOIN category c ON p.category_id = c.id WHERE c.id = p.category_id; ", db);
             SQLiteDataReader reader = cmd.ExecuteReader();
             DataTable dt = new DataTable();
 
@@ -141,5 +142,24 @@ namespace AutoFact.model
             return dt;
 
         }
+
+        public static ComboBox GetListProduct(ComboBox combobox)
+        {
+            SQLiteConnection db = Database.getInstance().getConnection();
+            SQLiteCommand cmd = new SQLiteCommand("SELECT id, name || ' ' || unit_price || '€' AS ProductPrice FROM product", db);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id", typeof(string));
+            dt.Columns.Add("ProductPrice", typeof(string));
+
+            dt.Load(reader);
+
+            combobox.ValueMember = "id";
+            combobox.DisplayMember = "ProductPrice";
+            combobox.DataSource = dt;
+            db.Close();
+            return combobox;
+        }
+
     }
 }

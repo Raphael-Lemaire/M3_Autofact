@@ -29,7 +29,9 @@ namespace AutoFact
 
         private void gService_Load(object sender, EventArgs e)
         {
-            //ServiceModel.GetProduct(dataGridViewProduct);
+            ServiceModel.GetProduct(dataGridViewProduct);
+            CategoryModel.GetListCategory(comboBoxUpdateCategory);
+            CategoryModel.GetListCategory(comboBoxServiceCategory);
         }
 
         private void tbSearchProduct_TextChanged(object sender, EventArgs e)
@@ -75,19 +77,7 @@ namespace AutoFact
 
         private void dataGridViewProduct_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int rowindex = dataGridViewProduct.CurrentCell.RowIndex; if (rowindex >= 0)
-            {
-                // Récupérez la ligne sur laquelle vous avez cliqué
-                DataGridViewRow row = dataGridViewProduct.Rows[rowindex];
-                // Récupérez toutes les informations de la ligne
-                string col1Value = row.Cells[1].Value.ToString();
-                string col2Value = row.Cells[2].Value.ToString();
-                // Ajoutez autant de colonnes que nécessaire 
-                // Utilisez les informations récupérées pour effectuer les traitements souhaités   
-                // Par exemple, afficher les informations dans une zone de texte 
-                TBnameUpdate.Text = $"{col1Value}";
-                TBunitPriceUpdate.Text = $"{col2Value}";
-            }
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -149,7 +139,45 @@ namespace AutoFact
 
         private void ReadProduct_Click_1(object sender, EventArgs e)
         {
-            //ServiceModel.GetProduct(dataGridViewProduct);
+            ServiceModel.GetProduct(dataGridViewProduct);
+        }
+
+        private void DeleteCategoryButton_Click(object sender, EventArgs e)
+        {
+            int selectedValue = Convert.ToInt32(comboBoxUpdateCategory.SelectedValue);
+
+            CategoryModel.UpdateCategory(selectedValue);
+            CategoryModel.GetListCategory(comboBoxUpdateCategory);
+            CategoryModel.GetListCategory(comboBoxServiceCategory);
+        }
+
+        private void UpdateCategoryButton_Click(object sender, EventArgs e)
+        {
+            string libelle = textBoxUpdateCategory.Text;
+            int selectedValue = Convert.ToInt32(comboBoxUpdateCategory.SelectedValue);
+
+            CategoryModel.UpdateCategory(selectedValue, libelle);
+            CategoryModel.GetListCategory(comboBoxUpdateCategory);
+            CategoryModel.GetListCategory(comboBoxServiceCategory);
+        }
+
+        private void dataGridViewProduct_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowindex = dataGridViewProduct.CurrentCell.RowIndex; if (rowindex >= 0)
+            {
+                // Récupérez la ligne sur laquelle vous avez cliqué
+                DataGridViewRow row = dataGridViewProduct.Rows[rowindex];
+                // Récupérez toutes les informations de la ligne
+                string col1Value = row.Cells[1].Value.ToString();
+                int col2Value = Convert.ToInt32(row.Cells[2].Value);
+                // Ajoutez autant de colonnes que nécessaire 
+                // Utilisez les informations récupérées pour effectuer les traitements souhaités   
+                // Par exemple, afficher les informations dans une zone de texte 
+                TBnameUpdate.Text = $"{col1Value}";
+                TBunitPriceUpdate.Text = $"{col2Value}";
+
+
+            }
         }
     }
 }

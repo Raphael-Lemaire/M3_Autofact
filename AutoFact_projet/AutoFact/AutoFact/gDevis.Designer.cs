@@ -32,8 +32,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.TBmailUpdate = new System.Windows.Forms.TextBox();
-            this.TBfirstNameUp = new System.Windows.Forms.TextBox();
+            this.TBTotalPrice = new System.Windows.Forms.TextBox();
+            this.TBQuotationName = new System.Windows.Forms.TextBox();
             this.tbScreachCustomer = new System.Windows.Forms.TextBox();
             this.dataGridViewQuotation = new System.Windows.Forms.DataGridView();
             this.logo = new System.Windows.Forms.PictureBox();
@@ -56,7 +56,7 @@
             this.rButton1 = new CustomControls.RJControls.RButton();
             this.Updatebot = new CustomControls.RJControls.RButton();
             this.RefreshButtonGQuotation = new CustomControls.RJControls.RButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxAmount = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuotation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -89,19 +89,19 @@
             this.label1.TabIndex = 49;
             this.label1.Text = "Nom du devis";
             // 
-            // TBmailUpdate
+            // TBTotalPrice
             // 
-            this.TBmailUpdate.Location = new System.Drawing.Point(308, 585);
-            this.TBmailUpdate.Name = "TBmailUpdate";
-            this.TBmailUpdate.Size = new System.Drawing.Size(100, 20);
-            this.TBmailUpdate.TabIndex = 46;
+            this.TBTotalPrice.Location = new System.Drawing.Point(308, 585);
+            this.TBTotalPrice.Name = "TBTotalPrice";
+            this.TBTotalPrice.Size = new System.Drawing.Size(100, 20);
+            this.TBTotalPrice.TabIndex = 46;
             // 
-            // TBfirstNameUp
+            // TBQuotationName
             // 
-            this.TBfirstNameUp.Location = new System.Drawing.Point(59, 588);
-            this.TBfirstNameUp.Name = "TBfirstNameUp";
-            this.TBfirstNameUp.Size = new System.Drawing.Size(100, 20);
-            this.TBfirstNameUp.TabIndex = 44;
+            this.TBQuotationName.Location = new System.Drawing.Point(59, 588);
+            this.TBQuotationName.Name = "TBQuotationName";
+            this.TBQuotationName.Size = new System.Drawing.Size(100, 20);
+            this.TBQuotationName.TabIndex = 44;
             // 
             // tbScreachCustomer
             // 
@@ -121,6 +121,7 @@
             this.dataGridViewQuotation.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.RoyalBlue;
             this.dataGridViewQuotation.Size = new System.Drawing.Size(852, 382);
             this.dataGridViewQuotation.TabIndex = 41;
+            this.dataGridViewQuotation.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewQuotation_CellClick);
             // 
             // logo
             // 
@@ -187,7 +188,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(742, 586);
+            this.label6.Location = new System.Drawing.Point(794, 585);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 13);
             this.label6.TabIndex = 65;
@@ -196,7 +197,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(615, 589);
+            this.label7.Location = new System.Drawing.Point(644, 588);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 13);
             this.label7.TabIndex = 64;
@@ -207,7 +208,7 @@
             this.comboBoxService.FormattingEnabled = true;
             this.comboBoxService.Location = new System.Drawing.Point(577, 605);
             this.comboBoxService.Name = "comboBoxService";
-            this.comboBoxService.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxService.Size = new System.Drawing.Size(169, 21);
             this.comboBoxService.TabIndex = 63;
             // 
             // label8
@@ -244,6 +245,7 @@
             this.rButton4.Text = "Ajouter un service au devis";
             this.rButton4.TextColor = System.Drawing.Color.White;
             this.rButton4.UseVisualStyleBackColor = false;
+            this.rButton4.Click += new System.EventHandler(this.rButton4_Click);
             // 
             // DeleteButtonStatus
             // 
@@ -375,19 +377,20 @@
             this.RefreshButtonGQuotation.UseVisualStyleBackColor = false;
             this.RefreshButtonGQuotation.Click += new System.EventHandler(this.ReadCustomer_Click);
             // 
-            // textBox1
+            // textBoxAmount
             // 
-            this.textBox1.Location = new System.Drawing.Point(709, 606);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 73;
+            this.textBoxAmount.Location = new System.Drawing.Point(764, 606);
+            this.textBoxAmount.Name = "textBoxAmount";
+            this.textBoxAmount.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAmount.TabIndex = 73;
+            this.textBoxAmount.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // gDevis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1050, 720);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxAmount);
             this.Controls.Add(this.rButton4);
             this.Controls.Add(this.DeleteButtonStatus);
             this.Controls.Add(this.textBoxUpdateStatus);
@@ -409,8 +412,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.TBmailUpdate);
-            this.Controls.Add(this.TBfirstNameUp);
+            this.Controls.Add(this.TBTotalPrice);
+            this.Controls.Add(this.TBQuotationName);
             this.Controls.Add(this.tbScreachCustomer);
             this.Controls.Add(this.RefreshButtonGQuotation);
             this.Controls.Add(this.dataGridViewQuotation);
@@ -433,8 +436,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TBmailUpdate;
-        private System.Windows.Forms.TextBox TBfirstNameUp;
+        private System.Windows.Forms.TextBox TBTotalPrice;
+        private System.Windows.Forms.TextBox TBQuotationName;
         private System.Windows.Forms.TextBox tbScreachCustomer;
         private CustomControls.RJControls.RButton RefreshButtonGQuotation;
         private System.Windows.Forms.DataGridView dataGridViewQuotation;
@@ -454,6 +457,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxStatus;
         private CustomControls.RJControls.RButton rButtonStatus;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxAmount;
     }
 }

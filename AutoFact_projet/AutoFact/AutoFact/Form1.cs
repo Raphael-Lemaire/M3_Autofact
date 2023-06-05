@@ -242,7 +242,7 @@ namespace AutoFact
 
         private void ReadService_Click(object sender, EventArgs e)
         {
-
+            ServiceModel.GetProduct(dataGridView3);
         }
     }
 
